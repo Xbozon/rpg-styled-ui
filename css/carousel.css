@@ -1,0 +1,362 @@
+#combat-carousel .carousel-icon {
+    display: none;
+}
+
+#combat-carousel .splide__track {
+    overflow: hidden!important;
+}
+
+#combat-carousel .card {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#combat-carousel .avatar {
+    border-radius: 50%;
+    height: auto;
+    box-shadow: 0 0 20px #000;
+}
+
+#combat-carousel .avatar::after {
+    content: "";
+    position: absolute;
+    width: 106%;
+    height: 106%;
+    left: -3%;
+    top: -3%;
+    background: url(../ui/frames/avatar.png);
+    background-size: contain;
+    z-index: 12;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#combat-carousel .avatar::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: url(../ui/frames/chat-background.jpg);
+    background-size: contain;
+    z-index: -1;
+}
+
+#combat-carousel .initiative {
+    right: -1px;
+    bottom: -7px;
+    background: url(../ui/frames/value.png);
+    width: 38px;
+    height: 38px;
+    background-size: contain;
+    text-align: center;
+}
+
+#combat-carousel .is-active.card .initiative {
+    right: -1px;
+    bottom: -7px;
+    background: url(../ui/frames/value_red.png);
+    width: 38px;
+    height: 38px;
+    background-size: contain;
+    text-align: center;
+}
+
+#combat-carousel .initiative .roll-init{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    overflow: hidden;
+    width: 17px;
+}
+
+#combat-carousel .initiative input[type="text"]:disabled.fa-stack-1x {
+    color: var(--main-text-light-color);
+}
+
+#combat-carousel .fa-dice-d20 {
+    display: none;
+}
+
+#combat-carousel .is-active.card {
+    margin: 30px 16px 0px 16px;
+    transform: scale(1.1);
+}
+
+#combat-carousel .splide__slide:hover:not(.combat-round) {
+    margin: 30px 16px 0px 16px;
+    transform: scale(1.1);
+}
+
+#combat-carousel .is-active.card .splide__container::after {
+    content: "";
+    position: absolute;
+    width: 157px;
+    height: 172px;
+    left: -34px;
+    top: -43px;
+    background: url(../ui/frames/extra.png);
+    background-size: 100% 100%;
+    z-index: 11;
+}
+
+#combat-carousel .splide__container {
+    position: relative;
+}
+
+#combat-carousel .splide__container::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 106%;
+    left: -10%;
+    top: -1%;
+    background: url(../ui/bg/health_bg.png);
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+#combat-carousel .is-active.card .avatar::after {
+    content: "";
+    position: absolute;
+    width: 106%;
+    height: 106%;
+    left: -3%;
+    top: -3%;
+    background: url(../ui/frames/avatar_red.png);
+    background-size: contain;
+    z-index: 12;
+}
+
+#combat-carousel .splide__slide {
+    margin: 5px;
+}
+
+#combat-carousel .splide__slide:first-child{
+}
+
+#combat-carousel .splide__slide:last-child{
+}
+
+#combat-carousel.wrapper {
+    max-width: calc(100% - 310px);
+    position: initial;
+    display: flex;
+    justify-content: center;
+    top: 0px!important;
+}
+
+#combat-carousel img {
+    border: none;
+    margin: 0px;
+    z-index: 10;
+}
+
+#combat-carousel .is-active.card .active-combatant {
+    display: none;
+}
+
+#combat-carousel .hp {
+    position: relative;
+    top: -84px;
+    z-index: 11;
+    left: 44px;
+    transform: rotate(-90deg);
+}
+
+#combat-carousel .combat-control a {
+    background: none;
+    border: none;
+
+    color: #98968a;
+}
+
+#combat-carousel .combat-control a i{
+    z-index: 2;
+}
+
+#combat-carousel .combat-control a::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    background: url(../ui/frames/value.png);
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+#combat-carousel .combat-control a.turn {
+    top: calc(48% + 10px);
+}
+
+#combat-carousel .combat-control a.round {
+    top: calc(0% + 45px);
+}
+
+#combat-carousel .encounter-info {
+    background: none;
+    border: none;
+    top: 3%;
+    color: #98968a;
+}
+
+#combat-carousel .encounter-info > div {
+    z-index: 3;
+}
+
+#combat-carousel .encounter-info::before {
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 118%;
+    left: -35%;
+    top: -10%;
+    background: url(../ui/bg/health_bg.png);
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+#combat-carousel .splide__container .tracker-indicators:has(i.fa-skull) {
+    display: none;
+}
+
+#combat-carousel .splide__container .fa-skull::before{
+    content: "";
+}
+
+#combat-carousel .splide__container .fa-skull {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    filter: alpha(opacity=40);
+    background-color: #000;
+}
+
+meter {
+    /*--background: #dadada;*/
+    --optimum: forestgreen;
+    --sub-optimum: gold;
+    --sub-sub-optimum: crimson;
+
+    /* The gray background in Firefox */
+    /*background: var(--background);*/
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+#combat-carousel meter {
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    border: 3px solid transparent;
+    border-bottom-right-radius: 2px;
+}
+
+/* The gray background in Chrome, etc. */
+meter::-webkit-meter-bar {
+    border-radius: 0;
+    border: none;
+    background: var(--background);
+}
+
+/* The green (optimum) bar in Firefox */
+meter:-moz-meter-optimum::-moz-meter-bar {
+    background: var(--optimum);
+}
+
+/* The green (optimum) bar in Chrome etc. */
+meter::-webkit-meter-optimum-value {
+    background: var(--optimum);
+}
+
+/* The yellow (sub-optimum) bar in Firefox */
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: var(--sub-optimum);
+}
+
+/* The yellow (sub-optimum) bar in Chrome etc. */
+meter::-webkit-meter-suboptimum-value {
+    background: var(--sub-optimum);
+}
+
+/* The red (even less good) bar in Firefox */
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: var(--sub-sub-optimum);
+}
+
+/* The red (even less good) bar in Chrome etc. */
+meter::-webkit-meter-even-less-good-value {
+    background: var(--sub-sub-optimum);
+}
+
+
+#combat-carousel meter[value="0"] {
+    background: initial;
+}
+
+#combat-carousel .splide {
+    max-width: 70vw;
+}
+
+
+#combat-carousel .splide__slide:hover .name {
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+
+/* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:0.7;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.7;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:0.7;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.7;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:0.7;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.7;
+    }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:0.7;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.7;
+    }
+}

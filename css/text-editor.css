@@ -1,0 +1,23 @@
+:root {
+    --main-text-light-color: #98968a;
+}
+
+.tox .tox-tbtn svg {
+    fill: var(--main-text-light-color)!important;
+}
+
+.tox .tox-tbtn {
+    color: var(--main-text-light-color)!important;
+}
+
+.dnd5e.sheet .editor .tox-toolbar-overlord, .dnd5e.sheet .editor .tox-toolbar__primary {
+    background: #ffffff14;
+}
+
+.mce-content-body {
+    color: var(--main-text-light-color)!important;
+}
+
+.tox.tox-tinymce .tox-edit-area__iframe {
+    background: #ffffff8a;
+}

@@ -24,6 +24,6 @@
 
   "packs": [],
   "url": "https://github.com/Xbozon/rpg-styled-ui",
-  "manifest": "https://github.com/Xbozon/rpg-styled-ui/-/raw/master/module/module.json",
+  "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
   "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v0.1.13.zip"
 }

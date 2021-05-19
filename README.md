@@ -30,7 +30,7 @@ I don't have a lot of free time, but I will try to maintain this module as much 
 - Converting png/jpg to webp
 
 # How to install
-Copy link ```https://github.com/Xbozon/rpg-styled-ui/blob/main/module.json``` to
+Copy link ```https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json``` to
 
 ![alt text](install.jpg "Title")
 

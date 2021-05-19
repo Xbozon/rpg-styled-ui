@@ -29,6 +29,11 @@ I don't have a lot of free time, but I will try to maintain this module as much 
 - Styling map pins
 - Converting png/jpg to webp
 
+# How to install
+Copy link ```https://github.com/Xbozon/rpg-styled-ui/blob/main/module.json``` to
+
+![alt text](install.jpg "Title")
+
 # How it looks
 
 ![alt text](example.jpg "Title")

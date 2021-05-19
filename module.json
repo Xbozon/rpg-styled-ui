@@ -2,7 +2,7 @@
   "name": "rpg-styled-ui",
   "title": "RPG Styled UI for Foundry VTT",
   "description": "Theme for DnD5e.",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "minimumCoreVersion": "0.7.9",
   "compatibleCoreVersion": "1.0.0",
   "author": "Xbozon",
@@ -13,7 +13,7 @@
     "css/carousel.css",
     "css/text-editor.css"
   ],
-  "scripts": [ "scripts/pathfinder-chat-color.js" ],
+  "scripts": [ "scripts/chat-color.js" ],
   "languages": [
     {
       "lang": "en",
@@ -25,5 +25,5 @@
   "packs": [],
   "url": "https://github.com/Xbozon/rpg-styled-ui",
   "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
-  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v0.1.13.zip"
+  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v0.1.14.zip"
 }

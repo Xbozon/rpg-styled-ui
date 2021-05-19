@@ -500,6 +500,32 @@ img#logo {
 }
 
 /* ACTOR AND ITEM */
+button#roll-hd {
+    position: relative;
+    color: var(--main-text-light-color);
+    border: none;
+}
+
+button#roll-hd:hover,button#roll-hd:active{
+    box-shadow: none;
+}
+
+button#roll-hd::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 140%;
+    top: -20%;
+    left: 0%;
+    background: url(../ui/buttons/btn-dnd5e-card.png);
+    background-size: 100% 100%;
+    z-index: -1;
+}
+button#roll-hd:hover::before {
+    background: url(../ui/buttons/btn-dnd5e-card_hover.png);
+    background-size: 100% 100%;
+}
+
 .dnd5e.sheet.actor:not(.loot-sheet-npc),
 .dnd5e.sheet.item {
     background: rgba(6, 4, 3, 0.92);
@@ -808,7 +834,10 @@ img#logo {
     border-right: 1px solid var(--border-color);
 }
 
-.dnd5e.sheet.actor .inventory-list .item-detail {
+.dnd5e.sheet.actor .inventory-list .item-detail,
+.dnd5e.sheet .effects .item .effect-source,
+.dnd5e.sheet .effects .item .effect-duration,
+.dnd5e.sheet .effects .item .effect-controls {
     border-right: 1px solid var(--border-color);
     border-left: 1px solid var(--border-color);
 }

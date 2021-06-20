@@ -881,6 +881,7 @@ button#roll-hd:hover::before {
 #navigation #scene-list.vertical .scene.nav-item {
     float: none;
     width: fit-content;
+    display: table;
 }
 
 #navigation #scene-list .scene.nav-item {

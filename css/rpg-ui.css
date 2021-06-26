@@ -262,8 +262,15 @@ img#logo {
     top: 70px;
 }
 
+body.compact-mode > ol.app.control-tools {
+    top: -6px!important;
+}
+
 #controls .control-tools {
     left: 68px;
+}
+body.compact-mode #controls .control-tools {
+    left: 60px;
 }
 
 #controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {
@@ -276,6 +283,9 @@ img#logo {
     background: none;
     color: #837360;
     padding: 5px;
+}
+body.compact-mode #controls .scene-control, #controls .control-tool {
+    margin: 0 0 2px;
 }
 
 #controls .scene-control i {
@@ -294,6 +304,12 @@ img#logo {
     z-index: -2;
     opacity: 0.88;
 }
+body.compact-mode #controls .scene-control > i::after {
+    width: 50px;
+    height: 50px;
+    left: -11px;
+    top: -12px;
+}
 
 #controls .control-tool {
     position: relative;
@@ -311,13 +327,25 @@ img#logo {
     z-index: -2;
     opacity: 0.88;
 }
+body.compact-mode #controls .control-tool::after {
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    top: -3px;
+}
 
 #controls .scene-control i.fa-lightbulb::after {
     left: -19px;
 }
+body.compact-mode #controls .scene-control i.fa-lightbulb::after {
+    left: -15px;
+}
 
 #controls .scene-control i.fa-bookmark::after {
     left: -17px;
+}
+body.compact-mode #controls .scene-control i.fa-bookmark::after {
+    left: -13px;
 }
 
 

@@ -13,8 +13,13 @@
 }
 
 #combat-carousel .avatar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    height: auto;
     box-shadow: 0 0 20px #000;
 }
 
@@ -92,10 +97,10 @@
 #combat-carousel .is-active.card .splide__container::after {
     content: "";
     position: absolute;
-    width: 157px;
-    height: 172px;
-    left: -34px;
-    top: -43px;
+    width: 161px;
+    height: 175px;
+    left: -37px;
+    top: -45px;
     background: url(../ui/frames/extra.png);
     background-size: 100% 100%;
     z-index: 11;

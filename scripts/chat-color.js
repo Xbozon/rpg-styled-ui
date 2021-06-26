@@ -1,9 +1,4 @@
 Hooks.on('init', () => {
-	let newLogo = document.createElement('div');
-	newLogo.classList.add("new-logo")
-	newLogo.innerText = "Foundry \nVTT"
-	document.body.appendChild(newLogo);
-
 	// Register module settings.
 	game.settings.register('rpg-styled-ui', 'navigationVerticalToggle', {
 		name: game.i18n.localize('RPGUI.SETTINGS.NAVIGATION'),
@@ -16,7 +11,24 @@ Hooks.on('init', () => {
 			location.reload();
 		}
 	});
+	game.settings.register('rpg-styled-ui', 'compactModeToggle', {
+		name: game.i18n.localize('RPGUI.SETTINGS.COMPACT_MODE'),
+		hint: game.i18n.localize('RPGUI.SETTINGS.COMPACT_MODE_HINT'),
+		scope: "world",
+		type: Boolean,
+		default: false,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
 
+	if (!game.settings.get('rpg-styled-ui', 'compactModeToggle')) {
+		let newLogo = document.createElement('div');
+		newLogo.classList.add("new-logo")
+		newLogo.innerText = "Foundry \nVTT"
+		document.body.appendChild(newLogo);
+	}
 });
 
 Hooks.on('getSceneNavigationContext', () => {
@@ -24,4 +36,13 @@ Hooks.on('getSceneNavigationContext', () => {
 		navigation = document.querySelector("nav.app > ol#scene-list");
 		navigation.classList.add("vertical")
 	}
+	if (game.settings.get('rpg-styled-ui', 'compactModeToggle')) {
+		addClassByQuerySelector("compact-mode", "body")
+	}
 });
+
+function addClassByQuerySelector(className, selector) {
+	let navigation = document.querySelector(selector);
+	console.log(navigation)
+	navigation.classList.add(className)
+}

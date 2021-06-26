@@ -1,6 +1,9 @@
 {
-    "I18N.MAINTAINERS": ["Letheka Zhorai"],
+    "I18N.MAINTAINERS": ["Xbozon"],
 
     "RPGUI.SETTINGS.NAVIGATION": "Switches the navigation back to horizontal mode",
-    "RPGUI.SETTINGS.NAVIGATION_HINT": "Use this switch if you are not using Combat Carousel integration"
+    "RPGUI.SETTINGS.NAVIGATION_HINT": "Use this switch if you are not using Combat Carousel integration",
+
+    "RPGUI.SETTINGS.COMPACT_MODE": "Compact mode",
+    "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Reduces the size of the left menu and removes the logo"
 }

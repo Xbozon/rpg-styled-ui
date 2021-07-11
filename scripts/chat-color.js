@@ -41,8 +41,18 @@ Hooks.on('getSceneNavigationContext', () => {
 	}
 });
 
+Hooks.on('renderCombatCarousel', () => {
+	let carouselSize = game.settings.get('combat-carousel', 'carouselSize')
+	if (carouselSize !== "") {
+		addClassByQuerySelector(carouselSize, "#combat-carousel")
+	}
+
+	if (game.settings.get('combat-carousel', 'fixedTopModeToggle')) {
+		addClassByQuerySelector("fixed-mode", "#combat-carousel")
+	}
+});
+
 function addClassByQuerySelector(className, selector) {
 	let navigation = document.querySelector(selector);
-	console.log(navigation)
 	navigation.classList.add(className)
 }

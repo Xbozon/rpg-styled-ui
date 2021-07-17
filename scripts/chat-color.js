@@ -22,12 +22,27 @@ Hooks.on('init', () => {
 			location.reload();
 		}
 	});
+	game.settings.register('rpg-styled-ui', 'standardLogoToggle', {
+		name: game.i18n.localize('RPGUI.SETTINGS.STANDARD_LOGO'),
+		hint: game.i18n.localize('RPGUI.SETTINGS.STANDARD_LOGO_HINT'),
+		scope: "world",
+		type: Boolean,
+		default: false,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
 
 	if (!game.settings.get('rpg-styled-ui', 'compactModeToggle')) {
-		let newLogo = document.createElement('div');
-		newLogo.classList.add("new-logo")
-		newLogo.innerText = "Foundry \nVTT"
-		document.body.appendChild(newLogo);
+		if (!game.settings.get('rpg-styled-ui', 'standardLogoToggle')) {
+			addClassByQuerySelector("hide", "img#logo")
+
+			let newLogo = document.createElement('div');
+			newLogo.classList.add("new-logo")
+			newLogo.innerText = "Foundry \nVTT"
+			document.body.appendChild(newLogo);
+		}
 	}
 });
 
@@ -45,10 +60,6 @@ Hooks.on('renderCombatCarousel', () => {
 	let carouselSize = game.settings.get('combat-carousel', 'carouselSize')
 	if (carouselSize !== "") {
 		addClassByQuerySelector(carouselSize, "#combat-carousel")
-	}
-
-	if (game.settings.get('combat-carousel', 'fixedTopModeToggle')) {
-		addClassByQuerySelector("fixed-mode", "#combat-carousel")
 	}
 });
 

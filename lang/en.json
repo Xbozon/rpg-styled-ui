@@ -5,5 +5,8 @@
     "RPGUI.SETTINGS.NAVIGATION_HINT": "Use this switch if you are not using Combat Carousel integration",
 
     "RPGUI.SETTINGS.COMPACT_MODE": "Compact mode",
-    "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Reduces the size of the left menu and removes the logo"
+    "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Reduces the size of the left menu and removes the logo",
+
+    "RPGUI.SETTINGS.STANDARD_LOGO": "Standard logo",
+    "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Returns the standard logo instead of the text logo"
 }

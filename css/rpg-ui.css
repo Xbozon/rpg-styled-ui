@@ -9,7 +9,8 @@
     left: 22px;
 }
 
-img#logo {
+.hide {
+    display: none;
     display: none;
 }
 
@@ -267,14 +268,15 @@ body.compact-mode > ol.app.control-tools {
 }
 
 #controls .control-tools {
-    left: 68px;
-}
-body.compact-mode #controls .control-tools {
     left: 60px;
 }
 
+#controls .scene-control, #controls .control-tool {
+    margin: 0 0 4px;
+}
+
 #controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {
-    color: var(--main-text-light-color);
+    color: #d6d3c1;
 }
 
 #controls .scene-control, #controls .control-tool {
@@ -284,26 +286,47 @@ body.compact-mode #controls .control-tools {
     color: #837360;
     padding: 5px;
 }
-body.compact-mode #controls .scene-control, #controls .control-tool {
-    margin: 0 0 2px;
+
+#controls .scene-control, #controls .control-tool {
+    margin: 0 0 4px;
 }
 
 #controls .scene-control i {
     position: relative;
 }
 
-#controls .scene-control > i::after {
+#controls .scene-control > i::after, #controls li[data-control="combat-carousel"]::after {
     position: absolute;
     content: " ";
-    width: 56px;
-    height: 56px;
-    left: -15px;
-    top: -15px;
+    width: 53px;
+    height: 53px;
+    left: -12px;
+    top: -12px;
     background: url(../ui/buttons/controls_btn.png);
     background-size: 100% 100%;
     z-index: -2;
     opacity: 0.88;
 }
+
+#controls li[data-control="combat-carousel"] {
+    position: relative;
+}
+
+#controls li[data-control="combat-carousel"] img {
+    position: relative;
+    left: 4px;
+}
+
+#controls li[data-control="combat-carousel"]::after {
+    left: 0px;
+    top: 0px;
+}
+
+#controls .scene-control.active > i::after {
+    background: url(../ui/buttons/controls_btn_accent.png);
+    background-size: 100% 100%;
+}
+
 body.compact-mode #controls .scene-control > i::after {
     width: 50px;
     height: 50px;
@@ -318,15 +341,21 @@ body.compact-mode #controls .scene-control > i::after {
 #controls .control-tool::after {
     position: absolute;
     content: " ";
-    width: 56px;
-    height: 56px;
-    left: -4px;
-    top: -5px;
+    width: 53px;
+    height: 53px;
+    left: -3px;
+    top: -2px;
     background: url(../ui/buttons/controls_btn.png);
     background-size: 100% 100%;
     z-index: -2;
     opacity: 0.88;
 }
+
+#controls .control-tool.active::after {
+    background: url(../ui/buttons/controls_btn_accent.png);
+    background-size: 100% 100%;
+}
+
 body.compact-mode #controls .control-tool::after {
     width: 50px;
     height: 50px;
@@ -335,14 +364,14 @@ body.compact-mode #controls .control-tool::after {
 }
 
 #controls .scene-control i.fa-lightbulb::after {
-    left: -19px;
+    left: -16px;
 }
 body.compact-mode #controls .scene-control i.fa-lightbulb::after {
     left: -15px;
 }
 
 #controls .scene-control i.fa-bookmark::after {
-    left: -17px;
+    left: -14px;
 }
 body.compact-mode #controls .scene-control i.fa-bookmark::after {
     left: -13px;
@@ -363,7 +392,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     height: 52px;
 }
 
-#hotbar::before {
+#action-bar:not(.collapsed)::before {
     position: absolute;
     z-index: -1;
     content: " ";
@@ -1028,4 +1057,11 @@ button#roll-hd:hover::before {
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
+}
+
+/* ==== compatibility ==== */
+
+/* Illandril's Hotbar Uses */
+.illandril-hotbar-uses--hasUses .illandril-hotbar-uses--counter {
+    z-index: 10;
 }

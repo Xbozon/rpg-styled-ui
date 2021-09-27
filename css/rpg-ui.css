@@ -1059,9 +1059,219 @@ button#roll-hd:hover::before {
     left: -10%;
 }
 
+/* ==== jornal ==== */
+.app.journal-sheet {
+    font-family: 'Kurale', serif;
+    padding: 10px 25px;
+
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.app.journal-sheet::before{
+    position: absolute;
+    content: " ";
+    width: 106%;
+    height: 105%;
+    top: -1%;
+    left: -3%;
+    background:url(../ui/other/paper_texture.jpg);
+    background-size: cover;
+    z-index: -1;
+
+    -webkit-mask-image: url(../ui/other/journal_mask.png);
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.app.journal-sheet::after{
+    position: absolute;
+    content: " ";
+    width: 106%;
+    height: 105%;
+    top: -1%;
+    left: -3%;
+    background:url(../ui/other/journal_background.png);
+    background-size: 100% 100%;
+    opacity: 0.90;
+    z-index: -2;
+}
+
+.app.journal-sheet img {
+    border: none;
+}
+
+.app.journal-sheet .window-app .window-header {
+    border-bottom: none;
+}
+
+.app.journal-sheet .window-header {
+    position: relative;
+    top: 2%;
+    flex: 0 0 40px;
+    line-height: 40px;
+
+    color: rgb(93, 24, 13);
+    font-weight: 600;
+}
+
+.journal-sheet .window-content {
+    background: none;
+}
+
+.journal-sheet .window-content::before {
+    position: absolute;
+    width: 512px;
+    height: 298px;
+    left: -6px;
+    top: 12px;
+    content: " ";
+    background: url(../ui/other/journal_right_top_corner.png);
+    background-size: 100% 100%;
+    opacity: 0.09;
+    z-index: -1;
+}
+
+.app.journal-sheet .window-header .window-title {
+    opacity: 0;
+}
+
+.app.journal-sheet .window-header {
+    border: none;
+}
+
+.journal-sheet form input[name="name"] {
+    position: relative;
+    z-index: 10;
+    padding: 10px 0px 20px 0px;
+    margin-bottom: 10px;
+    border: none;
+    background: none;
+
+    color: rgb(93, 24, 13);
+    font-size: .705cm;
+    font-weight: bold;
+    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+
+.journal-sheet .window-resizable-handle {
+    bottom: 5%;
+    right: 5%;
+}
+
+.journal-sheet form select {
+    display: none;
+}
+
+.journal-sheet .header-button.close {
+    position: relative;
+    width: 36px;
+    height: 33px;
+
+    color: rgba(0, 0, 0, 0);
+}
+
+.journal-sheet .header-button.close::before {
+    width: 36px;
+    height: 33px;
+    top: 4px;
+    position: absolute;
+    content: " ";
+    background:url(../ui/buttons/close_icon.png);
+    background-size: 100% 100%;
+}
+
+.journal-sheet .header-button.close:hover {
+    text-shadow: none;
+}
+
+.journal-sheet .header-button.close:hover::before {
+    background:url(../ui/buttons/close_icon_hover.png);
+    background-size: 100% 100%;
+}
+
+.journal-sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #74645526;
+}
+
+.journal-sheet ::-webkit-scrollbar-track {
+    background: transparent!important;
+}
+
+.journal-sheet .window-resizable-handle {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--main-text-light-color)
+}
+
+.journal-sheet .window-resizable-handle::before {
+    position: absolute;
+    content: " ";
+    background: url(../ui/buttons/players_btn.png);
+    background-size: 100% 100%;
+    width: 120%;
+    height: 120%;
+    top: 0%;
+    right: -10%;
+}
+
+.journal-sheet button {
+    width: 158px;
+    height: 43px;
+    position: relative;
+
+    color: var(--main-text-light-color);
+    font-weight: 600;
+    font-family: 'Kurale', serif;
+
+    background: url(../ui/buttons/btn.png) center center no-repeat;
+    background-size: 95% 95%;
+    border: none;
+}
+
+.journal-sheet button:focus {
+    box-shadow: none;
+}
+
+.journal-sheet button:hover {
+    background: url(../ui/buttons/btn-dnd5e-card_hover.png) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.journal-sheet button:active {
+    background: url(../ui/buttons/btn.png) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.journal-sheet.image-popout .window-content {
+    margin-top: 30px;
+    background: none;
+}
+
 /* ==== compatibility ==== */
 
 /* Illandril's Hotbar Uses */
 .illandril-hotbar-uses--hasUses .illandril-hotbar-uses--counter {
     z-index: 10;
+}
+
+/* D&D 5th Edition PHB Journal Styling for Foundry VTT */
+/* https://github.com/Daxiongmao87/foundry-vtt-5e-phb-journal-styling */
+.journal-sheet .editor-content {
+    font-size: .365cm !important;
+    padding: 0!important;
+    background: transparent;
+}
+
+.journal-sheet .editor-content blockquote {
+    margin: 10px;
 }

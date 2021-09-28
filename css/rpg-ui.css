@@ -9,6 +9,10 @@
     left: 22px;
 }
 
+body.compact-mode #logo {
+    display: none;
+}
+
 .hide {
     display: none;
     display: none;
@@ -313,8 +317,7 @@ body.compact-mode > ol.app.control-tools {
 }
 
 #controls li[data-control="combat-carousel"] img {
-    position: relative;
-    left: 4px;
+    opacity: 0;
 }
 
 #controls li[data-control="combat-carousel"]::after {

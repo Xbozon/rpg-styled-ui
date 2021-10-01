@@ -1275,3 +1275,51 @@ button#roll-hd:hover::before {
 .journal-sheet .editor-content blockquote {
     margin: 10px;
 }
+
+/* Damage Log */
+/* https://github.com/cs96and/FoundryVTT-damage-log */
+
+nav.damage-log-nav .item.active {
+    border: none;
+    box-shadow: none;
+}
+
+nav.damage-log-nav.tabs {
+    position: relative;
+    box-shadow: none;
+    border: none;
+}
+
+nav.damage-log-nav.tabs::before {
+    content: " ";
+    position: absolute;
+    width: 317px;
+    z-index: 10;
+    left: -2px;
+    height: 7px;
+    bottom: -7px;
+    background: url(../ui/frames/brown_line.png);
+    background-size: 317px 7px;
+}
+
+nav.damage-log-nav .item {
+    position: relative;
+}
+
+nav.damage-log-nav .item:before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/frames/red_line.png);
+    width: 70%;
+    height: 3px;
+    bottom: -3px;
+    z-index: 10;
+    left: 15%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+nav.damage-log-nav .item.active:before {
+    opacity: 1;
+}

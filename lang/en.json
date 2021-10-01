@@ -8,5 +8,8 @@
     "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Reduces the size of the left menu and removes the logo",
 
     "RPGUI.SETTINGS.STANDARD_LOGO": "Standard logo",
-    "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Returns the standard logo instead of the text logo"
+    "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Returns the standard logo instead of the text logo",
+
+    "RPGUI.SETTINGS.DISABLE_STYLES": "Disable RPG styled UI",
+    "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "This is a local setting, with which any player can turn off styles"
 }

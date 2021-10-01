@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import 'carousel.css';
+@import 'text-editor.css';
 
 :root {
     --main-text-light-color: #98968a;
@@ -14,7 +16,6 @@ body.compact-mode #logo {
 }
 
 .hide {
-    display: none;
     display: none;
 }
 

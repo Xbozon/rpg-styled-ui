@@ -1023,11 +1023,20 @@ button#roll-hd:hover::before {
 
 #players h3 {
     position: relative;
-    font-size: 18px;
-    color: #fff;
+    color: #e9e9da;
     border-bottom: none;
+    font-size: 18px;
     font-family: 'Kurale', serif;
     font-weight: 800;
+
+    text-shadow: 2px 0 0 var(--border-color),
+                -2px 0 0 var(--border-color),
+                0 2px 0 var(--border-color),
+                0 -2px 0 var(--border-color),
+                1px 1px var(--border-color),
+                -1px -1px 0 var(--border-color),
+                1px -1px 0 var(--border-color),
+                -1px 1px 0 var(--border-color);
 }
 
 #players h3::before {
@@ -1057,6 +1066,17 @@ button#roll-hd:hover::before {
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
+}
+
+#players ol li.player {
+    text-shadow: 2px 0 0 var(--border-color),
+    -2px 0 0 var(--border-color),
+    0 2px 0 var(--border-color),
+    0 -2px 0 var(--border-color),
+    1px 1px var(--border-color),
+    -1px -1px 0 var(--border-color),
+    1px -1px 0 var(--border-color),
+    -1px 1px 0 var(--border-color);
 }
 
 /* ==== jornal ==== */
@@ -1278,19 +1298,22 @@ button#roll-hd:hover::before {
 
 /* Damage Log */
 /* https://github.com/cs96and/FoundryVTT-damage-log */
+/* Tabbed Chatlog */
+/* https://github.com/cswendrowski/FoundryVTT-Tabbed-Chatlog */
 
-nav.damage-log-nav .item.active {
-    border: none;
-    box-shadow: none;
-}
-
-nav.damage-log-nav.tabs {
+nav.damage-log-nav.tabs,
+.tabbedchatlog.tabs {
     position: relative;
     box-shadow: none;
     border: none;
 }
 
-nav.damage-log-nav.tabs::before {
+.tabbedchatlog.tabs {
+    padding: 0 10px;
+}
+
+nav.damage-log-nav.tabs::before,
+.tabbedchatlog.tabs::before {
     content: " ";
     position: absolute;
     width: 317px;
@@ -1302,11 +1325,19 @@ nav.damage-log-nav.tabs::before {
     background-size: 317px 7px;
 }
 
-nav.damage-log-nav .item {
+nav.damage-log-nav .item,
+.tabbedchatlog .item {
     position: relative;
 }
 
-nav.damage-log-nav .item:before {
+nav.damage-log-nav .item.active,
+.tabbedchatlog .item.active {
+    border: none;
+    box-shadow: none;
+}
+
+nav.damage-log-nav .item:before,
+.tabbedchatlog .item:before {
     position: absolute;
     content: ' ';
     background: url(../ui/frames/red_line.png);
@@ -1320,6 +1351,24 @@ nav.damage-log-nav .item:before {
     transition-duration: 0.3s;
 }
 
-nav.damage-log-nav .item.active:before {
+nav.damage-log-nav .item.active:before,
+.tabbedchatlog .item.active:before {
     opacity: 1;
+}
+
+/* Dice Tray */
+/* https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator */
+
+.dice-tray {
+    position: relative;
+    top: -25px;
+    padding: 0 4px;
+}
+
+.dice-tray button {
+    box-shadow: 0 0 6px inset #3f342b;
+}
+
+.dice-calculator > button, .dice-calculator .dice-calculator--button {
+    color: var(--main-text-light-color)
 }

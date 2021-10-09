@@ -170,6 +170,16 @@ body.compact-mode #logo {
     left: -10px;
     top: -15%;
     z-index: -1;
+
+    filter: brightness(1.4);
+}
+
+#chat-log .message.whisper::before {
+    filter: brightness(1.0);
+}
+
+#chat-log .message.blind::before {
+    filter: brightness(1.0) hue-rotate(180deg);
 }
 
 #chat-log .message .message-header {

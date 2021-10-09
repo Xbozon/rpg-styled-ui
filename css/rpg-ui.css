@@ -203,6 +203,13 @@ body.compact-mode #logo {
     background: #181413;
 }
 
+a.entity-link, a.inline-roll {
+    background: #61180e;
+    padding: 0px 3px;
+    border: 2px solid #9a2619;
+    border-radius: 6px;
+}
+
 .dnd5e.chat-card {
     padding-bottom: 15px;
 }

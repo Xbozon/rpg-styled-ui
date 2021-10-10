@@ -87,6 +87,14 @@ body.compact-mode #logo {
     background-size: 350px 86px;
 }
 
+#sidebar a.entity-link,
+#sidebar a.inline-roll {
+    background: #61180e;
+    padding: 0px 3px;
+    border: 2px solid #9a2619;
+    border-radius: 6px;
+}
+
 #sidebar-tabs {
     box-shadow: none;
     border-bottom: none;
@@ -201,13 +209,6 @@ body.compact-mode #logo {
 
 ::-webkit-scrollbar-track {
     background: #181413;
-}
-
-#chat-log a.entity-link, a.inline-roll {
-    background: #61180e;
-    padding: 0px 3px;
-    border: 2px solid #9a2619;
-    border-radius: 6px;
 }
 
 .dnd5e.chat-card {

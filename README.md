@@ -22,6 +22,10 @@ Special thanks:
 ## Update policy
 I don't have a lot of free time, but I will try to maintain this module as much as possible.
 
+## Thanks for the translation
+
+- French ([Sasmira](https://gitlab.com/sasmira))
+
 ## Planned
 
 - Replace the standard buttons on the tabs

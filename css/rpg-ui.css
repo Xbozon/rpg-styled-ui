@@ -527,7 +527,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     font-family: 'Kurale', serif;
     font-weight: 600;
     color: #837360;
-    border: none;
+    border: none!important;
     position: relative;
     box-shadow: none;
 }

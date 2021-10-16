@@ -1,0 +1,16 @@
+{
+	"I18N.LANGUAGE": "Français",
+	"I18N.MAINTAINERS": ["Sasmira"],
+
+    "RPGUI.SETTINGS.NAVIGATION": "Navigation Horizontale",
+    "RPGUI.SETTINGS.NAVIGATION_HINT": "Utilisez ce bouton si vous n'utilisez pas Combat Carousel.",
+
+    "RPGUI.SETTINGS.COMPACT_MODE": "Mode Compact",
+    "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Réduit la taille du menu de gauche et supprime le logo.",
+
+    "RPGUI.SETTINGS.STANDARD_LOGO": "Logo Standard",
+    "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Remet le logo Foundry au lieu du logo texte",
+
+    "RPGUI.SETTINGS.DISABLE_STYLES": "Désactiver Pathfinder Ui",
+    "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "Il s'agit d'un paramètre local, avec lequel tout joueur peut désactiver les styles"
+}

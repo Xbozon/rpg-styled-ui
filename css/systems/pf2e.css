@@ -1,0 +1,29 @@
+.system-pf2e .sheet.actor:not(.loot-sheet-npc),
+.system-pf2e .sheet.item {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+
+.system-pf2e .sheet.actor .window-header,
+.system-pf2e .sheet.item .window-header {
+    border: none;
+    color: var(--main-text-light-color);
+}
+
+.system-pf2e .sheet.actor:not(.loot-sheet-npc) .window-header::after,
+.system-pf2e .sheet.item .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../../ui/frames/header.webp);
+    background-size: 100% 45px;
+}

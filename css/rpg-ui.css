@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 @import 'carousel.css';
 @import 'text-editor.css';
+@import "systems/pf2e.css";
 
 :root {
     --main-text-light-color: #98968a;
     --border-color: #372d25;
+}
+
+#pause img {
+    box-sizing: border-box;
+    width: 128px;
+    height: 128px;
+    padding-left: 128px;
+
+    background-image: url("../ui/other/paused.webp");
+    animation: rotation 20s infinite linear;
 }
 
 #logo {
@@ -38,7 +49,7 @@ body.compact-mode #logo {
     width: 128%;
     height: 130%;
     top: -15%;
-    background: url(../ui/buttons/controls_btn.png);
+    background: url(../ui/buttons/controls_btn.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
@@ -55,14 +66,14 @@ body.compact-mode #logo {
 }
 
 #sidebar.app.collapsed {
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 
 #sidebar.app.collapsed::before {
-    width: 40px!important;
-    left: -4px!important;
-    height: 110%!important;
+    width: 40px !important;
+    left: -4px !important;
+    height: 110% !important;
 }
 
 #sidebar::before {
@@ -72,7 +83,7 @@ body.compact-mode #logo {
     height: 100%;
     width: 100%;
     left: 0;
-    background: url(../ui/frames/chat.png);
+    background: url(../ui/frames/chat.webp);
     background-size: 350px 100%;
 }
 
@@ -83,7 +94,7 @@ body.compact-mode #logo {
     width: 350px;
     height: 86px;
     left: 0;
-    background: url(../ui/frames/header.png);
+    background: url(../ui/frames/header.webp);
     background-size: 350px 86px;
 }
 
@@ -111,7 +122,7 @@ body.compact-mode #logo {
 #sidebar-tabs > .item:before {
     position: absolute;
     content: ' ';
-    background: url(../ui/frames/red_line.png);
+    background: url(../ui/frames/red_line.webp);
     width: 100%;
     height: 3px;
     bottom: -3px;
@@ -146,7 +157,7 @@ body.compact-mode #logo {
 #chat-controls::before {
     position: relative;
     content: ' ';
-    background: url(../ui/frames/brown_line.png);
+    background: url(../ui/frames/brown_line.webp);
     background-size: 350px 7px;
     left: -3px;
     width: 350px;
@@ -171,7 +182,7 @@ body.compact-mode #logo {
     content: " ";
     position: absolute;
     background-repeat: no-repeat;
-    background: url(../ui/frames/chat-texture-light.png) !important;
+    background: url(../ui/frames/chat-texture-light.webp) !important;
     background-size: 95% 110% !important;
     width: calc(100% + 35px);
     height: calc(100% + 15%);
@@ -197,7 +208,7 @@ body.compact-mode #logo {
 }
 
 .chat-message .message-content {
-    color: var(--main-text-light-color) !important;/*8e8073*/
+    color: var(--main-text-light-color) !important; /*8e8073*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -218,7 +229,7 @@ body.compact-mode #logo {
 .dnd5e.chat-card::before {
     position: relative;
     content: ' ';
-    background: url(../ui/frames/brown_line.png);
+    background: url(../ui/frames/brown_line.webp);
     background-size: 350px 7px;
     left: -3px;
     width: 350px;
@@ -260,14 +271,14 @@ body.compact-mode #logo {
     width: 100%;
     height: 130%;
     top: -15%;
-    background: url(../ui/buttons/btn-dnd5e-card.png);
+    background: url(../ui/buttons/btn-dnd5e-card.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: 0;
 }
 
 .dnd5e.chat-card .card-buttons button:hover::before {
-    background: url(../ui/buttons/btn-dnd5e-card_hover.png);
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp);
     background-size: 100% 100%;
 }
 
@@ -287,7 +298,7 @@ body.compact-mode #logo {
 }
 
 body.compact-mode > ol.app.control-tools {
-    top: -6px!important;
+    top: -6px !important;
 }
 
 #controls .control-tools {
@@ -325,7 +336,7 @@ body.compact-mode > ol.app.control-tools {
     height: 53px;
     left: -12px;
     top: -12px;
-    background: url(../ui/buttons/controls_btn.png);
+    background: url(../ui/buttons/controls_btn.webp);
     background-size: 100% 100%;
     z-index: -2;
     opacity: 0.88;
@@ -341,7 +352,7 @@ body.compact-mode > ol.app.control-tools {
 }
 
 #controls .scene-control.active > i::after {
-    background: url(../ui/buttons/controls_btn_accent.png);
+    background: url(../ui/buttons/controls_btn_accent.webp);
     background-size: 100% 100%;
 }
 
@@ -363,14 +374,14 @@ body.compact-mode #controls .scene-control > i::after {
     height: 53px;
     left: -3px;
     top: -2px;
-    background: url(../ui/buttons/controls_btn.png);
+    background: url(../ui/buttons/controls_btn.webp);
     background-size: 100% 100%;
     z-index: -2;
     opacity: 0.88;
 }
 
 #controls .control-tool.active::after {
-    background: url(../ui/buttons/controls_btn_accent.png);
+    background: url(../ui/buttons/controls_btn_accent.webp);
     background-size: 100% 100%;
 }
 
@@ -384,6 +395,7 @@ body.compact-mode #controls .control-tool::after {
 #controls .scene-control i.fa-lightbulb::after {
     left: -16px;
 }
+
 body.compact-mode #controls .scene-control i.fa-lightbulb::after {
     left: -15px;
 }
@@ -391,6 +403,7 @@ body.compact-mode #controls .scene-control i.fa-lightbulb::after {
 #controls .scene-control i.fa-bookmark::after {
     left: -14px;
 }
+
 body.compact-mode #controls .scene-control i.fa-bookmark::after {
     left: -13px;
 }
@@ -405,7 +418,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
 
 #hotbar {
     max-width: calc(100% - 310px);
-    left: calc(50vw - 290px - 150px);
+    left: calc(50vw - 290px - 40px);
     width: 658px;
     height: 52px;
 }
@@ -418,7 +431,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     bottom: -10px;
     left: -106px;
     height: 85px;
-    background-image: url(../ui/frames/action_bar.png);
+    background-image: url(../ui/frames/action_bar.webp);
     background-size: 870px 85px;
     background-repeat: no-repeat;
 }
@@ -431,7 +444,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
 }
 
 #hotbar #action-bar .macro::before {
-    background-image: url(../ui/frames/macro.png);
+    background-image: url(../ui/frames/macro.webp);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -444,7 +457,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
 }
 
 #hotbar #action-bar .macro:hover::before {
-    background-image: url(../ui/frames/macro_hover.png);
+    background-image: url(../ui/frames/macro_hover.webp);
 }
 
 #hotbar .macro .macro-key {
@@ -473,9 +486,10 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
 
 /* DIALOG */
 
-.app.window-app.dialog {
+.app.window-app.dialog,
+.app.window-app.folder-edit {
     background: rgba(6, 4, 3, 0.92);
-    border-image-source: url(../ui/frames/input_border.png);
+    border-image-source: url(../ui/frames/input_border.webp);
     border-image-slice: 5 20 20 20 fill;
     border-image-repeat: repeat repeat;
     border-image-width: auto;
@@ -483,17 +497,20 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     border-radius: 0;
 }
 
-.window-app.dialog .window-content {
+.window-app.dialog .window-content,
+.window-app.folder-edit .window-content {
     color: #8f8a80;
     background: none;
 }
 
-.window-app.dialog .window-header {
+.window-app.dialog .window-header,
+.window-app.folder-edit .window-header {
     border: none;
     color: var(--main-text-light-color);
 }
 
-.window-app.dialog .window-header::after {
+.window-app.dialog .window-header::after,
+.window-app.folder-edit .window-header::after {
     position: absolute;
     z-index: -1;
     content: " ";
@@ -501,11 +518,12 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     height: 45px;
     left: 0;
     top: -7px;
-    background: url(../ui/frames/header.png);
+    background: url(../ui/frames/header.webp);
     background-size: 100% 45px;
 }
 
-.dialog .dialog-buttons button {
+.dialog button,
+.folder-edit button {
     font-family: 'Kurale', serif;
     font-weight: 600;
     color: #837360;
@@ -514,29 +532,32 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     box-shadow: none;
 }
 
-.dialog form .form-group label {
+.folder-edit form .form-group label,
+.folder-edit form .form-group label {
     color: var(--main-text-light-color)
 }
 
-.dialog .dialog-buttons button::before {
+.dialog button::before,
+.folder-edit button::before {
     position: absolute;
     content: " ";
     width: 100%;
     height: 110%;
     top: 0%;
-    background: url(../ui/buttons/btn-dnd5e-card.png);
+    background: url(../ui/buttons/btn-dnd5e-card.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: 0;
 }
 
-.dialog .dialog-buttons button::after {
+.dialog button::after,
+.folder-edit button::after {
     position: absolute;
     content: " ";
     width: 100%;
     height: 130%;
     top: -15%;
-    background: url(../ui/buttons/btn-accept.png);
+    background: url(../ui/buttons/btn-accept.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: 0;
@@ -545,33 +566,44 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
     transition: opacity 0.2s ease-in-out;
 }
 
-.dialog .dialog-buttons button.default {
+.dialog .dialog-buttons {
     border: none;
 }
 
-.dialog .dialog-buttons button.default::before {
-    background: url(../ui/buttons/btn-dnd5e-card_hover.png);
+.dialog button.default::before,
+.folder-edit button.default::before {
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp);
     background-size: 100% 100%;
 }
 
-.dialog .dialog-buttons button:hover::after {
+.dialog button:hover::after,
+.folder-edit button:hover::after {
     opacity: 1;
 }
 
-.dialog input {
+.dialog input,
+.folder-edit input {
     border: none;
     color: #ddc5b9;
     background: #ffffff14;
 }
 
-.dialog input:focus {
+.dialog input:focus,
+.folder-edit input:focus {
     box-shadow: none;
     outline: 2px solid #782e22;
 }
 
-.dialog select {
+.dialog select,
+.folder-edit select {
     border: 0;
     background: rgba(131, 115, 96, 0.56);
+}
+
+.folder-edit input[type="color"][data-edit][data-edit] {
+    border: none;
+    color: #ddc5b9;
+    background: #ffffff14;
 }
 
 /* ACTOR AND ITEM */
@@ -581,7 +613,7 @@ button#roll-hd {
     border: none;
 }
 
-button#roll-hd:hover,button#roll-hd:active{
+button#roll-hd:hover, button#roll-hd:active {
     box-shadow: none;
 }
 
@@ -592,19 +624,20 @@ button#roll-hd::before {
     height: 140%;
     top: -20%;
     left: 0%;
-    background: url(../ui/buttons/btn-dnd5e-card.png);
+    background: url(../ui/buttons/btn-dnd5e-card.webp);
     background-size: 100% 100%;
     z-index: -1;
 }
+
 button#roll-hd:hover::before {
-    background: url(../ui/buttons/btn-dnd5e-card_hover.png);
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp);
     background-size: 100% 100%;
 }
 
 .dnd5e.sheet.actor:not(.loot-sheet-npc),
 .dnd5e.sheet.item {
     background: rgba(6, 4, 3, 0.92);
-    border-image-source: url(../ui/frames/input_border.png);
+    border-image-source: url(../ui/frames/input_border.webp);
     border-image-slice: 5 20 20 20 fill;
     border-image-repeat: repeat repeat;
     border-image-width: auto;
@@ -627,33 +660,33 @@ button#roll-hd:hover::before {
     height: 45px;
     left: 0;
     top: -9px;
-    background: url(../ui/frames/header.png);
+    background: url(../ui/frames/header.webp);
     background-size: 100% 45px;
 }
 
 .dnd5e.sheet.actor:not(.loot-sheet-npc) .window-content,
-.dnd5e.sheet.item .window-content{
+.dnd5e.sheet.item .window-content {
     background: none;
     color: var(--main-text-light-color);
 }
 
 .dnd5e.sheet .sheet-header {
-    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
     border-bottom: 5px groove #eeede0;
 }
 
 .dnd5e.sheet .sheet-header img.profile {
-    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
 }
 
 .dnd5e.sheet .sheet-navigation {
-    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
     border-bottom: 5px groove #eeede0;
 }
 
 .dnd5e.sheet.actor .sheet-header .summary,
 .dnd5e.sheet.item .sheet-header .summary {
-    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
     border-bottom: 5px groove #eeede0;
     border-top: 5px groove #eeede0;
     height: 34px;
@@ -678,7 +711,7 @@ button#roll-hd:hover::before {
 }
 
 .dnd5e.sheet.actor.character .sheet-header .xpbar .bar {
-    background: url("../ui/other/xp_bar.png") center right;
+    background: url("../ui/other/xp_bar.webp") center right;
     height: 10px;
     border: none;
     margin: 0;
@@ -740,7 +773,7 @@ button#roll-hd:hover::before {
     height: 50%;
     left: -15%;
     bottom: -17px;
-    background: url(../ui/buttons/active.png);
+    background: url(../ui/buttons/active.webp);
     background-size: 100% auto;
     background-repeat: no-repeat;
     z-index: 1;
@@ -788,7 +821,7 @@ button#roll-hd:hover::before {
     height: 140%;
     top: -15%;
     left: -7%;
-    background: url(../ui/buttons/btn-dnd5e-card.png);
+    background: url(../ui/buttons/btn-dnd5e-card.webp);
     background-size: 100% 100%;
     z-index: -1;
 }
@@ -799,7 +832,7 @@ button#roll-hd:hover::before {
     width: 100%;
     height: 130%;
     top: -15%;
-    background: url(../ui/buttons/btn-accept.png);
+    background: url(../ui/buttons/btn-accept.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: 0;
@@ -893,7 +926,7 @@ button#roll-hd:hover::before {
 
 .dnd5e.sheet .items-list .items-header {
     border: 2px groove var(--border-color);
-    background: url(../ui/other/items-header.png);
+    background: url(../ui/other/items-header.webp);
     background-size: 100%;
 }
 
@@ -979,7 +1012,7 @@ button#roll-hd:hover::before {
     height: 50px;
     left: -8px;
     top: -9px;
-    background: url(../ui/buttons/controls_btn.png);
+    background: url(../ui/buttons/controls_btn.webp);
     background-size: 100% 100%;
     z-index: -2;
     opacity: 0.88;
@@ -998,7 +1031,7 @@ button#roll-hd:hover::before {
     width: 120%;
     height: 130%;
     top: -15%;
-    background: url(../ui/buttons/controls_btn.png);
+    background: url(../ui/buttons/controls_btn.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
@@ -1032,7 +1065,7 @@ button#roll-hd:hover::before {
     width: 34px;
     height: 32px;
     top: -7px;
-    background: url(../ui/buttons/players_btn.png);
+    background: url(../ui/buttons/players_btn.webp);
     background-size: 100% 100%;
     z-index: -1;
     opacity: 0.6;
@@ -1048,13 +1081,13 @@ button#roll-hd:hover::before {
     font-weight: 800;
 
     text-shadow: 2px 0 0 var(--border-color),
-                -2px 0 0 var(--border-color),
-                0 2px 0 var(--border-color),
-                0 -2px 0 var(--border-color),
-                1px 1px var(--border-color),
-                -1px -1px 0 var(--border-color),
-                1px -1px 0 var(--border-color),
-                -1px 1px 0 var(--border-color);
+    -2px 0 0 var(--border-color),
+    0 2px 0 var(--border-color),
+    0 -2px 0 var(--border-color),
+    1px 1px var(--border-color),
+    -1px -1px 0 var(--border-color),
+    1px -1px 0 var(--border-color),
+    -1px 1px 0 var(--border-color);
 }
 
 #players h3::before {
@@ -1063,7 +1096,7 @@ button#roll-hd:hover::before {
     width: 120%;
     height: 130%;
     top: -15%;
-    background: url(../ui/frames/players_header.png);
+    background: url(../ui/frames/players_header.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
@@ -1075,12 +1108,12 @@ button#roll-hd:hover::before {
     font-weight: 400;
 }
 
-#players ol::before{
+#players ol::before {
     position: absolute;
     content: " ";
     width: 120%;
     height: 130%;
-    background: url(../ui/frames/players_bg_dark.png);
+    background: url(../ui/frames/players_bg_dark.webp);
     background-size: 100% 100%;
     z-index: -1;
     left: -10%;
@@ -1097,7 +1130,7 @@ button#roll-hd:hover::before {
     -1px 1px 0 var(--border-color);
 }
 
-/* ==== jornal ==== */
+/* ==== journal ==== */
 .app.journal-sheet {
     font-family: 'Kurale', serif;
     padding: 10px 25px;
@@ -1107,31 +1140,31 @@ button#roll-hd:hover::before {
     background: none;
 }
 
-.app.journal-sheet::before{
+.app.journal-sheet::before {
     position: absolute;
     content: " ";
     width: 106%;
     height: 105%;
     top: -1%;
     left: -3%;
-    background:url(../ui/other/paper_texture.jpg);
+    background: url(../ui/other/paper_texture.webp);
     background-size: cover;
     z-index: -1;
 
-    -webkit-mask-image: url(../ui/other/journal_mask.png);
+    -webkit-mask-image: url(../ui/other/journal_mask.webp);
     -webkit-mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 }
 
-.app.journal-sheet::after{
+.app.journal-sheet::after {
     position: absolute;
     content: " ";
     width: 106%;
     height: 105%;
     top: -1%;
     left: -3%;
-    background:url(../ui/other/journal_background.png);
+    background: url(../ui/other/journal_background.webp);
     background-size: 100% 100%;
     opacity: 0.90;
     z-index: -2;
@@ -1166,7 +1199,7 @@ button#roll-hd:hover::before {
     left: -6px;
     top: 12px;
     content: " ";
-    background: url(../ui/other/journal_right_top_corner.png);
+    background: url(../ui/other/journal_right_top_corner.webp);
     background-size: 100% 100%;
     opacity: 0.09;
     z-index: -1;
@@ -1191,7 +1224,7 @@ button#roll-hd:hover::before {
     color: rgb(93, 24, 13);
     font-size: .705cm;
     font-weight: bold;
-    border-image: url(../ui/frames/brown_line.png) 25 25 round;
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
     border-bottom: 5px groove #eeede0;
 }
 
@@ -1218,7 +1251,7 @@ button#roll-hd:hover::before {
     top: 4px;
     position: absolute;
     content: " ";
-    background:url(../ui/buttons/close_icon.png);
+    background: url(../ui/buttons/close_icon.webp);
     background-size: 100% 100%;
 }
 
@@ -1227,7 +1260,7 @@ button#roll-hd:hover::before {
 }
 
 .journal-sheet .header-button.close:hover::before {
-    background:url(../ui/buttons/close_icon_hover.png);
+    background: url(../ui/buttons/close_icon_hover.webp);
     background-size: 100% 100%;
 }
 
@@ -1239,7 +1272,7 @@ button#roll-hd:hover::before {
 }
 
 .journal-sheet ::-webkit-scrollbar-track {
-    background: transparent!important;
+    background: transparent !important;
 }
 
 .journal-sheet .window-resizable-handle {
@@ -1252,7 +1285,7 @@ button#roll-hd:hover::before {
 .journal-sheet .window-resizable-handle::before {
     position: absolute;
     content: " ";
-    background: url(../ui/buttons/players_btn.png);
+    background: url(../ui/buttons/players_btn.webp);
     background-size: 100% 100%;
     width: 120%;
     height: 120%;
@@ -1269,7 +1302,7 @@ button#roll-hd:hover::before {
     font-weight: 600;
     font-family: 'Kurale', serif;
 
-    background: url(../ui/buttons/btn.png) center center no-repeat;
+    background: url(../ui/buttons/btn.webp) center center no-repeat;
     background-size: 95% 95%;
     border: none;
 }
@@ -1279,13 +1312,13 @@ button#roll-hd:hover::before {
 }
 
 .journal-sheet button:hover {
-    background: url(../ui/buttons/btn-dnd5e-card_hover.png) center center no-repeat;
+    background: url(../ui/buttons/btn-dnd5e-card_hover.webp) center center no-repeat;
     background-size: 100% 100%;
     box-shadow: none;
 }
 
 .journal-sheet button:active {
-    background: url(../ui/buttons/btn.png) center center no-repeat;
+    background: url(../ui/buttons/btn.webp) center center no-repeat;
     background-size: 100% 100%;
     box-shadow: none;
 }
@@ -1293,6 +1326,28 @@ button#roll-hd:hover::before {
 .journal-sheet.image-popout .window-content {
     margin-top: 30px;
     background: none;
+}
+
+.journal-sheet.minimized {
+    padding: 1px 0px;
+}
+
+.journal-sheet.minimized .window-header .window-title {
+    opacity: 100;
+    color: rgb(93, 24, 13);
+    font-size: .505cm;
+    font-weight: bold;
+}
+
+.app.journal-sheet.minimized::before {
+    -webkit-mask-image: none;
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+    box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px
 }
 
 /* ==== compatibility ==== */
@@ -1306,7 +1361,7 @@ button#roll-hd:hover::before {
 /* https://github.com/Daxiongmao87/foundry-vtt-5e-phb-journal-styling */
 .journal-sheet .editor-content {
     font-size: .365cm !important;
-    padding: 0!important;
+    padding: 0 !important;
     background: transparent;
 }
 
@@ -1339,7 +1394,7 @@ nav.damage-log-nav.tabs::before,
     left: -2px;
     height: 7px;
     bottom: -7px;
-    background: url(../ui/frames/brown_line.png);
+    background: url(../ui/frames/brown_line.webp);
     background-size: 317px 7px;
 }
 
@@ -1358,7 +1413,7 @@ nav.damage-log-nav .item:before,
 .tabbedchatlog .item:before {
     position: absolute;
     content: ' ';
-    background: url(../ui/frames/red_line.png);
+    background: url(../ui/frames/red_line.webp);
     width: 70%;
     height: 3px;
     bottom: -3px;

@@ -27,3 +27,28 @@
     background: url(../../ui/frames/header.webp);
     background-size: 100% 45px;
 }
+
+.system-pf2e .window-app.dialog .window-content,
+.system-pf2e .window-app.folder-edit .window-content {
+    background: url(/ui/parchment.jpg) repeat;
+    color: #191813;
+}
+
+.pf2e.chat-card .card-header,
+.pf2e.chat-card .card-footer,
+.pf2e.chat-card .card-footer span {
+    border-color: var(--border-color);
+}
+
+.system-pf2e .effect-panel {
+    right: 360px;
+    top: 22px;
+}
+
+.effect-panel div[data-item-id] {
+    position: relative;
+    border-radius: 50%;
+
+    border: 2px solid var(--border-color);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px
+}

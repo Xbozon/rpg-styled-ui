@@ -1445,3 +1445,12 @@ nav.damage-log-nav .item.active:before,
 .dice-calculator > button, .dice-calculator .dice-calculator--button {
     color: var(--main-text-light-color)
 }
+
+/* Dynamic Active Effects */
+/* https://gitlab.com/tposney/dae */
+
+.app.sw5e .dnd5e.sheet.actor:not(.loot-sheet-npc):not(.sw5e),
+.app.sw5e .dnd5e.sheet.item:not(.sw5e) {
+    background: none;
+    border: none;
+}

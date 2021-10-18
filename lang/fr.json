@@ -11,6 +11,6 @@
     "RPGUI.SETTINGS.STANDARD_LOGO": "Logo Standard",
     "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Remet le logo Foundry au lieu du logo texte",
 
-    "RPGUI.SETTINGS.DISABLE_STYLES": "Désactiver Pathfinder Ui",
+    "RPGUI.SETTINGS.DISABLE_STYLES": "Désactiver RPG Styled Ui",
     "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "Il s'agit d'un paramètre local, avec lequel tout joueur peut désactiver les styles"
 }

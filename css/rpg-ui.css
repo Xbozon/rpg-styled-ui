@@ -847,6 +847,16 @@ button#roll-hd:hover::before {
     background: #ffffff14;
 }
 
+.dnd5e.sheet.actor.character .inventory .item-controls .item-toggle, 
+.dnd5e.sheet.actor.character .spellbook .item-controls .item-toggle {
+    color: #4b4a44;
+}
+
+.dnd5e.sheet.actor.character .inventory .item-controls .item-toggle.active, 
+.dnd5e.sheet.actor.character .spellbook .item-controls .item-toggle.active {
+    color: #b5b3a4;
+}
+
 /* ATTRIBUTES */
 
 .dnd5e.sheet.actor .ability-scores {
@@ -932,6 +942,10 @@ button#roll-hd:hover::before {
 
 .dnd5e.sheet .items-list .item-name h3, .dnd5e.sheet .items-list .item-name h4 {
     color: var(--main-text-light-color)
+}
+
+.dnd5e.sheet .item-buttons button {
+	color: var(--main-text-light-color);
 }
 
 .dnd5e.sheet.actor .spell-slots, .dnd5e.sheet.actor .spell-comps {

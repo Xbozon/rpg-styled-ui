@@ -1468,3 +1468,10 @@ nav.damage-log-nav .item.active:before,
     background: none;
     border: none;
 }
+
+/* Better Rolls 5e */
+/* https://github.com/RedReign/FoundryVTT-BetterRolls5e */
+
+.red-dual .die-icon {
+    color: black;
+}

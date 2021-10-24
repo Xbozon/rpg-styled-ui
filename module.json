@@ -2,7 +2,7 @@
   "name": "rpg-styled-ui",
   "title": "RPG Styled UI for Foundry VTT",
   "description": "Theme for DnD5e.",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "minimumCoreVersion": "0.7.9",
   "compatibleCoreVersion": "1.0.0",
   "author": "Xbozon",
@@ -16,6 +16,11 @@
       "path": "lang/en.json"
     },
     {
+      "lang": "es",
+      "name": "Spanish (Español)",
+      "path": "lang/es.json"
+    },
+    {
       "lang": "fr",
       "name": "French (French)",
       "path": "lang/fr.json"
@@ -24,5 +29,5 @@
   "packs": [],
   "url": "https://github.com/Xbozon/rpg-styled-ui",
   "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
-  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v0.5.4.zip"
+  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v0.6.0.zip"
 }

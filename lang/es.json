@@ -1,0 +1,15 @@
+{
+    "I18N.MAINTAINERS": ["Regik"],
+
+    "RPGUI.SETTINGS.NAVIGATION": "Vuelve a poner la navegación en modo horizontal",
+    "RPGUI.SETTINGS.NAVIGATION_HINT": "Marca esta opción si no utiliza el módulo Combat Carousel",
+
+    "RPGUI.SETTINGS.COMPACT_MODE": "Modo compacto",
+    "RPGUI.SETTINGS.COMPACT_MODE_HINT": "Reduce el tamaño del menú de la izquierda y elimina el logotipo",
+
+    "RPGUI.SETTINGS.STANDARD_LOGO": "Logotipo estándar",
+    "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Devuelve el logotipo estándar en lugar del logotipo de texto",
+
+    "RPGUI.SETTINGS.DISABLE_STYLES": "Desactivar RPG styled UI",
+    "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "Esta es una configuración local, con la que cualquier jugador puede desactivar el estilo"
+}

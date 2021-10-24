@@ -28,8 +28,7 @@
     background-size: 100% 45px;
 }
 
-.system-pf2e .window-app.dialog .window-content,
-.system-pf2e .window-app.folder-edit .window-content {
+.system-pf2e .window-app.dice-checks.dialog .window-content{
     background: url(/ui/parchment.jpg) repeat;
     color: #191813;
 }
@@ -51,4 +50,37 @@
 
     border: 2px solid var(--border-color);
     box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px
+}
+
+[data-visibility=gm]:is(div,em,p,span,strong) {
+    background: transparent;
+    border: transparent;
+    background-size: 100% 100%;
+
+}
+.flavor-text div.degree-of-success .criticalSuccess{
+    color:rgb(55, 245, 55)
+}
+.flavor-text div.degree-of-success .success{
+    color:rgb(100, 216, 255)
+}
+.flavor-text div.degree-of-success .failure{
+    color:#ff7644
+}
+.flavor-text div.degree-of-success .criticalFailure{
+    color:rgb(247, 59, 59)
+}
+.dice-roll .dice-total {
+    flex: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.dice-roll .dice-total.success {
+    color: rgb(55, 245, 55);
+}
+.dice-roll .dice-total.failure {
+    color: rgb(247, 59, 59);
+}
+.dice-roll .dice-tooltip {
+    display: none;
 }

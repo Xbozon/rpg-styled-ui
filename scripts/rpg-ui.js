@@ -62,7 +62,9 @@ Hooks.on('init', () => {
 Hooks.on('getSceneNavigationContext', () => {
 	if (!game.settings.get('rpg-styled-ui', 'navigationVerticalToggle')) {
 		navigation = document.querySelector("nav.app > ol#scene-list");
-		navigation.classList.add("vertical")
+		if (navigation) {
+			navigation.classList.add("vertical")
+		}
 	}
 	if (game.settings.get('rpg-styled-ui', 'compactModeToggle')) {
 		addClassByQuerySelector("compact-mode", "body")

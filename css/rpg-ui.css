@@ -9,7 +9,7 @@
     --border-color: #372d25;
 }
 
-#pause img {
+#pause img[src*="icons/svg/clockwork.svg"]{
     box-sizing: border-box;
     width: 128px;
     height: 128px;

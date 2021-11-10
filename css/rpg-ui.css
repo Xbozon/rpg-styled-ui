@@ -81,9 +81,10 @@ body.compact-mode #logo {
     position: absolute;
     z-index: -1;
     content: " ";
-    height: 100%;
+    height: calc(100% + 10px);
     width: 100%;
     left: 0;
+    top: -10px;
     background: url(../ui/frames/chat.webp);
     background-size: 350px 100%;
 }
@@ -93,10 +94,10 @@ body.compact-mode #logo {
     z-index: -1;
     content: " ";
     width: 350px;
-    height: 86px;
+    height: 76px;
     left: 0;
     background: url(../ui/frames/header.webp);
-    background-size: 350px 86px;
+    background-size: 350px 76px;
 }
 
 #sidebar a.entity-link,
@@ -111,7 +112,7 @@ body.compact-mode #logo {
     box-shadow: none;
     border-bottom: none;
     padding: 0 10px;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 #sidebar-tabs > .item.active {
@@ -1060,4 +1061,79 @@ nav.damage-log-nav .item.active:before,
 
 .red-dual .die-icon {
     color: black;
+}
+
+/* Monk's TokenBar */
+/* https://github.com/ironmonk88/monks-tokenbar */
+
+:root{
+    --monks-border-color: #6b6155;
+}
+
+#chat .monks-tokenbar.chat-card .card-header {
+    padding: 3px 0;
+    border-top: 2px groove var(--monks-border-color);
+    border-bottom: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar.chat-card .card-footer {
+    border-top: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar.chat-card .card-footer span {
+    border-right: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar .sheet .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: #cfbda7;
+}
+
+#chat .monks-tokenbar.chat-card .card-header h3 {
+    color: var(--main-text-light-color)
+}
+
+#chat #requestsavingthrow .request-header {
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: #cfbda7;
+    background: black;
+    border: 2px solid var(--border-color);
+    padding: 1px 8px;
+}
+
+#chat .monks-tokenbar .sheet .items-list .item-name h3,
+#chat .monks-tokenbar .sheet .items-list .item-name h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: #cfbda7;
+    font-weight: bold;
+    padding: 1px 4px;
+
+    background: rgba(0, 0, 0, 0.43);
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#chat .monks-tokenbar .sheet .items-list .items-header {
+    height: 28px;
+    margin: 2px 0;
+    padding: 0;
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: nowrap;
+
+    background: rgba(0, 0, 0, 0.43);
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#chat .monks-tokenbar.chat-card .sheet .items-list {
+    padding: 0;
 }

@@ -75,6 +75,18 @@
     border-radius: 0;
 }
 
+.dnd5e.sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    background: #251f1d;
+}
+
+.dnd5e.sheet ::-webkit-scrollbar-track {
+    background: #181413;
+}
+
+
 .window-app.dnd5e.sheet.actor .window-header,
 .window-app.dnd5e.sheet.item .window-header {
     border: none;
@@ -351,7 +363,9 @@
     color: var(--main-text-light-color)
 }
 
-.dnd5e.sheet.item .details input[type="text"], .dnd5e.sheet.item .details input[type="number"], .dnd5e.sheet.item .details select {
+.dnd5e.sheet.item .details input[type="text"],
+.dnd5e.sheet.item .details input[type="number"],
+.dnd5e.sheet.item .details select {
     border: 1px solid #7a797145;
     background: #ffffff14;
 }
@@ -415,4 +429,12 @@
 
 .dnd5e.sheet.item .sheet-body .item-properties {
     border-right: 2px groove var(--border-color);
+}
+
+.dnd5e.sheet.item a.entity-link,
+.dnd5e.sheet.item a.inline-roll {
+    background: #40130c;
+    padding: 0px 3px;
+    border: 2px solid #671911;
+    border-radius: 6px;
 }

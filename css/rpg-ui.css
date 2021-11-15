@@ -213,14 +213,14 @@ body.compact-mode #logo {
     color: var(--main-text-light-color) !important; /*8e8073*/
 }
 
-::-webkit-scrollbar-thumb {
+#chat ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 0px;
     border: none;
     background: #251f1d;
 }
 
-::-webkit-scrollbar-track {
+#chat ::-webkit-scrollbar-track {
     background: #181413;
 }
 
@@ -929,6 +929,14 @@ button#roll-hd:hover::before {
     background: none;
 }
 
+.journal-sheet a.entity-link,
+.journal-sheet a.inline-roll {
+    background: #d3c3a7ab;
+    padding: 0px 3px;
+    border: 2px solid #2f271aab;
+    border-radius: 4px;
+}
+
 .journal-sheet.minimized {
     padding: 1px 0px;
 }
@@ -1136,4 +1144,10 @@ nav.damage-log-nav .item.active:before,
 
 #chat .monks-tokenbar.chat-card .sheet .items-list {
     padding: 0;
+}
+
+/* Midi Quality of Life Improvements */
+/* https://gitlab.com/tposney/midi-qol */
+.xmidi-qol-flex-container select {
+    color: var(--main-text-light-color)
 }

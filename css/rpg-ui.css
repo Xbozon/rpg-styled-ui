@@ -6,6 +6,7 @@
 
 :root {
     --main-text-light-color: #98968a;
+    --main-text-very-light-color: #d4d1c3;
     --border-color: #372d25;
 }
 
@@ -1150,4 +1151,10 @@ nav.damage-log-nav .item.active:before,
 /* https://gitlab.com/tposney/midi-qol */
 .xmidi-qol-flex-container select {
     color: var(--main-text-light-color)
+}
+
+/* Babele */
+/* ttps://gitlab.com/riccisi/foundryvtt-babele */
+#actor-translate-log {
+    color: var(--main-text-very-light-color)
 }

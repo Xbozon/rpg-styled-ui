@@ -34,15 +34,16 @@ body.compact-mode #logo {
 
 .new-logo {
     z-index: 6;
-    position: absolute;
-    left: 20px;
-    width: 100px;
-    top: 5px;
+    position: relative;
+    left: 22px;
+    width: 80px;
+    top: 10px;
     color: var(--main-text-light-color);
     font-family: 'Kurale', serif;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .new-logo::before {
@@ -59,9 +60,15 @@ body.compact-mode #logo {
 
 
 #sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    right: 0px;
+    top: 0px;
     overflow: visible;
     width: 350px;
-    padding: 0px 15px;
+    padding:0px 15px;
     background: none;
     box-shadow: none;
     border: none;
@@ -232,154 +239,204 @@ body.compact-mode #logo {
 
 /* CONTROLS */
 
-#controls {
-    top: 70px;
-}
-
-body.compact-mode > ol.app.control-tools {
-    top: -6px !important;
-}
-
-#controls .control-tools {
-    left: 60px;
-}
-
-#controls .scene-control, #controls .control-tool {
-    margin: 0 0 4px;
-}
-
-#controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {
-    color: #d6d3c1;
-}
-
-#controls .scene-control, #controls .control-tool {
-    border: none;
-    box-shadow: none;
+#controls ol .scene-control,
+#controls ol .control-tool {
     background: none;
-    color: #837360;
-    padding: 5px;
-}
-
-#controls .scene-control, #controls .control-tool {
-    margin: 0 0 4px;
-}
-
-#controls .scene-control i {
-    position: relative;
-}
-
-#controls .scene-control > i::after, #controls li[data-control="combat-carousel"]::after {
-    position: absolute;
-    content: " ";
-    width: 53px;
-    height: 53px;
-    left: -12px;
-    top: -12px;
-    background: url(../ui/buttons/controls_btn.webp);
-    background-size: 100% 100%;
-    z-index: -2;
-    opacity: 0.88;
-}
-
-#controls li[data-control="combat-carousel"] {
-    position: relative;
-}
-
-#controls li[data-control="combat-carousel"]::after {
-    left: 0px;
-    top: 0px;
-}
-
-#controls .scene-control.active > i::after {
-    background: url(../ui/buttons/controls_btn_accent.webp);
-    background-size: 100% 100%;
-}
-
-body.compact-mode #controls .scene-control > i::after {
-    width: 50px;
-    height: 50px;
-    left: -11px;
-    top: -12px;
-}
-
-#controls .control-tool {
-    position: relative;
-}
-
-#controls .control-tool::after {
-    position: absolute;
-    content: " ";
-    width: 53px;
-    height: 53px;
-    left: -3px;
-    top: -2px;
-    background: url(../ui/buttons/controls_btn.webp);
-    background-size: 100% 100%;
-    z-index: -2;
-    opacity: 0.88;
-}
-
-#controls .control-tool.active::after {
-    background: url(../ui/buttons/controls_btn_accent.webp);
-    background-size: 100% 100%;
-}
-
-body.compact-mode #controls .control-tool::after {
-    width: 50px;
-    height: 50px;
-    left: 0px;
-    top: -3px;
-}
-
-#controls .scene-control i.fa-lightbulb::after {
-    left: -16px;
-}
-
-body.compact-mode #controls .scene-control i.fa-lightbulb::after {
-    left: -15px;
-}
-
-#controls .scene-control i.fa-bookmark::after {
-    left: -14px;
-}
-
-body.compact-mode #controls .scene-control i.fa-bookmark::after {
-    left: -13px;
-}
-
-
-#controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {
     box-shadow: none;
     border: none;
+    color: #837360;
 }
+
+#controls ol .scene-control.active,
+#controls ol .control-tool.active,
+#controls ol .scene-control:hover,
+#controls ol .control-tool:hover {
+    border: none;
+    box-shadow: none;
+}
+
+#controls ol .scene-control.active:before,
+#controls ol .control-tool.active:before,
+#controls ol .scene-control:hover:before,
+#controls ol .control-tool:hover:before {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    background-size: 100% 100%;
+}
+
+#controls ol > li {
+    position: relative;
+}
+
+#controls ol > li.scene-control:before,
+#controls ol > li.control-tool:before
+{
+    position: absolute;
+    left: -9%;
+    top: -15%;
+
+    content: " ";
+    width: 130%;
+    height: 130%;
+
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -2;
+    opacity: 0.88;
+}
+
+/*#controls {*/
+/*    top: 70px;*/
+/*}*/
+
+/*body.compact-mode > ol.app.control-tools {*/
+/*    top: -6px !important;*/
+/*}*/
+
+/*#controls .control-tools {*/
+/*    left: 60px;*/
+/*}*/
+
+/*#controls .scene-control, #controls .control-tool {*/
+/*    margin: 0 0 4px;*/
+/*}*/
+
+/*#controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {*/
+/*    color: #d6d3c1;*/
+/*}*/
+
+/*#controls .scene-control, #controls .control-tool {*/
+/*    border: none;*/
+/*    box-shadow: none;*/
+/*    background: none;*/
+/*    color: #837360;*/
+/*    padding: 5px;*/
+/*}*/
+
+/*#controls .scene-control, #controls .control-tool {*/
+/*    margin: 0 0 4px;*/
+/*}*/
+
+/*#controls .scene-control i {*/
+/*    position: relative;*/
+/*}*/
+
+/*#controls .scene-control > i::after, #controls li[data-control="combat-carousel"]::after {*/
+/*    position: absolute;*/
+/*    content: " ";*/
+/*    width: 53px;*/
+/*    height: 53px;*/
+/*    left: -12px;*/
+/*    top: -12px;*/
+/*    background: url(../ui/buttons/controls_btn.webp);*/
+/*    background-size: 100% 100%;*/
+/*    z-index: -2;*/
+/*    opacity: 0.88;*/
+/*}*/
+
+/*#controls li[data-control="combat-carousel"] {*/
+/*    position: relative;*/
+/*}*/
+
+/*#controls li[data-control="combat-carousel"]::after {*/
+/*    left: 0px;*/
+/*    top: 0px;*/
+/*}*/
+
+/*#controls .scene-control.active > i::after {*/
+/*    background: url(../ui/buttons/controls_btn_accent.webp);*/
+/*    background-size: 100% 100%;*/
+/*}*/
+
+/*body.compact-mode #controls .scene-control > i::after {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    left: -11px;*/
+/*    top: -12px;*/
+/*}*/
+
+/*#controls .control-tool {*/
+/*    position: relative;*/
+/*}*/
+
+/*#controls .control-tool::after {*/
+/*    position: absolute;*/
+/*    content: " ";*/
+/*    width: 53px;*/
+/*    height: 53px;*/
+/*    left: -3px;*/
+/*    top: -2px;*/
+/*    background: url(../ui/buttons/controls_btn.webp);*/
+/*    background-size: 100% 100%;*/
+/*    z-index: -2;*/
+/*    opacity: 0.88;*/
+/*}*/
+
+/*#controls .control-tool.active::after {*/
+/*    background: url(../ui/buttons/controls_btn_accent.webp);*/
+/*    background-size: 100% 100%;*/
+/*}*/
+
+/*body.compact-mode #controls .control-tool::after {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    left: 0px;*/
+/*    top: -3px;*/
+/*}*/
+
+/*#controls .scene-control i.fa-lightbulb::after {*/
+/*    left: -16px;*/
+/*}*/
+
+/*body.compact-mode #controls .scene-control i.fa-lightbulb::after {*/
+/*    left: -15px;*/
+/*}*/
+
+/*#controls .scene-control i.fa-bookmark::after {*/
+/*    left: -14px;*/
+/*}*/
+
+/*body.compact-mode #controls .scene-control i.fa-bookmark::after {*/
+/*    left: -13px;*/
+/*}*/
+
+
+/*#controls .scene-control.active, #controls .control-tool.active, #controls .scene-control:hover, #controls .control-tool:hover {*/
+/*    box-shadow: none;*/
+/*    border: none;*/
+/*}*/
 
 /* HOTBAR */
 
+#ui-bottom > div {
+    justify-content: center;
+}
+
 #hotbar {
-    max-width: calc(100% - 310px);
-    left: calc(50vw - 290px - 40px);
-    width: 658px;
-    height: 52px;
+    position: relative;
+    right: 145px;
+}
+
+#hotbar #action-bar {
+    position: relative;
 }
 
 #action-bar:not(.collapsed)::before {
     position: absolute;
     z-index: -1;
     content: " ";
-    width: 930px;
+    width: 146%;
     bottom: -10px;
-    left: -106px;
+    left: -23%;
     height: 85px;
     background-image: url(../ui/frames/action_bar.webp);
-    background-size: 870px 85px;
+    background-size: 100% 85px;
     background-repeat: no-repeat;
 }
 
 #hotbar #action-bar .macro {
-    /*border: none;*/
     border-radius: 0;
     box-shadow: none;
-    margin: 0px 4px;
+    margin: 0 0;
 }
 
 #hotbar #action-bar .macro::before {
@@ -413,7 +470,7 @@ body.compact-mode #controls .scene-control i.fa-bookmark::after {
 }
 
 #hotbar #macro-list {
-    flex: 0 0 582px;
+    grid-gap: 8px;
 }
 
 #hotbar .bar-controls {

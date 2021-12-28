@@ -50,9 +50,10 @@ Hooks.on('init', () => {
 			addClassByQuerySelector("hide", "img#logo")
 
 			let newLogo = document.createElement('div');
+			let uiLeft = document.getElementById('ui-left')
 			newLogo.classList.add("new-logo")
 			newLogo.innerText = "Foundry \nVTT"
-			document.body.appendChild(newLogo);
+			uiLeft.prepend(newLogo)
 		}
 	}
 

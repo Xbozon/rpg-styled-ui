@@ -1017,6 +1017,12 @@ button#roll-hd:hover::before {
     box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px
 }
 
+#fps {
+    position: absolute;
+    right: 350px;
+    order: 2;
+}
+
 /* ==== compatibility ==== */
 
 /* Illandril's Hotbar Uses */

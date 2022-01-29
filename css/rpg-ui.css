@@ -94,7 +94,7 @@ body.compact-mode #logo {
     left: 0;
     top: -10px;
     background: url(../ui/frames/chat.webp);
-    background-size: 350px 100%;
+    background-size: 100% 100%;
 }
 
 #sidebar::after {

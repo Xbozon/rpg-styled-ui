@@ -632,7 +632,8 @@ button#roll-hd:hover::before {
 
 /* NAVIGATION */
 
-#navigation {
+#ui-top {
+    width: calc(100% - 340px);
     left: 142px;
 }
 

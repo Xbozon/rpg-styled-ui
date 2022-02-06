@@ -872,7 +872,7 @@ button#roll-hd:hover::before {
     border: none;
 }
 
-.journal-sheet form input[name="name"] {
+.app:not(.monks-enhanced-journal).journal-sheet form input[name="name"] {
     position: relative;
     z-index: 10;
     padding: 10px 0px 20px 0px;
@@ -887,7 +887,7 @@ button#roll-hd:hover::before {
     border-bottom: 5px groove #eeede0;
 }
 
-.journal-sheet .window-resizable-handle {
+.app:not(.monks-enhanced-journal).journal-sheet .window-resizable-handle {
     bottom: 5%;
     right: 5%;
 }

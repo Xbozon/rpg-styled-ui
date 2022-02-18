@@ -29,7 +29,7 @@ body.compact-mode #logo {
 }
 
 .hide {
-    display: none;
+    visibility: hidden;
 }
 
 .new-logo {
@@ -634,7 +634,6 @@ button#roll-hd:hover::before {
 
 #ui-top {
     width: calc(100% - 340px);
-    left: 142px;
 }
 
 #navigation #nav-toggle {
@@ -873,7 +872,7 @@ button#roll-hd:hover::before {
     border: none;
 }
 
-.journal-sheet form input[name="name"] {
+.app:not(.monks-enhanced-journal).journal-sheet form input[name="name"] {
     position: relative;
     z-index: 10;
     padding: 10px 0px 20px 0px;
@@ -888,7 +887,7 @@ button#roll-hd:hover::before {
     border-bottom: 5px groove #eeede0;
 }
 
-.journal-sheet .window-resizable-handle {
+.app:not(.monks-enhanced-journal).journal-sheet .window-resizable-handle {
     bottom: 5%;
     right: 5%;
 }
@@ -1218,7 +1217,31 @@ nav.damage-log-nav .item.active:before,
 }
 
 /* Babele */
-/* ttps://gitlab.com/riccisi/foundryvtt-babele */
+/* https://gitlab.com/riccisi/foundryvtt-babele */
 #actor-translate-log {
     color: var(--main-text-very-light-color)
+}
+
+/* Minimal UI */
+/* https://github.com/saif-ellafi/foundryvtt-minimal-ui/issues */
+.minimal-ui-mode .new-logo {
+    display: none!important;
+}
+.minimal-ui-mode #controls ol li.scene-control[data-control="combat-carousel"] {
+    width: var(--controlsw)!important;
+    height: var(--controlsh)!important;
+}
+.minimal-ui-mode #controls li[data-control="combat-carousel"]::after {
+    width: calc(var(--controlsw) - 10px)!important;
+    height: calc(var(--controlsh) - 10px)!important;
+}
+
+.minimal-ui-mode #ui-bottom > div {
+    justify-content: inherit!important;
+}
+.minimal-ui-mode #navigation #scene-list {
+    margin-left: 16px;
+}
+.minimal-ui-mode #controls ol.main-controls {
+    width: 60px;
 }

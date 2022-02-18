@@ -11,5 +11,8 @@
     "RPGUI.SETTINGS.STANDARD_LOGO_HINT": "Returns the standard logo instead of the text logo",
 
     "RPGUI.SETTINGS.DISABLE_STYLES": "Disable RPG styled UI",
-    "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "This is a local setting, with which any player can turn off styles"
+    "RPGUI.SETTINGS.DISABLE_STYLES_HINT": "This is a local setting, with which any player can turn off styles",
+
+    "RPGUI.SETTINGS.MINIMAL_UI": "Minimal UI support",
+    "RPGUI.SETTINGS.MINIMAL_UI_HINT": "Fixes some (not all) of the problems with minimal UI"
 }

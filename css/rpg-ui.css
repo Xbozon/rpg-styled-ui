@@ -221,6 +221,11 @@ body.compact-mode #logo {
     color: var(--main-text-light-color) !important; /*8e8073*/
 }
 
+.chat-message .table-draw .table-description {
+    border-top: 1px solid var(--monks-border-color);
+    color: var(--main-text-light-color)
+}
+
 #chat ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 0px;

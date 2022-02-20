@@ -226,6 +226,10 @@ body.compact-mode #logo {
     color: var(--main-text-light-color)
 }
 
+.chat-message .table-draw .table-results .table-result img.result-image {
+    filter: invert(75%);
+}
+
 #chat ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 0px;

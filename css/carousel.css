@@ -189,18 +189,27 @@
     z-index: 999;
 }
 
+#combat-carousel .initiative .fa-2x {
+    position: relative;
+}
+
 #combat-carousel .initiative .roll-init{
     position: relative;
-    top: 2px;
-    left: 2px;
+    display: block;
     overflow: hidden;
-    width: 17px;
+    width: 100%;
+    height: 100%;
 }
 
 #combat-carousel .initiative input{
     position: relative;
     top: 3px;
     color: var(--main-text-light-color)!important;
+}
+
+#combat-carousel .initiative input[type="text"].fa-stack-1x {
+    position: absolute;
+    color: var(--main-text-light-color)
 }
 
 #combat-carousel .initiative .roll-init .initiative-icon{

@@ -740,7 +740,6 @@ button#roll-hd:hover::before {
     position: relative;
     color: #e9e9da;
     border-bottom: none;
-    font-size: 18px;
     font-family: 'Kurale', serif;
     font-weight: 800;
 
@@ -1227,6 +1226,36 @@ nav.damage-log-nav .item.active:before,
     color: var(--main-text-very-light-color)
 }
 
+/* DF Chat Enhancements */
+/* https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance */
+:root{
+    --glassy: 0px 0px 2px rgba(255, 255, 255, 0.4) inset, 0px 0px 6px rgba(255, 255, 255, 0.2) inset, 1px 1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+#dfcp-rt-buttons button {
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    background: var(--glassy);
+    border: none;
+    border-radius: 50%;
+    color: #837360;
+    box-shadow: var(--glassy);
+    cursor: pointer;
+}
+
+#dfcp-rt-buttons button:hover {
+    color: #ff6400;
+    border-color: #ff6400;
+    box-shadow: 0 0 6px inset #ff6400;
+}
+
+#dfcp-rt-buttons button[data-id=publicroll].active {
+    background-color: #91a82a;
+}
+
+#dfcp-rt-buttons button[data-id=selfroll].active {
+    background-color: #ff6400;
+}
+
 /* Minimal UI */
 /* https://github.com/saif-ellafi/foundryvtt-minimal-ui/issues */
 .minimal-ui-mode .new-logo {
@@ -1244,6 +1273,51 @@ nav.damage-log-nav .item.active:before,
 .minimal-ui-mode #ui-bottom > div {
     justify-content: inherit!important;
 }
+:root {
+    --hotbarvis: visible;
+    --hotbarypos: -5px;
+    --hotbarxpos: 400px;
+    --hotbarlh1: 24px;
+    --hotbarlh2: 8px;
+    --hotbarhv: -5px;
+    --hotbarmg: 0px;
+    --hotbarhh: 100%;
+    --hotbarshp: 0px;
+}
+
+.minimal-ui-mode #hotbar {
+    left: var(--hotbarxpos);
+    bottom: var(--hotbarypos);
+    visibility: var(--hotbarvis);
+    transition: 0.5s ease-out 0.5s;
+    opacity: var(--opacity);
+    position: absolute;
+}
+
+:root {
+    --playervis: hidden;
+    --playerfsize: 0px;
+    --playerfsizehv: 12px;
+    --playerwidthhv: 150px;
+    --playerslh: 20px;
+    --playerbennies: none;
+    --playerh3w: unset;
+    --playerbot: -8px;
+    --playerleft: -8px;
+    --playerpingdisplay: initial;
+}
+
+.minimal-ui-mode #players {
+    bottom: var(--playerbot);
+    left: var(--playerleft);
+    font-size: var(--playerfsize);
+    visibility: var(--playervis);
+    opacity: var(--opacity);
+    box-shadow:none;
+    position: absolute;
+    border: none;
+}
+
 .minimal-ui-mode #navigation #scene-list {
     margin-left: 16px;
 }

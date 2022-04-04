@@ -6,7 +6,7 @@
   "authors": [],
   "url": "https://github.com/Xbozon/rpg-styled-ui",
   "flags": {},
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "scripts": [
@@ -39,7 +39,7 @@
   "dependencies": [],
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
-  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v1.0.0.zip",
+  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v1.0.1.zip",
   "protected": false,
   "coreTranslation": false,
   "library": false

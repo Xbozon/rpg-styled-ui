@@ -248,6 +248,10 @@ body.compact-mode #logo {
 
 /* CONTROLS */
 
+#controls ol.main-controls {
+    overflow: visible;
+}
+
 #controls ol .scene-control,
 #controls ol .control-tool {
     background: none;
@@ -1108,6 +1112,106 @@ nav.damage-log-nav .item:before,
 nav.damage-log-nav .item.active:before,
 .tabbedchatlog .item.active:before {
     opacity: 1;
+}
+
+#settings button,
+#sidebar .directory .action-buttons button {
+    z-index: 18;
+
+    color: var(--color-text-light-highlight);
+    font-family: 'Kurale', serif;
+    line-height: 25px;
+
+    position: relative;
+    background: url(../ui/buttons/button-bg.webp) no-repeat;
+    background-size: cover;
+
+
+    border: 1px solid #332a1f;
+    box-shadow: 0px 0px 0px 1px #675241;
+
+    transition: all 0.2s;
+}
+
+#sidebar .directory .action-buttons button {
+    margin: 6px 5px;
+}
+
+#settings button:hover,
+#sidebar .directory .action-buttons button:hover {
+    background: url(../ui/frames/header.webp) center center;
+    background-size: 100% 45px;
+    /*color: #a11414;*/
+}
+
+#settings button::before,
+#sidebar .directory .action-buttons button::before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 27px;
+    left: -5px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+#settings button::after,
+#sidebar .directory .action-buttons button::after {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 26px;
+    right: -5px;
+    top: 0;
+}
+
+#sidebar .directory .directory-header .header-search {
+    position: relative;
+}
+#sidebar .directory .directory-header .header-search .fas{
+    position: relative;
+    color: #a0836c;
+}
+#sidebar .directory .directory-header .header-search::after{
+    position: absolute;
+    content: ' ';
+    bottom: 3px;
+    right: 1%;
+
+    width: 98%;
+    height: 1px;
+
+    border-bottom: 1px solid #332a1f;
+    box-shadow: 0px 1px 0px 0px #675241;
+}
+#sidebar .directory .directory-header .header-search input {
+    background: none;
+    border-radius: 0;
+    border: none;
+    color: var(--color-text-light-highlight);
+    transition: all 0.2s;
+}
+#sidebar .directory .directory-header .header-search input:focus{
+   box-shadow: none;
+}
+#sidebar .directory .directory-header .header-search input::placeholder {
+    color: var(--main-text-light-color)
+}
+#sidebar hr {
+    border: none;
+    border-top: 1px solid #675241;
+    border-bottom: 1px solid #675241;
+}
+
+#settings h2 {
+    margin: 6px 5px;
+    border: none;
+    border-bottom: 1px solid #675241;
+    background: rgb(125 125 125 / 10%);
 }
 
 /* Dice Tray */

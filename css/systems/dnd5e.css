@@ -431,8 +431,19 @@
     border-right: 2px groove var(--border-color);
 }
 
-.dnd5e.sheet.item a.entity-link,
+/*.dnd5e.sheet.item a.entity-link,
 .dnd5e.sheet.item a.inline-roll {
+    color:#98968a;
+    background: #40130c;
+    padding: 0px 3px;
+    border: 2px solid #671911;
+    border-radius: 6px;
+}*/
+
+ a.entity-link,
+ a.content-link,
+ a.inline-roll {
+    color:#98968a;
     background: #40130c;
     padding: 0px 3px;
     border: 2px solid #671911;

@@ -593,7 +593,7 @@ body.compact-mode #logo {
 .dialog input,
 .folder-edit input {
     border: none;
-    color: #ddc5b9;
+    color: #ddc5b9 !important;
     background: #ffffff14;
 }
 
@@ -1001,10 +1001,11 @@ button#roll-hd:hover::before {
 
 .journal-sheet a.entity-link,
 .journal-sheet a.inline-roll {
-    background: #d3c3a7ab;
+    color:#98968a;
+    background: #40130c;
     padding: 0px 3px;
-    border: 2px solid #2f271aab;
-    border-radius: 4px;
+    border: 2px solid #671911;
+    border-radius: 6px;
 }
 
 .journal-sheet.minimized {

@@ -449,3 +449,7 @@
     border: 2px solid #671911;
     border-radius: 6px;
 }
+
+.dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
+    background: transparent;
+}

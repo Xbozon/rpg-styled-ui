@@ -1136,6 +1136,7 @@ nav.damage-log-nav .item.active:before,
 
 #sidebar .directory .action-buttons button {
     margin: 6px 5px;
+    height: auto;
 }
 
 #settings button:hover,

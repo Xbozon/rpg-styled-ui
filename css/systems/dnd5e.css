@@ -64,6 +64,14 @@
 
 /* SHEET */
 
+.dnd5e.sheet.actor.character {
+    min-height: 730px;
+}
+
+.dnd5e.sheet.actor.npc {
+    min-height: 720px;
+}
+
 .dnd5e.sheet.actor:not(.loot-sheet-npc),
 .dnd5e.sheet.item {
     background: rgba(6, 4, 3, 0.92);

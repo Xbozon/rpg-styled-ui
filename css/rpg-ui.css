@@ -802,6 +802,9 @@ button#roll-hd:hover::before {
 }
 
 /* ==== journal ==== */
+
+
+/* ==== journal ==== */
 .app.journal-sheet {
     font-family: 'Kurale', serif;
     padding: 10px 25px;
@@ -904,10 +907,6 @@ button#roll-hd:hover::before {
     right: 5%;
 }
 
-.journal-sheet form select {
-    display: none;
-}
-
 .journal-sheet .header-button.close {
     position: relative;
     width: 36px;
@@ -964,20 +963,6 @@ button#roll-hd:hover::before {
     right: -10%;
 }
 
-.journal-sheet button {
-    width: 158px;
-    height: 43px;
-    position: relative;
-
-    color: var(--main-text-light-color);
-    font-weight: 600;
-    font-family: 'Kurale', serif;
-
-    background: url(../ui/buttons/btn.webp) center center no-repeat;
-    background-size: 95% 95%;
-    border: none;
-}
-
 .journal-sheet button:focus {
     box-shadow: none;
 }
@@ -1029,6 +1014,77 @@ button#roll-hd:hover::before {
     border-radius: 0;
     box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px
 }
+
+/*add v10*/
+.sheet.journal-entry {
+    --sidebar-width-expanded: 270px;
+    --sidebar-width-collapsed: 30px;
+}
+.sheet.journal-entry .journal-sidebar .action-buttons {
+    flex: 0.1;
+}
+.sheet.journal-entry .pages-list .page-heading .page-title {
+color:#5d180d;
+font-weight: bold;
+}
+.sheet.journal-entry .pages-list .page-heading .page-title:hover {
+color:#5d180d !important;
+font-weight: bold;
+}
+.sheet.journal-entry .pages-list .h2 .heading-link {
+    color:#5d180d;
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .h2 .heading-link:hover {
+    color:#5d180d;
+    font-weight: bold;
+}
+.sheet.journal-entry .pages-list .page-heading {
+color:#5d180d;
+font-weight: bold;
+}
+.sheet.journal-entry .journal-sidebar .directory-header .view-mode {
+color:#5d180d;
+}
+.directory .directory-header .header-search input {
+background: none;
+}
+.sheet.journal-entry .journal-sidebar .directory-header .collapse-toggle {
+color:#5d180d;
+}
+.sheet.journal-entry .journal-entry-content {
+    flex: 1;
+    height: 94%;
+    margin-top: 15px;
+    margin-right: 12px;
+    background: none;
+    border: none;
+    border-radius: 6px 0 0 0;
+}
+.prosemirror menu {
+    background: rgba(0, 0, 0, 0.5);
+}
+.journal-sheet button {
+    position: relative;
+    color: var(--main-text-light-color);
+    font-weight: 600;
+    background: url(../ui/buttons/btn.webp) center center no-repeat;
+    background-size: 95% 95%;
+    border: none;
+}
+.prosemirror menu .pm-dropdown > span {
+    color:#5d180d;
+}
+.sheet.journal-entry-page .journal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.sheet.journal-entry-page .journal-header .heading-level {
+    width: 100%;
+    align-items: center;
+}
+/*=========================*/
 
 #fps {
     position: absolute;

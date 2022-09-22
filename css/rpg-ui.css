@@ -63,7 +63,7 @@ body.compact-mode #logo {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    position: fixed;
+    position: relative;
     right: 0px;
     top: 0px;
     overflow: visible;
@@ -74,10 +74,16 @@ body.compact-mode #logo {
     border: none;
 }
 
-#sidebar.app.collapsed {
-    padding: 0 !important;
+#sidebar.collapsed #sidebar-tabs {
+    padding: 3px 0px 0px 7px;
+    margin-top: 0;
+    margin-bottom: -20px;
 }
 
+#sidebar.app.collapsed {
+    padding: 0;
+    top: 5px;
+}
 
 #sidebar.app.collapsed::before {
     width: 40px !important;
@@ -420,13 +426,21 @@ body.compact-mode #logo {
 
 /* HOTBAR */
 
+#fps {
+    position: absolute;
+    left: 1275px;
+    order: 2;
+}
+
 #ui-bottom > div {
     justify-content: center;
 }
 
 #hotbar {
-    position: relative;
-    right: 145px;
+    left: 500px;
+    bottom: -5px;
+    transition: 0.5s ease-out 0.5s;
+    position: absolute;
 }
 
 #hotbar #action-bar {
@@ -1090,13 +1104,6 @@ button#roll-hd:hover::before {
 .sheet.journal-entry-page .journal-header .heading-level {
     width: 100%;
     align-items: center;
-}
-/*=========================*/
-
-#fps {
-    position: absolute;
-    right: 350px;
-    order: 2;
 }
 
 /* ==== compatibility ==== */

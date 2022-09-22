@@ -1,6 +1,4 @@
 {
-    "I18N.MAINTAINERS": ["Regik"],
-
     "RPGUI.SETTINGS.NAVIGATION": "Vuelve a poner la navegación en modo horizontal",
     "RPGUI.SETTINGS.NAVIGATION_HINT": "Marca esta opción si no utiliza el módulo Combat Carousel",
 

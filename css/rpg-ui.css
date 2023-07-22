@@ -1656,15 +1656,15 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
     max-height: 125%
 }
 
-/* Fast Dice */
-/* https://github.com/sanguaire/fast-dice-box */
+/* Fast Rolls */
+/* https://github.com/reonZ/fast-rolls */
 #fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img {
     filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(-55deg) brightness(50%);
     margin: 0 0px 6px
 }
-#chat-form {
+/*#chat-form {
     margin: 0 6px 6px !important;
-}
+}*/
 
 /* Mastercrafted */
 #mastercrafted-recipeApp.sheet.journal-entry .journal-sidebar, #mastercrafted-recipeApp .recipe-description, .app.journal-sheet, #mastercrafted-recipeApp .mastercrafted-recipe-header p {

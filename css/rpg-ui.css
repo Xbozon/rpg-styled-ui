@@ -1423,6 +1423,12 @@ nav.damage-log-nav .item.active:before,
 .xmidi-qol-flex-container select {
     color: var(--main-text-light-color)
 }
+.midi-qol-nobox {
+    border-top: 2px groove #837360;
+}
+.dnd5e.chat-card .card-buttons span {
+    border: 0px solid #CCC;
+}
 
 /* Babele */
 /* https://gitlab.com/riccisi/foundryvtt-babele */
@@ -1547,6 +1553,13 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     border: none;
 }
 
+body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
+    background: rgba(6, 4, 3, 0.95);}
+
+.window-app.single-sheet, .sheet.journal-entry {
+    background: none !important;
+}
+
 /* Monk's Hotbar Expansion */
 
 #hotbar .macro-list {
@@ -1560,4 +1573,104 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 #hotbar .macro-list {
     border: none;
     border-radius: 3px;
+}
+
+/* Tidy5e Sheet */
+/* https://github.com/sdenec/tidy5e-sheet */
+:root.tidy5eDark {
+    --t5e-primary-font: #98968a;
+    --t5e-background: rgba(6, 4, 3, 0.5);
+    --t5e-white: rgba(0, 0, 0, 1);
+    --t5e-primary-color: var(--main-text-light-color);
+    --t5e-secondary-color: var(--main-text-light-color);
+    --t5e-light-color: rgba(255, 255, 255, 0.25);
+    --t5e-faint-color: rgba(255, 255, 255, 0.1);
+    --t5e-faintest-color: rgba(255, 255, 255, 0.05);
+    --t5e-ability-accent: darkslategrey;
+    --t5e-header-background: rgba(6, 4, 3, 0.05);
+    --t5e-header-border: rgba(255, 255, 255, 0.25);
+    --t5e-primary-accent: #9A0806;
+    --t5e-equipped: rgba(255, 255, 255, 0.1);
+    --t5e-prepared: rgba(255, 255, 255, 0.1);
+    --t5e-pact: rgba(255, 255, 255, 0.1);
+    --t5e-atwill: rgba(255, 255, 255, 0.1);
+    --t5e-innate: rgba(255, 255, 255, 0.1);
+    --t5e-alwaysprepared: rgba(255, 255, 255, 0.1);
+    --t5e-icon-background: rgba(30, 30, 30, 1);
+    --t5e-icon-shadow: rgba(0, 0, 0, 0.4);
+    --t5e-icon-outline: rgba(0, 0, 0, 0.4);
+    --t5e-icon-font: rgba(255, 255, 255, 0.4);
+    --t5e-icon-hover: rgba(255, 255, 255, 0.8);
+    --t5e-warning-accent: rgba(255, 30, 0, 0.65);
+    --t5e-check-default: url("../images/check-dark-unchecked.svg");
+    --t5e-check-checked: url("../images/check-light-checked.svg");
+    --t5e-checkbox-font: rgba(255, 255, 255, 0.8);
+    --t5e-checkbox-outline: rgba(50, 50, 50, 1);
+    --t5e-checkbox-unchecked: rgba(75, 75, 75, 1);
+    --t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
+}
+.tidy5e.sheet.actor .tidy5e-navigation .toggle-allow-edit span {
+    background: rgba(255, 255, 255, 0.1);
+}
+.tidy5e.sheet.actor .attuned-items-counter {
+    -webkit-box-shadow: 0 0 5px #368EED inset;
+    box-shadow: 0 0 5px #368EED inset;
+    border: 1px solid #368EED;
+}
+.tidy5e.sheet.actor .encumbrance .encumbrance-bar {
+    border: 1px solid #9A0806;
+    background: #621616;
+}
+/* Scrollbar grayscaled
+.tidy5e.sheet.actor ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+} */
+.tidy5e.sheet.actor header {
+    background: url(modules/rpg-styled-ui/ui/frames/header.webp);
+    background-size: 100% 115%;
+}
+.tidy5e.sheet.actor .window-content {
+    background: none;
+}
+.tidy5e.sheet.actor .header-attributes .ac-display svg {
+    filter: sepia(100%) saturate(1000%) hue-rotate(-60deg);
+}
+
+/* Simbul's cover calculator */
+/* https://github.com/vtt-lair/simbuls-cover-calculator */
+#party-inventory button,
+.cover-calc button {
+    background: #837360;
+    border: 2px groove #000000;
+    border-radius: 3px;
+}
+.cover-calc button {
+    height: 22px;
+    line-height: 15px;
+}
+.cover-calc button img {
+    position: relative;
+    top: -3px;
+    max-width: 125%;
+    max-height: 125%
+}
+
+/* Fast Dice */
+/* https://github.com/sanguaire/fast-dice-box */
+#fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img {
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(-55deg) brightness(50%);
+    margin: 0 0px 6px
+}
+#chat-form {
+    margin: 0 6px 6px !important;
+}
+
+/* Mastercrafted */
+#mastercrafted-recipeApp.sheet.journal-entry .journal-sidebar, #mastercrafted-recipeApp .recipe-description, .app.journal-sheet, #mastercrafted-recipeApp .mastercrafted-recipe-header p {
+    color: var(--color-text-dark-primary);
+}
+#mastercrafted-recipeApp h3 {
+    border-top: 2px groove #000000;
+    border-bottom: 2px groove #000000;
 }

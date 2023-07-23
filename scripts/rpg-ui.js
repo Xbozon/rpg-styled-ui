@@ -1,10 +1,4 @@
 Hooks.on('init', () => {
-	
-	// Retreat class of Monk's Little Details
-	Hooks.on('ready', async () => {
-		$("body").removeClass("change-windows");
-	});
-
 	// Register module settings.
 	game.settings.register('rpg-styled-ui', 'navigationVerticalToggle', {
 		name: game.i18n.localize('RPGUI.SETTINGS.NAVIGATION'),
@@ -95,6 +89,11 @@ Hooks.on('renderCombatCarousel', () => {
 	if (carouselSize !== "") {
 		addClassByQuerySelector(carouselSize, "#combat-carousel")
 	}
+});
+
+// Retreat class of Monk's Little Details
+Hooks.on('ready', async () => {
+	$("body").removeClass("change-windows");
 });
 
 function addClassByQuerySelector(className, selector) {

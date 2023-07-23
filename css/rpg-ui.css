@@ -434,7 +434,7 @@ body.compact-mode #logo {
 
 #fps {
     position: absolute;
-    left: 1275px;
+    right: 350px;
     order: 2;
 }
 

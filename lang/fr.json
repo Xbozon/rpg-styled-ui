@@ -1,7 +1,4 @@
 {
-	"I18N.LANGUAGE": "Français",
-	"I18N.MAINTAINERS": ["Sasmira"],
-
     "RPGUI.SETTINGS.NAVIGATION": "Navigation Horizontale",
     "RPGUI.SETTINGS.NAVIGATION_HINT": "Utilisez ce bouton si vous n'utilisez pas Combat Carousel.",
 

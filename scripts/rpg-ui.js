@@ -91,6 +91,11 @@ Hooks.on('renderCombatCarousel', () => {
 	}
 });
 
+// Retreat class of Monk's Little Details
+Hooks.on('ready', async () => {
+	$("body").removeClass("change-windows");
+});
+
 function addClassByQuerySelector(className, selector) {
 	let navigation = document.querySelector(selector);
 	navigation.classList.add(className)

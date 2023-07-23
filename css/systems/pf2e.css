@@ -39,12 +39,12 @@
     border-color: var(--border-color);
 }
 
-.system-pf2e .effect-panel {
-    right: 360px;
-    top: 22px;
+.system-pf2e #effects-panel {
+    margin-top: 5px;
+    margin-right: -5px;
 }
 
-.effect-panel div[data-item-id] {
+#effect-panel div[data-item-id] {
     position: relative;
     border-radius: 50%;
 

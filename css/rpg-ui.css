@@ -1626,8 +1626,8 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.25);
 } */
-.tidy5e.sheet.actor header {
-    background: url(modules/rpg-styled-ui/ui/frames/header.webp);
+.tidy5e.sheet.actor header, .tidy5e.sheet.item header{
+    background: url(../ui/frames/header.webp);
     background-size: 100% 115%;
 }
 .tidy5e.sheet.actor .window-content {
@@ -1635,6 +1635,12 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
 }
 .tidy5e.sheet.actor .header-attributes .ac-display svg {
     filter: sepia(100%) saturate(1000%) hue-rotate(-60deg);
+}
+.tidy5e.sheet.item .window-content {
+    background: none !important;
+}
+.tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button, .tidy5e.sheet.item .sheet-body .tab.details .form-group select, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.details .form-group button, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Simbul's cover calculator */
@@ -1656,15 +1662,15 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
     max-height: 125%
 }
 
-/* Fast Rolls */
-/* https://github.com/reonZ/fast-rolls */
+/* Fast Dice */
+/* https://github.com/sanguaire/fast-dice-box */
 #fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img {
     filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(-55deg) brightness(50%);
     margin: 0 0px 6px
 }
-/*#chat-form {
+#chat-form {
     margin: 0 6px 6px !important;
-}*/
+}
 
 /* Mastercrafted */
 #mastercrafted-recipeApp.sheet.journal-entry .journal-sidebar, #mastercrafted-recipeApp .recipe-description, .app.journal-sheet, #mastercrafted-recipeApp .mastercrafted-recipe-header p {

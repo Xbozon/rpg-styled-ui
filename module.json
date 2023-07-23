@@ -5,9 +5,9 @@
   "url": "https://github.com/Xbozon/rpg-styled-ui",
   "version": "v1.1.3",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
   },
   "scripts": [
 

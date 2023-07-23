@@ -10,7 +10,7 @@
     --border-color: #372d25;
 }
 
-#pause img[src*="icons/svg/clockwork.svg"]{
+#pause img[src*="icons/svg/clockwork.svg"] {
     box-sizing: border-box;
     width: 128px;
     height: 128px;
@@ -75,7 +75,7 @@ body.compact-mode #logo {
     top: 0px;
     overflow: visible;
     width: 350px;
-    padding:0px 15px;
+    padding: 0px 15px;
     background: none;
     box-shadow: none;
     border: none;
@@ -294,8 +294,7 @@ body.compact-mode #logo {
 }
 
 #controls ol > li.scene-control:before,
-#controls ol > li.control-tool:before
-{
+#controls ol > li.control-tool:before {
     position: absolute;
     left: -9%;
     top: -15%;
@@ -554,7 +553,7 @@ body.compact-mode #logo {
     font-family: 'Kurale', serif;
     font-weight: 600;
     color: #837360;
-    border: none!important;
+    border: none !important;
     position: relative;
     box-shadow: none;
 }
@@ -1004,7 +1003,7 @@ button#roll-hd:hover::before {
 
 .journal-sheet a.entity-link,
 .journal-sheet a.inline-roll {
-    color:#98968a;
+    color: #98968a;
     background: #40130c;
     padding: 0px 3px;
     border: 2px solid #671911;
@@ -1045,23 +1044,23 @@ button#roll-hd:hover::before {
 
 .sheet.journal-entry .pages-list .page-heading .page-title,
 .sheet.journal-entry .pages-list .page-heading .page-title:hover {
-    color:#5d180d !important;
+    color: #5d180d !important;
     font-weight: bold;
 }
 
 .sheet.journal-entry .pages-list .h2 .heading-link,
 .sheet.journal-entry .pages-list .h2 .heading-link:hover {
-    color:#5d180d;
+    color: #5d180d;
     font-weight: bold;
 }
 
 .sheet.journal-entry .pages-list .page-heading {
-    color:#5d180d;
+    color: #5d180d;
     font-weight: bold;
 }
 
 .sheet.journal-entry .journal-sidebar .directory-header .view-mode {
-    color:#5d180d;
+    color: #5d180d;
 }
 
 .directory .directory-header .header-search input {
@@ -1069,7 +1068,7 @@ button#roll-hd:hover::before {
 }
 
 .sheet.journal-entry .journal-sidebar .directory-header .collapse-toggle {
-    color:#5d180d;
+    color: #5d180d;
 }
 
 .sheet.journal-entry .journal-entry-content {
@@ -1096,7 +1095,7 @@ button#roll-hd:hover::before {
 }
 
 .prosemirror menu .pm-dropdown > span {
-    color:#5d180d;
+    color: #5d180d;
 }
 
 .sheet.journal-entry-page .journal-header {
@@ -1110,7 +1109,33 @@ button#roll-hd:hover::before {
     align-items: center;
 }
 
-/* ==== compatibility ==== */
+.sheet.journal-entry .pages-list .directory-item {
+    border: none;
+}
+
+.sheet.journal-entry .pages-list .directory-item.active:first-of-type {
+    border-top: none;
+    outline: none !important;
+}
+
+.sheet.journal-entry .pages-list .directory-item.active + :not(.active) {
+    border: none;
+}
+
+.sheet.journal-entry .pages-list .directory-item:not(.active) + .active {
+    border: none;
+}
+
+.directory .directory-item.context, .directory .directory-item.active {
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+}
+
+.sheet.journal-entry .pages-list .page-heading .page-number {
+    color: #5d180d;
+}
+
+
+    /* ==== compatibility ==== */
 
 /* Illandril's Hotbar Uses */
 .illandril-hotbar-uses--hasUses .illandril-hotbar-uses--counter {
@@ -1248,11 +1273,13 @@ nav.damage-log-nav .item.active:before,
 #sidebar .directory .directory-header .header-search {
     position: relative;
 }
-#sidebar .directory .directory-header .header-search .fas{
+
+#sidebar .directory .directory-header .header-search .fas {
     position: relative;
     color: #a0836c;
 }
-#sidebar .directory .directory-header .header-search::after{
+
+#sidebar .directory .directory-header .header-search::after {
     position: absolute;
     content: ' ';
     bottom: 3px;
@@ -1264,6 +1291,7 @@ nav.damage-log-nav .item.active:before,
     border-bottom: 1px solid #332a1f;
     box-shadow: 0px 1px 0px 0px #675241;
 }
+
 #sidebar .directory .directory-header .header-search input {
     background: none;
     border-radius: 0;
@@ -1271,12 +1299,15 @@ nav.damage-log-nav .item.active:before,
     color: var(--color-text-light-highlight);
     transition: all 0.2s;
 }
-#sidebar .directory .directory-header .header-search input:focus{
-   box-shadow: none;
+
+#sidebar .directory .directory-header .header-search input:focus {
+    box-shadow: none;
 }
+
 #sidebar .directory .directory-header .header-search input::placeholder {
     color: var(--main-text-light-color)
 }
+
 #sidebar hr {
     border: none;
     border-top: 1px solid #675241;
@@ -1326,7 +1357,7 @@ nav.damage-log-nav .item.active:before,
 /* Monk's TokenBar */
 /* https://github.com/ironmonk88/monks-tokenbar */
 
-:root{
+:root {
     --monks-border-color: #6b6155;
 }
 
@@ -1412,7 +1443,7 @@ nav.damage-log-nav .item.active:before,
 
 /* DF Chat Enhancements */
 /* https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance */
-:root{
+:root {
     --glassy: 0px 0px 2px rgba(255, 255, 255, 0.4) inset, 0px 0px 6px rgba(255, 255, 255, 0.2) inset, 1px 1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1443,20 +1474,23 @@ nav.damage-log-nav .item.active:before,
 /* Minimal UI */
 /* https://github.com/saif-ellafi/foundryvtt-minimal-ui/issues */
 .minimal-ui-mode .new-logo {
-    display: none!important;
+    display: none !important;
 }
+
 .minimal-ui-mode #controls ol li.scene-control[data-control="combat-carousel"] {
-    width: var(--controlsw)!important;
-    height: var(--controlsh)!important;
+    width: var(--controlsw) !important;
+    height: var(--controlsh) !important;
 }
+
 .minimal-ui-mode #controls li[data-control="combat-carousel"]::after {
-    width: calc(var(--controlsw) - 10px)!important;
-    height: calc(var(--controlsh) - 10px)!important;
+    width: calc(var(--controlsw) - 10px) !important;
+    height: calc(var(--controlsh) - 10px) !important;
 }
 
 .minimal-ui-mode #ui-bottom > div {
-    justify-content: inherit!important;
+    justify-content: inherit !important;
 }
+
 :root {
     --hotbarvis: visible;
     --hotbarypos: -5px;
@@ -1497,7 +1531,7 @@ nav.damage-log-nav .item.active:before,
     font-size: var(--playerfsize);
     visibility: var(--playervis);
     opacity: var(--opacity);
-    box-shadow:none;
+    box-shadow: none;
     position: absolute;
     border: none;
 }
@@ -1505,6 +1539,36 @@ nav.damage-log-nav .item.active:before,
 .minimal-ui-mode #navigation #scene-list {
     margin-left: 16px;
 }
+
 .minimal-ui-mode #controls ol.main-controls {
     width: 60px;
+}
+
+/* Monk's little details */
+
+.dnd5e.sheet.actor:not(.loot-sheet-npc), .dnd5e.sheet.item {
+    background-color: rgba(6, 4, 3, 0.92)!important;
+}
+
+.app.window-app.dialog, .app.window-app.folder-edit {
+    background-color: rgba(6, 4, 3, 0.92)!important;
+}
+
+body.change-windows:not(.system-forbidden-lands) .window-app > header {
+    border: none;
+}
+
+/* Monk's Hotbar Expansion */
+
+#hotbar .macro-list {
+    column-gap: 8px;
+}
+
+.hotbar-page {
+    width: calc(var(--hotbar-width) + 72px);
+}
+
+#hotbar .macro-list {
+    border: none;
+    border-radius: 3px;
 }

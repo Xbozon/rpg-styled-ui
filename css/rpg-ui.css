@@ -1604,37 +1604,37 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 /* Tidy5e Sheet */
 /* https://github.com/sdenec/tidy5e-sheet */
 :root.tidy5eDark {
-    --t5e-primary-font: rgba(152,150,138, 1);
+	--t5e-primary-font: rgba(152,150,138, 1);
 	--t5e-background: rgba(6, 4, 3, 0.92);
-    --t5e-white: rgba(0, 0, 0, 1);
+	--t5e-white: rgba(0, 0, 0, 1);
 	--t5e-primary-color: rgba(152,150,138, 0.8);
 	--t5e-secondary-color: rgba(152,150,138, 0.65);
-    --t5e-light-color: rgba(152,150,138, 0.25);
-    --t5e-faint-color: rgba(152,150,138, 0.1);
-    --t5e-faintest-color: rgba(152,150,138, 0.05);
-    --t5e-ability-accent: darkslategrey;
-    --t5e-header-background: rgba(6, 4, 3, 0.05);
-    --t5e-header-border: rgba(152,150,138, 0.25);
-    --t5e-primary-accent: #9A0806;
+	--t5e-light-color: rgba(152,150,138, 0.25);
+	--t5e-faint-color: rgba(152,150,138, 0.1);
+	--t5e-faintest-color: rgba(152,150,138, 0.05);
+	--t5e-ability-accent: darkslategrey;
+	--t5e-header-background: rgba(6, 4, 3, 0.05);
+	--t5e-header-border: rgba(152,150,138, 0.25);
+	--t5e-primary-accent: #9A0806;
 	--t5e-ability-accent: #837360 ;
-    --t5e-equipped: rgba(152,150,138, 0.2);
-    --t5e-prepared: rgba(152,150,138, 0.2);
-    --t5e-pact: rgba(152,150,138, 0.2);
-    --t5e-atwill: rgba(152,150,138, 0.2);
-    --t5e-innate: rgba(152,150,138, 0.2);
-    --t5e-alwaysprepared: rgba(152,150,138, 0.2);
-    --t5e-icon-background: rgba(30, 30, 30, 1);
-    --t5e-icon-shadow: rgba(0, 0, 0, 0.4);
-    --t5e-icon-outline: rgba(0, 0, 0, 0.4);
-    --t5e-icon-font: rgba(255, 255, 255, 0.4);
-    --t5e-icon-hover: rgba(255, 255, 255, 0.8);
-    --t5e-warning-accent: rgba(255, 30, 0, 0.65);
-    --t5e-check-default: url("../images/check-dark-unchecked.svg");
-    --t5e-check-checked: url("../images/check-light-checked.svg");
-    --t5e-checkbox-font: rgba(255, 255, 255, 0.8);
-    --t5e-checkbox-outline: rgba(50, 50, 50, 1);
-    --t5e-checkbox-unchecked: rgba(75, 75, 75, 1);
-    --t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
+	--t5e-equipped: rgba(152,150,138, 0.2);
+	--t5e-prepared: rgba(152,150,138, 0.2);
+	--t5e-pact: rgba(152,150,138, 0.2);
+	--t5e-atwill: rgba(152,150,138, 0.2);
+	--t5e-innate: rgba(152,150,138, 0.2);
+	--t5e-alwaysprepared: rgba(152,150,138, 0.2);
+	--t5e-icon-background: rgba(30, 30, 30, 1);
+	--t5e-icon-shadow: rgba(0, 0, 0, 0.4);
+	--t5e-icon-outline: rgba(0, 0, 0, 0.4);
+	--t5e-icon-font: rgba(255, 255, 255, 0.4);
+	--t5e-icon-hover: rgba(255, 255, 255, 0.8);
+	--t5e-warning-accent: rgba(255, 30, 0, 0.65);
+	--t5e-check-default: url("../images/check-dark-unchecked.svg");
+	--t5e-check-checked: url("../images/check-light-checked.svg");
+	--t5e-checkbox-font: rgba(255, 255, 255, 0.8);
+	--t5e-checkbox-outline: rgba(50, 50, 50, 1);
+	--t5e-checkbox-unchecked: rgba(75, 75, 75, 1);
+	--t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
 	--t5e-safe-accent: #331914;
 }
 .tidy5eDark  body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {

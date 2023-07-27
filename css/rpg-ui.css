@@ -1637,9 +1637,6 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 	--t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
 	--t5e-safe-accent: #331914;
 }
-.tidy5eDark body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
-    background: rgba(6, 4, 3, 0.92) !important;
-}
 .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet {
     background-color: rgba(6, 4, 3, 0.5) !important;
 }
@@ -1819,4 +1816,207 @@ filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50
 .dfce-cm-middle > .message-content,
 .dfce-cm-bottom > .message-content {
     padding-right: 0;
+}
+
+/* Simple Calendar */
+/* https://github.com/vigoren/foundryvtt-simple-calendar */
+.simple-calendar.dark {
+    --font-family: Roboto, sans-serif;
+    --heading-font-family: Roboto, sans-serif;
+    --input-bg-color: rgba(152,150,138, 0.1) !important;
+    --input-border-color: rgba(152,150,138, 1) !important;
+    --input-color: rgba(152,150,138, 1) !important;
+    --link-color: rgba(255,0,0, 0.5) !important;
+    --link-hover-color: rgba(255,0,0, 1) !important;
+    --entity-link-bg-color: #2E638C;
+    --entity-link-border-color: #598BAD;
+    --entity-link-icon-color: #E1B438;
+    --entity-link-icon-hover-color: #D59C24;
+    --heading-border-color: #E1B438;
+    --about-heading-border-color: #3C769E;
+    --app-header-bg-color: none !important;
+    --app-header-bg-image: unset;
+    --app-header-color: rgba(152,150,138, 1) !important;
+    --app-header-border: 0;
+    --app-header-border-image: unset;
+    --app-header-height: 1.875rem;
+    --app-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --app-bg-image: unset;
+    --app-border: 0;
+    --app-border-image: unset;
+    --app-color: rgba(152,150,138, 1) !important;
+    --comapct-header-control-grey: #adb5bd;
+    --comapct-header-control-secondary: #E1B438;
+    --comapct-header-control-tertiary: #A19ECF;
+    --comapct-header-control-save: #2E8D72;
+    --section-bg-color: rgba(152,150,138, 0.10) !important;
+    --section-border-color: rgba(152,150,138, 0.30) !important;
+    --section-color: rgba(152,150,138, 1) !important;
+    --side-drawer-color: rgba(152,150,138, 1) !important;
+    --side-drawer-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --side-drawer-bg-image: unset;
+    --side-drawer-border-color: rgba(152,150,138, 0.70) !important;
+    --side-drawer-border-image: unset;
+    --scrollbar-background-color: #3C769E;
+    --scrollbar-border-color: #366E96;
+    --scrollbar-track-bg-color: unset;
+    --scrollbar-track-border: unset;
+    --scrollbar-button-height: 0;
+    --scrollbar-button-bg-color: unset;
+    --scrollbar-button-border: unset;
+    --cal-weekend-bg-color: rgba(0, 0, 0, 0.25);
+    --cal-day-border-color: rgba(152,150,138, 0.30) !important;
+    --cal-day-hover-color: rgba(152,150,138, 0.20) !important;
+    --cal-day-current-bg-color: rgba(255,0,0, .3) !important;
+    --cal-day-current-box-shadow-color: rgba(255,0,0, 0.3) !important;
+    --cal-day-current-hover-bg-color: rgba(255,0,0, 0.5) !important;
+    --cal-day-selected-bg-color: rgba(152,150,138, 0.3) !important;
+    --cal-day-selected-box-shadow-color: rgba(152,150,138, 0.3) !important;
+    --cal-day-selected-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --cal-note-indicator-bg-color: rgba(152,150,138, 1) !important;
+    --cal-note-reminder-indicator-bg-color: rgba(255,0,0, .75) !important;
+    --cal-note-indicator-color: #2b292a;
+    --cal-moon-group-bg-color: #162B39;
+    --cal-moon-group-border-color: #366E96;
+    --cal-moon-group-box-shadow-color: rgba(122, 122, 122, 0.7098039216);
+    --cal-moon-text-shadow: rgba(0, 0, 0, 0.5);
+    --cal-list-color: #ffffff;
+    --cal-list-active-border-color: #459FFF;
+    --cal-list-active-bg-color: #275982;
+    --cal-list-visible-bg-color: #3D3697;
+    --cal-list-bg-hover-color: #5F59AD;
+    --clock-started-color: #59AD97;
+    --clock-stopped-color: #E65F55;
+    --clock-paused-color: #E6BF56;
+    --context-menu-color: #ffffff;
+    --context-menu-border-color: #E1B438;
+    --context-menu-bg-color: rgba(0, 0, 0, 0.85);
+    --context-menu-action-hover-color: #459FFF;
+    --context-menu-divider-color: #6c757d;
+    --config-menu-heading-color: #459FFF;
+    --config-menu-item-border-color: #495057;
+    --config-menu-item-color: #E1B438;
+    --config-menu-item-hover-color: #2b292a;
+    --config-menu-item-hover-bg-color: #E1B438;
+    --config-menu-cal-settings-bg-color: #162B39;
+    --config-menu-cal-selector-bg-color: #0D1A22;
+    --config-menu-cal-selector-hover-bg-color: #1A3344;
+    --config-menu-cal-selector-color: #ffffff;
+    --config-menu-cal-selector-hover-color: #ffffff;
+    --btn-bg-image: unset;
+    --btn-border: 1px solid;
+    --btn-border-image: unset;
+    --btn-grey-border-color: rgba(152,150,138, .7) !important;
+    --btn-grey-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-grey-color: rgba(152,150,138, 1) !important;
+    --btn-grey-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-grey-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-primary-border-color: rgba(152,150,138, .7) !important;
+    --btn-primary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-primary-color: rgba(152,150,138, 1) !important;
+    --btn-primary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-primary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-secondary-border-color: rgba(152,150,138, .7) !important;
+    --btn-secondary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-secondary-color: rgba(152,150,138, 1) !important;
+    --btn-secondary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-secondary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-tertiary-border-color: rgba(152,150,138, .7) !important;
+    --btn-tertiary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-tertiary-color: rgba(152,150,138, 1) !important;
+    --btn-tertiary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-tertiary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-delete-border-color: rgba(255,0,0, .7) !important;
+    --btn-delete-bg-color: rgba(255,0,0, 0.3) !important;
+    --btn-delete-color: rgba(255,0,0, 1) !important;
+    --btn-delete-bg-hover-color: rgba(255,0,0, 0.5) !important;
+    --btn-delete-disabled-bg-color: rgba(255,0,0, 0.1) !important;
+    --btn-save-border-color: rgba(152,150,138, .7) !important;
+    --btn-save-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-save-color: rgba(152,150,138, 1) !important;
+    --btn-save-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-save-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --form-group-bg-color: rgba(152,150,138, 0.3) !important;
+    --form-group-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --form-group-border-color: rgba(152,150,138, .7) !important;
+    --form-group-label-color: rgba(225,180,56, 1) !important;
+    --form-group-help-color: rgba(225,180,56, 1) !important;
+    --form-group-input-bg-color: rgba(152,150,138, 0.3) !important;
+    --form-group-input-border-color: rgba(152,150,138, .7) !important;
+    --form-group-input-color: rgba(152,150,138, 1) !important;
+    --form-group-help-icon-color: #E1B438;
+    --message-color: rgba(152,150,138, 1) !important;
+    --message-warn-bg-color: #695110;
+    --message-warn-border-color: #CD8C17;
+    --message-success-bg-color: #1A4439;
+    --message-success-border-color: #1A7255;
+    --message-info-bg-color: #1A3344;
+    --message-info-border-color: #1A4670;
+    --message-danger-bg-color: #9D2017;
+    --message-danger-border-color: #AE241A;
+    --multi-select-option-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --multi-select-option-bg-hover-color: rgba(50,50,50, 0.92) !important;
+    --multi-select-option-border-color: rgba(152,150,138, 0.7) !important;
+    --multi-select-option-color: rgba(152,150,138, 1) !important;
+    --multi-select-disabled-bg-color: #495057;
+    --multi-select-disabled-color: #ced4da;
+    --note-cat-color: rgba(152,150,138, 1) !important;
+    --note-cat-bg-color: rgba(152,150,138, 0.3) !important;
+    --note-cat-box-shadow-color: #2b292a;
+    --note-cat-secondary-bg-color: #E1B438;
+    --note-cat-secondary-color: #2b292a;
+    --note-cat-success-bg-color: #1A7255;
+    --note-cat-success-color: #ffffff;
+    --note-cat-danger-bg-color: #CD1E16;
+    --note-cat-danger-color: #ffffff;
+    --note-cat-reminder-bg-color: #7B77BC;
+    --note-cat-reminder-color: #2b292a;
+    --note-list-note-border-color: rgba(152,150,138, 0.7) !important;
+    --note-list-note-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --note-list-note-hover-color: rgba(152,150,138, 1) !important;
+    --note-list-note-dragger-bg-color: #6c757d;
+    --note-list-note-dragger-box-shadow-color: #2b292a;
+    --note-sheet-page-list-border-color: rgba(152,150,138, 0.7) !important;
+    --note-sheet-page-list-page-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --pre-cal-color: #AFADFF;
+    --pre-cal-border-color: #5F59AD;
+    --pre-cal-border-hover-color: #3D3697;
+    --precal-hover-color: #ffffff;
+    --progress-bar-bg-color: #495057;
+    --progress-bar-border-color: #adb5bd;
+    --progress-bar-fill-color: #7B77BC;
+    --editor-color: rgba(152,150,138, 1) !important;
+    --editor-menu-bg-color: rgba(152,150,138, .3) !important;
+    --editor-menu-control-bg-color: rgba(152,150,138, .8) !important;
+    --editor-menu-control-bg-hover-color: rgba(152,150,138, 1) !important;
+    --search-box-placeholder-color: #ced4da;
+    --search-box-color: rgba(152,150,138, 1) !important;
+    --time-selector-color: rgba(152,150,138, 1) !important;
+    --time-selector-input-bg-color: rgba(152,150,138, 0.3) !important;
+    --time-selector-input-border-color: rgba(152,150,138, 0.7) !important;
+    --time-selector-option-bg-even-color: rgba(152,150,138, 0.4) !important;
+    --time-selector-option-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --toggle-border-color: #ffffff;
+    --toggle-checked-bg-color: #2B91FF;
+}
+body.game .fsc-h {
+border: 1px solid var(--section-border-color) !important;
+}
+.simple-calendar.window-app header.window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: 0px;
+    background-color: rgba(6, 4, 3, 0.92) !important;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 30px;
+}
+.simple-calendar.window-app.journal-sheet button{
+    background-image: none !important;
+}
+.simple-calendar.app.journal-sheet::before, body.change-windows:not(.system-forbidden-lands) .simple-calendar.window-app:not(.image-popout) {
+    background: none !important;
 }

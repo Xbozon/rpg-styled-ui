@@ -1725,6 +1725,23 @@ background-size: 100% !important;
 .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+.tidy5eDark .tidy5e.sheet.actor > section > form > div > section.sheet-body > div.tab.attributes.active > section > div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 2px 0;
+    padding: 4px 0 2px 6px;
+    line-height: 12px;
+    font-size: 12px;
+    background: var(--t5e-faint-color);
+    box-shadow: 0 0 3px inset var(--t5e-light-color);
+    border-radius: 5px;
+    border-bottom: 0px !important;
+    background: url(../ui/other/items-header.webp) !important;
+    background-size: 100% !important;
+}
 
 /* Simbul's cover calculator */
 /* https://github.com/vtt-lair/simbuls-cover-calculator */

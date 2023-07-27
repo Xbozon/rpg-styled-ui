@@ -1637,7 +1637,7 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 	--t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
 	--t5e-safe-accent: #331914;
 }
-.tidy5eDark  body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
+.tidy5eDark body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
     background: rgba(6, 4, 3, 0.92) !important;
 }
 .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet {
@@ -1675,11 +1675,11 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 .tidy5eDark .tidy5e.sheet.actor .window-content {
     background: none;
 }
-.tidy5eDark  .tidy5e.sheet.actor .inspiration input:checked + label {
+.tidy5eDark .tidy5e.sheet.actor .inspiration input:checked + label {
     text-shadow: 0 0 10px var(--color-shadow-primary);
     background: var(--t5e-icon-background);
 }
-.tidy5eDark  .tidy5e.sheet.actor .inspiration input:checked + label i {
+.tidy5eDark .tidy5e.sheet.actor .inspiration input:checked + label i {
     color: var(--main-text-light-color);
 }
 .tidy5eDark .tidy5e.sheet.actor .header-attributes .ac-display svg path {
@@ -1700,6 +1700,11 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 .tidy5eDark .tidy5e.sheet.actor .ability-scores .ability, .tidy5eDark .tidy5e.sheet.actor .header-attribute {
     border-image: url(../ui/frames/brown_line_vertical.webp) 25 25 round;
     border-left: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-navigation .item {
+    padding: 2px 8px 0 8px;
+    font-size: 18px;
+    font-family: "Modesto Condensed", "Palatino Linotype", serif;
 }
 .tidy5eDark .tidy5e.sheet.actor .attuned-items-counter {
     -webkit-box-shadow: 0 0 5px #368EED inset;

@@ -1440,6 +1440,24 @@ nav.damage-log-nav .item.active:before,
 .dnd5e.chat-card .card-buttons span {
     border: 0px solid #CCC;
 }
+.xmidi-qol-flex-container button {
+    box-shadow: 0px 0px 0px 0px #675241;
+    transition: all 0.2s;
+	background: url(../ui/buttons/controls_btn.webp);
+	border: 0px;
+	font-size: 18px !important;
+	width: 26px !important;
+    height: 26px !important;
+}
+.xmidi-qol-flex-container button:hover {
+	background: url(../ui/buttons/controls_btn_accent.webp);
+	border: 0px;
+}
+.xmidi-qol-flex-container select,  .xmidi-qol-flex-container option{
+    background: rgba(6, 4, 3, 1);
+    border: 1px solid #332a1f;
+    box-shadow: 0px 0px 0px 1px #675241;
+}
 
 /* Babele */
 /* https://gitlab.com/riccisi/foundryvtt-babele */
@@ -1564,9 +1582,6 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     border: none;
 }
 
-body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
-    background: rgba(6, 4, 3, 0.95);}
-
 .window-app.single-sheet, .sheet.journal-entry {
     background: none !important;
 }
@@ -1589,24 +1604,25 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
 /* Tidy5e Sheet */
 /* https://github.com/sdenec/tidy5e-sheet */
 :root.tidy5eDark {
-    --t5e-primary-font: #98968a;
-    --t5e-background: rgba(6, 4, 3, 0.5);
+    --t5e-primary-font: rgba(152,150,138, 1);
+	--t5e-background: rgba(6, 4, 3, 0.92);
     --t5e-white: rgba(0, 0, 0, 1);
-    --t5e-primary-color: var(--main-text-light-color);
-    --t5e-secondary-color: var(--main-text-light-color);
-    --t5e-light-color: rgba(255, 255, 255, 0.25);
-    --t5e-faint-color: rgba(255, 255, 255, 0.1);
-    --t5e-faintest-color: rgba(255, 255, 255, 0.05);
+	--t5e-primary-color: rgba(152,150,138, 0.8);
+	--t5e-secondary-color: rgba(152,150,138, 0.65);
+    --t5e-light-color: rgba(152,150,138, 0.25);
+    --t5e-faint-color: rgba(152,150,138, 0.1);
+    --t5e-faintest-color: rgba(152,150,138, 0.05);
     --t5e-ability-accent: darkslategrey;
     --t5e-header-background: rgba(6, 4, 3, 0.05);
-    --t5e-header-border: rgba(255, 255, 255, 0.25);
+    --t5e-header-border: rgba(152,150,138, 0.25);
     --t5e-primary-accent: #9A0806;
-    --t5e-equipped: rgba(255, 255, 255, 0.1);
-    --t5e-prepared: rgba(255, 255, 255, 0.1);
-    --t5e-pact: rgba(255, 255, 255, 0.1);
-    --t5e-atwill: rgba(255, 255, 255, 0.1);
-    --t5e-innate: rgba(255, 255, 255, 0.1);
-    --t5e-alwaysprepared: rgba(255, 255, 255, 0.1);
+	--t5e-ability-accent: #837360 ;
+    --t5e-equipped: rgba(152,150,138, 0.2);
+    --t5e-prepared: rgba(152,150,138, 0.2);
+    --t5e-pact: rgba(152,150,138, 0.2);
+    --t5e-atwill: rgba(152,150,138, 0.2);
+    --t5e-innate: rgba(152,150,138, 0.2);
+    --t5e-alwaysprepared: rgba(152,150,138, 0.2);
     --t5e-icon-background: rgba(30, 30, 30, 1);
     --t5e-icon-shadow: rgba(0, 0, 0, 0.4);
     --t5e-icon-outline: rgba(0, 0, 0, 0.4);
@@ -1619,39 +1635,90 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
     --t5e-checkbox-outline: rgba(50, 50, 50, 1);
     --t5e-checkbox-unchecked: rgba(75, 75, 75, 1);
     --t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
+	--t5e-safe-accent: #331914;
 }
-.tidy5e.sheet.actor .tidy5e-navigation .toggle-allow-edit span {
-    background: rgba(255, 255, 255, 0.1);
+.tidy5eDark  body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) {
+    background: rgba(6, 4, 3, 0.92) !important;
 }
-.tidy5e.sheet.actor .attuned-items-counter {
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet {
+    background-color: rgba(6, 4, 3, 0.5) !important;
+}
+.tidy5eDark .tidy5e.sheet.actor:not(.loot-sheet-npc) {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    background: #251f1d;
+} 
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-track {
+    background: #181413;
+}
+.tidy5eDark .tidy5e.sheet.actor:not(.loot-sheet-npc) .window-header::after, .tidy5eDark .tidy5e.sheet.item .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+.tidy5eDark .tidy5e.sheet.actor .window-content {
+    background: none;
+}
+.tidy5eDark  .tidy5e.sheet.actor .inspiration input:checked + label {
+    text-shadow: 0 0 10px var(--color-shadow-primary);
+    background: var(--t5e-icon-background);
+}
+.tidy5eDark  .tidy5e.sheet.actor .inspiration input:checked + label i {
+    color: var(--main-text-light-color);
+}
+.tidy5eDark .tidy5e.sheet.actor .header-attributes .ac-display svg path {
+    fill: #331914;
+}
+.tidy5eDark .tidy5e.sheet.item .window-content {
+    background: none !important;
+}
+.tidy5eDark .tidy5e.sheet.actor .origin-summary {
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+    border-top: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .movement {
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .ability-scores .ability, .tidy5eDark .tidy5e.sheet.actor .header-attribute {
+    border-image: url(../ui/frames/brown_line_vertical.webp) 25 25 round;
+    border-left: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .attuned-items-counter {
     -webkit-box-shadow: 0 0 5px #368EED inset;
     box-shadow: 0 0 5px #368EED inset;
     border: 1px solid #368EED;
 }
-.tidy5e.sheet.actor .encumbrance .encumbrance-bar {
+.tidy5eDark .tidy5e.sheet.actor .encumbrance .encumbrance-bar {
     border: 1px solid #9A0806;
     background: #621616;
 }
-/* Scrollbar grayscaled
-.tidy5e.sheet.actor ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-} */
-.tidy5e.sheet.actor header, .tidy5e.sheet.item header{
-    background: url(../ui/frames/header.webp);
-    background-size: 100% 115%;
-}
-.tidy5e.sheet.actor .window-content {
-    background: none;
-}
-.tidy5e.sheet.actor .header-attributes .ac-display svg {
-    filter: sepia(100%) saturate(1000%) hue-rotate(-60deg);
-}
-.tidy5e.sheet.item .window-content {
-    background: none !important;
+.tidy5eDark  .tidy5e.sheet.actor .items-list .items-header {
+    background: url(../ui/other/items-header.webp) !important;
+background-size: 100% !important;
 }
 .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button, .tidy5e.sheet.item .sheet-body .tab.details .form-group select, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.details .form-group button, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button {
     background: rgba(255, 255, 255, 0.1);
+}
+.tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Simbul's cover calculator */
@@ -1676,18 +1743,58 @@ body.change-windows:not(.system-forbidden-lands) .window-app:not(.image-popout) 
 /* Fast Dice */
 /* https://github.com/sanguaire/fast-dice-box */
 #fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img {
-    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(-55deg) brightness(50%);
-    margin: 0 0px 6px
+filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(52%);
 }
-#chat-form {
-    margin: 0 6px 6px !important;
+#fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img:hover {
+filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50%) drop-shadow(0px 0px 7px var(--color-shadow-primary));
+} 
+#fast-rolls-chat-dice  {
+    top: -15px;
+	position: relative;
 }
 
 /* Mastercrafted */
+/* https://wiki.theripper93.com/premium/mastercrafted */
 #mastercrafted-recipeApp.sheet.journal-entry .journal-sidebar, #mastercrafted-recipeApp .recipe-description, .app.journal-sheet, #mastercrafted-recipeApp .mastercrafted-recipe-header p {
     color: var(--color-text-dark-primary);
 }
 #mastercrafted-recipeApp h3 {
     border-top: 2px groove #000000;
     border-bottom: 2px groove #000000;
+}
+
+/* Damage Log */
+/* https://github.com/cs96and/FoundryVTT-damage-log */
+.message.damage-log.damage {
+    background-image: url(../ui/frames/chat-texture-light.webp) !important;
+    background-color: #1d0500;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 115% 130%;
+    background-blend-mode: luminosity;
+    border: 1px solid #b61d00!important;
+    border-radius: 5px !important;
+    padding: 2px !important;
+    margin: 3px !important;
+}
+.message.damage-log.healing {
+    background-image: url(../ui/frames/chat-texture-light.webp) !important;
+    background-color: #001515;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 115% 130%;
+    background-blend-mode: luminosity;
+    border: 1px solid #00b4b6!important;
+    border-radius: 5px !important;
+    padding: 2px !important;
+    margin: 3px !important;
+}
+.message.damage-log.chat-message .message-header {
+    color: var(--main-text-light-color) !important;
+}
+.dfce-cm-middle > .message-content,
+.dfce-cm-bottom > .message-content {
+    padding-right: 0;
 }

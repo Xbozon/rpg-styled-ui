@@ -20,13 +20,6 @@
     animation: rotation 20s infinite linear;
 }
 
-/*Fix v11*/
-#interface {
-    margin-top: 5px;
-    margin-bottom: -10px;
-}
-/*end*/
-
 #logo {
     left: 22px;
 }
@@ -102,12 +95,16 @@ body.compact-mode #logo {
     position: absolute;
     z-index: -1;
     content: " ";
-    height: calc(100% - 5px);
+    height: calc(100% - 0px);
     width: 100%;
     left: 0;
-    top: -0px;
+    top: 0;
     background: url(../ui/frames/chat.webp);
     background-size: 100% 100%;
+}
+
+#sidebar section {
+ margin-bottom: 20px;
 }
 
 #sidebar::after {

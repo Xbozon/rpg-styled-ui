@@ -22,8 +22,7 @@
 
 /*Fix v11*/
 #interface {
-    margin-bottom: 0px;
-	overflow: clip;
+    overflow: clip;
 }
 /*end*/
 

@@ -20,6 +20,13 @@
     animation: rotation 20s infinite linear;
 }
 
+/*Fix v11*/
+#interface {
+    margin-bottom: 0px;
+	overflow: clip;
+}
+/*end*/
+
 #logo {
     left: 22px;
 }

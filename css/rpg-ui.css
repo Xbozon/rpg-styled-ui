@@ -22,7 +22,7 @@
 
 /*Fix v11*/
 #interface {
-    overflow: clip;
+	overflow: clip;
 }
 /*end*/
 
@@ -1640,10 +1640,25 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     --t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
     --t5e-safe-accent: #331914;
 }
-.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet {
-    background-color: rgba(6, 4, 3, 0.5) !important;
+.tidy5eDark .tidy5e.sheet {
+    background-color: rgba(6, 4, 3, 0.92) !important;
 }
-.tidy5eDark .tidy5e.sheet.actor:not(.loot-sheet-npc) {
+.tidy5eDark .tidy5e.sheet .window-content, .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet, .tidy5eDark .tidy5e.sheet .window-content form  {
+    background: none;
+    background-color: rgba(6, 4, 3, 0.25) !important;
+}
+.tidy5eDark .tidy5e.sheet .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+.tidy5eDark .tidy5e.sheet {
     background: rgba(6, 4, 3, 0.92);
     border-image-source: url(../ui/frames/input_border.webp);
     border-image-slice: 5 20 20 20 fill;
@@ -1661,20 +1676,6 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-track {
     background: #181413;
 }
-.tidy5eDark .tidy5e.sheet.actor:not(.loot-sheet-npc) .window-header::after, .tidy5eDark .tidy5e.sheet.item .window-header::after {
-    position: absolute;
-    z-index: -1;
-    content: " ";
-    width: 100%;
-    height: 45px;
-    left: 0;
-    top: -9px;
-    background: url(../ui/frames/header.webp);
-    background-size: 100% 45px;
-}
-.tidy5eDark .tidy5e.sheet.actor .window-content {
-    background: none;
-}
 .tidy5eDark .tidy5e.sheet.actor .inspiration input:checked + label {
     text-shadow: 0 0 10px var(--color-shadow-primary);
     background: var(--t5e-icon-background);
@@ -1684,9 +1685,6 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
 }
 .tidy5eDark .tidy5e.sheet.actor .header-attributes .ac-display svg path {
     fill: #331914;
-}
-.tidy5eDark .tidy5e.sheet.item .window-content {
-    background: none !important;
 }
 .tidy5eDark .tidy5e.sheet.actor .origin-summary {
     border-image: url(../ui/frames/brown_line.webp) 25 25 round;
@@ -1701,10 +1699,13 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     border-image: url(../ui/frames/brown_line_vertical.webp) 25 25 round;
     border-left: 5px groove #eeede0;
 }
-.tidy5eDark .tidy5e.sheet.actor .tidy5e-navigation .item {
-    padding: 2px 8px 0 8px;
-    font-size: 18px;
-    font-family: "Modesto Condensed", "Palatino Linotype", serif;
+.tidy5eDark .tidy5e.sheet .tidy5e-navigation .item, .tidy5eDark .tidy5e.sheet .sheet-navigation .item, .tidy5eDark .tidy5e.sheet .sheet-navigation .list-row, .tidy5eDark .dnd5e.sheet .sheet-navigation .list-row{
+    padding: 2px 8px 0 8px !important;
+    font-size: 18px !important;
+    font-family: "Modesto Condensed", "Palatino Linotype", serif !important;
+}
+.fa-key:before {
+    display: none;
 }
 .tidy5eDark .tidy5e.sheet.actor .attuned-items-counter {
     -webkit-box-shadow: 0 0 5px #368EED inset;
@@ -1766,6 +1767,12 @@ filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50
 #mastercrafted-recipeApp h3 {
     border-top: 2px groove #000000;
     border-bottom: 2px groove #000000;
+}
+
+/* Levels Auto Cover */
+/* https://wiki.theripper93.com/levels/levelsautocover */
+.levelsautocover-header {
+    color: var(--main-text-light-color);
 }
 
 /* Damage Log */
@@ -2058,4 +2065,13 @@ body.game .simple-calendar.window-app.fsc-vf header>*:not(.close), body.game .si
 body.game .simple-calendar.window-app.fsc-vf header>*:not(.close) i{
     font-size: 3px !important;
     top: -5px !important;
+}
+
+/* Heartbeat */
+/* Move out of the way or carousel and active effects */
+button#heartbeat-button {
+	position: fixed !important;
+    left: 5px !important;
+    top: 10px !important;
+	z-index: 999 !important;
 }

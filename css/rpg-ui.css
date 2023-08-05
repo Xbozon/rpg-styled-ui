@@ -1641,7 +1641,14 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     --t5e-safe-accent: #331914;
 }
 .tidy5eDark .tidy5e.sheet {
-    background-color: rgba(6, 4, 3, 0.92) !important;
+    background: rgba(6, 4, 3, 0.92) !important;
+	background-color: rgba(6, 4, 3, 0.92) !important;
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
 }
 .tidy5eDark .tidy5e.sheet .window-content, .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet, .tidy5eDark .tidy5e.sheet .window-content form  {
     background: none;
@@ -1657,15 +1664,6 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     top: -9px;
     background: url(../ui/frames/header.webp);
     background-size: 100% 45px;
-}
-.tidy5eDark .tidy5e.sheet {
-    background: rgba(6, 4, 3, 0.92);
-    border-image-source: url(../ui/frames/input_border.webp);
-    border-image-slice: 5 20 20 20 fill;
-    border-image-repeat: repeat repeat;
-    border-image-width: auto;
-    border-image-outset: 1px 2px 2px 2px;
-    border-radius: 0;
 }
 .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-thumb {
     outline: none;
@@ -1716,15 +1714,17 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     border: 1px solid #9A0806;
     background: #621616;
 }
-.tidy5eDark  .tidy5e.sheet.actor .items-list .items-header {
+.tidy5eDark .tidy5e.sheet.actor .items-list .items-header {
     background: url(../ui/other/items-header.webp) !important;
     background-size: 100% !important;
 }
-.tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button, .tidy5e.sheet.item .sheet-body .tab.details .form-group select, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.details .form-group button, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text], .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button {
-    background: rgba(255, 255, 255, 0.1);
+.tidy5eDark .tidy5e.sheet.item .form-group select, .tidy5eDark .tidy5e.sheet.item .form-group input[type=text], .tidy5eDark .tidy5e.sheet.item .form-group button, .tidy5eDark .tidy5e.sheet.item .form-group input[type=number], .tidy5eDark .tidy5e.sheet.item .form-group input[type=checkbox] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
-.tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.item-betterRolls .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.details .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.advancement .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.dynamiceffects .form-group button:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group select:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group input[type=text]:hover, .tidy5e.sheet.item .sheet-body .tab.magic-items .form-group button:hover {
-    background: rgba(255, 255, 255, 0.2);
+.tidy5eDark .tidy5e.sheet.item .form-group select:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=text]:hover, .tidy5eDark .tidy5e.sheet.item .form-group button:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=number]:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=checkbox]:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid #9A0806 !important;
 }
 
 /* Simbul's cover calculator */

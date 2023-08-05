@@ -1138,7 +1138,7 @@ button#roll-hd:hover::before {
 }
 
 
-    /* ==== compatibility ==== */
+/* ==== compatibility ==== */
 
 /* Illandril's Hotbar Uses */
 .illandril-hotbar-uses--hasUses .illandril-hotbar-uses--counter {
@@ -2075,3 +2075,8 @@ button#heartbeat-button {
     top: 10px !important;
 	z-index: 999 !important;
 }
+
+/*
+  Adding css for compatibility is in a separate file. Please use compatibility.css.
+  The old rules stay here so I can get busy refactoring them later.
+*/

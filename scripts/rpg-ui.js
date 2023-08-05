@@ -68,8 +68,18 @@ Hooks.on('init', () => {
 		}
 	}
 
-	if (!game.settings.get('rpg-styled-ui', 'disableAllStyles')) { rpgUIAddMainCss() }
-	if (game.settings.get('rpg-styled-ui', 'minimalUICompatibility')) { addClassByQuerySelector('minimal-ui-mode', 'body.vtt') }
+	if (!game.settings.get('rpg-styled-ui', 'disableAllStyles')) {
+		rpgUIAddMainCss()
+	}
+
+	if (game.settings.get('rpg-styled-ui', 'minimalUICompatibility')) {
+		addClassByQuerySelector('minimal-ui-mode', 'body.vtt')
+	}
+});
+
+// Retreat class of Monk's Little Details
+Hooks.on('ready', async () => {
+	$("body").removeClass("change-windows");
 });
 
 Hooks.on('getSceneNavigationContext', () => {
@@ -91,11 +101,6 @@ Hooks.on('renderCombatCarousel', () => {
 	}
 });
 
-// Retreat class of Monk's Little Details
-Hooks.on('ready', async () => {
-	$("body").removeClass("change-windows");
-});
-
 function addClassByQuerySelector(className, selector) {
 	let navigation = document.querySelector(selector);
 	navigation.classList.add(className)
@@ -107,6 +112,7 @@ function rpgUIAddMainCss() {
 	mainCss.setAttribute("rel", "stylesheet")
 	mainCss.setAttribute("type", "text/css")
 	mainCss.setAttribute("href", "modules/rpg-styled-ui/css/rpg-ui.css")
+	mainCss.setAttribute("href", "modules/rpg-styled-ui/css/compatibility.css")
 	mainCss.setAttribute("media", "all")
 	head.insertBefore(mainCss, head.lastChild);
 }

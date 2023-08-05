@@ -78,7 +78,9 @@ Hooks.on('init', () => {
 });
 
 // Retreat class of Monk's Little Details
+// Create just an error without incident if Monk's little details isn't activate.
 Hooks.on('ready', async () => {
+	game.settings.set("monks-little-details", "window-css-changes", false);
 	$("body").removeClass("change-windows");
 });
 
@@ -112,7 +114,7 @@ function rpgUIAddMainCss() {
 	mainCss.setAttribute("rel", "stylesheet")
 	mainCss.setAttribute("type", "text/css")
 	mainCss.setAttribute("href", "modules/rpg-styled-ui/css/rpg-ui.css")
-	mainCss.setAttribute("href", "modules/rpg-styled-ui/css/compatibility.css")
+	// mainCss.setAttribute("href", "modules/rpg-styled-ui/css/compatibility.css")
 	mainCss.setAttribute("media", "all")
 	head.insertBefore(mainCss, head.lastChild);
 }

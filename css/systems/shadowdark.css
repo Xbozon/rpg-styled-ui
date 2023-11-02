@@ -1,0 +1,7 @@
+:root {
+    --pfui-main-color: #cfbda7;
+}
+
+.shadowdark-dialog {
+    color: var(--pfui-main-color);
+}

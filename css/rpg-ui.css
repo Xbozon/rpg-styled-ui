@@ -3,6 +3,7 @@
 @import 'text-editor.css';
 @import "systems/pf2e.css";
 @import "systems/dnd5e.css";
+@import "systems/shadowdark.css";
 
 :root {
     --main-text-light-color: #98968a;
@@ -1062,6 +1063,7 @@ button#roll-hd:hover::before {
 
 .directory .directory-header .header-search input {
     background: none;
+    color: var(--color-text-light-highlight);
 }
 
 .sheet.journal-entry .journal-sidebar .directory-header .collapse-toggle {

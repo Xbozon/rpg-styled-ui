@@ -452,11 +452,11 @@ body.compact-mode #logo {
     z-index: -1;
     content: " ";
     width: 146%;
-    bottom: -10px;
+    top: -19px;
     left: -23%;
-    height: 85px;
+    height: 81px;
     background-image: url(../ui/frames/action_bar.webp);
-    background-size: 100% 85px;
+    background-size: 100% 81px;
     background-repeat: no-repeat;
 }
 
@@ -473,9 +473,9 @@ body.compact-mode #logo {
     position: absolute;
     content: " ";
     width: 61px;
-    height: 78px;
-    top: -11px;
-    left: -9px;
+    height: 70px;
+    top: -10px;
+    left: -7px;
     z-index: 1;
 }
 

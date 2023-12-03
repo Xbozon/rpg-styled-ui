@@ -477,6 +477,12 @@
     color: var(--main-text-light-color);
 }
 
+/* Clock sheet width */
+.blades-in-the-dark.sheet.clock {
+    min-width: 320px;
+    min-height: 360px;
+}
+
 /* 4-segment clock */
 .blades-clock.clock-4.clock-4-0 {
     background-image: url('../../ui/other/progressclocks-svg/Progress Clock 4-0.svg') !important; 

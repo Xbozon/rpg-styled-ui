@@ -3,6 +3,7 @@
 @import 'text-editor.css';
 @import "systems/pf2e.css";
 @import "systems/dnd5e.css";
+@import "systems/blades-in-the-dark.css";
 @import "systems/shadowdark.css";
 
 :root {

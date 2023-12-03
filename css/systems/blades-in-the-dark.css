@@ -472,6 +472,11 @@
 
 /* CLOCKS */
 
+/* Clock zero label*/
+.blades-in-the-dark .clock-zero-label {
+    color: var(--main-text-light-color);
+}
+
 /* 4-segment clock */
 .blades-clock.clock-4.clock-4-0 {
     background-image: url('../../ui/other/progressclocks-svg/Progress Clock 4-0.svg') !important; 

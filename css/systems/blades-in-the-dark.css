@@ -1,0 +1,463 @@
+.blades-in-the-dark.chat-card {
+    padding-bottom: 15px;
+}
+
+.blades-in-the-dark.chat-card::before {
+    position: relative;
+    content: ' ';
+    background: url(../../ui/frames/brown_line.webp);
+    background-size: 350px 7px;
+    left: -3px;
+    width: 350px;
+    height: 7px;
+    bottom: 8px;
+}
+
+.blades-in-the-dark.chat-card .card-header {
+    border: none;
+}
+
+.blades-in-the-dark.chat-card .card-buttons button {
+    border: none;
+}
+
+.blades-in-the-dark.chat-card .card-footer {
+    border: none;
+}
+
+.blades-in-the-dark.chat-card .card-header h3 {
+    color: var(--main-text-light-color);
+}
+
+.blades-in-the-dark.chat-card .card-footer span {
+    border: none;
+}
+
+.blades-in-the-dark.chat-card .card-buttons button {
+    color: var(--main-text-light-color);
+}
+
+.blades-in-the-dark.chat-card .card-buttons button {
+    position: relative;
+}
+
+.blades-in-the-dark.chat-card .card-buttons button::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 130%;
+    top: -15%;
+    background: url(../../ui/buttons/btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: 0;
+}
+
+.blades-in-the-dark.chat-card .card-buttons button:hover::before {
+    background: url(../../ui/buttons/btn_hover.webp);
+    background-size: 100% 100%;
+}
+
+.blades-in-the-dark.chat-card .card-buttons button:hover {
+    box-shadow: none;
+}
+
+/* SHEET */
+
+.blades-in-the-dark.sheet.actor.character {
+    min-height: 730px;
+}
+
+.blades-in-the-dark.sheet.actor.npc {
+    min-height: 720px;
+}
+
+.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc),
+.blades-in-the-dark.sheet.item {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+
+.blades-in-the-dark.sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    background: #251f1d;
+}
+
+.blades-in-the-dark.sheet ::-webkit-scrollbar-track {
+    background: #181413;
+}
+
+
+.window-app.blades-in-the-dark.sheet.actor .window-header,
+.window-app.blades-in-the-dark.sheet.item .window-header {
+    border: none;
+    color: var(--main-text-light-color);
+}
+
+.window-app.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .window-header::after,
+.window-app.blades-in-the-dark.sheet.item .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+
+.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .window-content,
+.blades-in-the-dark.sheet.item .window-content {
+    background: none;
+    color: var(--main-text-light-color);
+}
+
+
+
+.blades-in-the-dark.sheet .sheet-header {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+
+.blades-in-the-dark.sheet .sheet-header img.profile {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+}
+
+.blades-in-the-dark.sheet .sheet-navigation {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+
+.blades-in-the-dark.sheet.actor .sheet-header .summary,
+.blades-in-the-dark.sheet.item .sheet-header .summary {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+    border-top: 5px groove #eeede0;
+    height: 34px;
+}
+
+.blades-in-the-dark.sheet.actor:not(.npc) .sheet-header .summary {
+    margin-top: 15px;
+}
+
+.blades-in-the-dark.sheet .sheet-header .summary li {
+    margin: 1px 3px;
+    border: none;
+}
+
+.blades-in-the-dark.item .sheet-header .summary li {
+    margin: -5px 3px;
+    border: none;
+}
+
+.blades-in-the-dark.sheet.actor .sheet-header .header-exp {
+    height: 47px;
+}
+
+.blades-in-the-dark.sheet.actor.character .sheet-header .xpbar .bar {
+    background: url("../../ui/other/xp_bar.webp") center right;
+    height: 10px;
+    border: none;
+    margin: 0;
+}
+
+.blades-in-the-dark.sheet.actor .sheet-header .summary input, .blades-in-the-dark.sheet.actor .sheet-header .summary span {
+    font-family: 'Kurale', serif;
+    height: 22px;
+    line-height: 22px;
+}
+
+.blades-in-the-dark.sheet.actor h4.box-title {
+    border-bottom: none;
+}
+
+.blades-in-the-dark.sheet .sheet-header .header-details {
+    position: relative;
+}
+
+.blades-in-the-dark.sheet.actor.character .sheet-header .xpbar {
+    width: 100%;
+    position: absolute;
+    background: #ffffff14;
+    top: 58px;
+    left: 0;
+}
+
+.blades-in-the-dark.sheet.actor.character .inventory .item-controls .item-toggle,
+.blades-in-the-dark.sheet.actor.character .spellbook .item-controls .item-toggle {
+    color: #4b4a44;
+}
+
+.blades-in-the-dark.sheet.actor.character .inventory .item-controls .item-toggle.active,
+.blades-in-the-dark.sheet.actor.character .spellbook .item-controls .item-toggle.active {
+    color: #b5b3a4;
+}
+
+.blades-in-the-dark.sheet.actor .sheet-header .attributes {
+    padding-bottom: 10px;
+}
+
+.blades-in-the-dark.sheet.actor .sheet-header .attributes .attribute {
+    border-right: none;
+}
+
+.blades-in-the-dark.sheet.actor ul.attributes li.attribute .attribute-footer {
+    margin-top: 4px;
+}
+
+.blades-in-the-dark.sheet .sheet-navigation .item {
+    border-bottom: none;
+}
+
+.blades-in-the-dark.sheet .sheet-navigation .item {
+    position: relative;
+    border-bottom: none;
+}
+
+.blades-in-the-dark.sheet .sheet-navigation .item.active {
+    border-bottom: none;
+}
+
+.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .sheet-navigation .item::before,
+.blades-in-the-dark.item .sheet-navigation .item::before {
+    opacity: 0;
+    position: absolute;
+    content: " ";
+    width: 130%;
+    height: 50%;
+    left: -15%;
+    bottom: -17px;
+    background: url(../../ui/buttons/active.webp);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.blades-in-the-dark.item .sheet-navigation .item::before {
+    width: 90%;
+    height: 50%;
+    left: 7%;
+    bottom: -16px;
+}
+
+.blades-in-the-dark.sheet .sheet-navigation .item.active::before {
+    opacity: 1;
+}
+
+.blades-in-the-dark.sheet input[type="text"], .blades-in-the-dark input[type="number"], .blades-in-the-dark select {
+    color: #837360;
+    background: #ffffff14;
+}
+
+.blades-in-the-dark.sheet input[type="text"]:hover,
+.blades-in-the-dark.sheet input[type="number"]:hover,
+.blades-in-the-dark.sheet input[type="text"]:focus,
+.blades-in-the-dark.sheet input[type="number"]:focus {
+    box-shadow: none;
+    background: #ffffff25;
+}
+
+.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest {
+    font-family: 'Kurale', serif;
+    font-weight: 600;
+    color: #837360;
+    border: none;
+    position: relative;
+    box-shadow: none;
+}
+
+.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 140%;
+    top: -15%;
+    left: -7%;
+    background: url(../../ui/buttons/btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 130%;
+    top: -15%;
+    background: url(../../ui/buttons/btn-accept.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.blades-in-the-dark.sheet.actor.character .characteristics textarea {
+    border: 1px solid var(--border-color);
+    color: #837360;
+    background: #ffffff14;
+}
+
+/* ATTRIBUTES */
+
+.blades-in-the-dark.sheet.actor .ability-scores {
+    border: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .ability-scores .ability {
+    border: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor ul.skills-list {
+    border: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor ul.attributes li.attribute {
+    border: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .counters {
+    border-bottom: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod, .blades-in-the-dark.sheet.actor .ability-scores .ability .ability-modifiers span.ability-save {
+    border-top: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod {
+    border-right: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .ability-scores .ability .ability-modifiers span.ability-save {
+    border-left: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet .window-content .tab {
+    margin-top: 5px;
+}
+
+.blades-in-the-dark.sheet.actor .counters .counter h4,
+.blades-in-the-dark.sheet.actor .traits label {
+    color: var(--main-text-light-color)
+}
+
+.blades-in-the-dark.sheet.actor .encumbrance {
+    flex: 0 0 16px;
+}
+
+.blades-in-the-dark.sheet .editable h4.rollable:hover, .blades-in-the-dark.sheet .editable .rollable:hover > h4 {
+    color: #837360;
+}
+
+.blades-in-the-dark .form-header {
+    border-bottom: 2px groove var(--border-color);
+    border-top: 2px groove var(--border-color);
+    color: #837360;
+}
+
+.blades-in-the-dark .form-group label,
+.blades-in-the-dark.sheet.item h4.damage-header {
+    color: var(--main-text-light-color)
+}
+
+.blades-in-the-dark.sheet.item .details input[type="text"],
+.blades-in-the-dark.sheet.item .details input[type="number"],
+.blades-in-the-dark.sheet.item .details select {
+    border: 1px solid #7a797145;
+    background: #ffffff14;
+}
+
+/* ITEM LIST BORDERS */
+
+.blades-in-the-dark.sheet .items-list .item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet .filter-list .filter-item {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet .items-list .items-header {
+    border: 2px groove var(--border-color);
+    background: url(../../ui/other/items-header.webp);
+    background-size: 100%;
+}
+
+.blades-in-the-dark.sheet .items-list .item-name h3, .blades-in-the-dark.sheet .items-list .item-name h4 {
+    color: var(--main-text-light-color)
+}
+
+.blades-in-the-dark.sheet .item-buttons button {
+    color: var(--main-text-light-color);
+}
+
+.blades-in-the-dark.sheet.actor .spell-slots, .blades-in-the-dark.sheet.actor .spell-comps {
+    border-right: 1px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .spell-school, .blades-in-the-dark.sheet.actor .spell-action, .blades-in-the-dark.sheet.actor .spell-target {
+    border-right: 1px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .inventory-list .item-detail,
+.blades-in-the-dark.sheet .effects .item .effect-source,
+.blades-in-the-dark.sheet .effects .item .effect-duration,
+.blades-in-the-dark.sheet .effects .item .effect-controls {
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet.actor .inventory-filters .currency input[type="text"] {
+    border: none;
+}
+
+.blades-in-the-dark.sheet.actor .inventory-list .item-summary {
+    border-top: 1px solid var(--border-color);
+    color: var(--main-text-light-color)
+}
+
+.blades-in-the-dark .tag {
+    border: 1px solid var(--border-color);
+}
+
+.blades-in-the-dark.sheet.item .sheet-body .item-properties .properties-list li {
+    border: 2px groove var(--border-color);
+}
+
+.blades-in-the-dark.sheet.item .sheet-body .item-properties {
+    border-right: 2px groove var(--border-color);
+}
+
+/*.blades-in-the-dark.sheet.item a.entity-link,
+.blades-in-the-dark.sheet.item a.inline-roll {
+    color:#98968a;
+    background: #40130c;
+    padding: 0px 3px;
+    border: 2px solid #671911;
+    border-radius: 6px;
+}*/
+
+ a.entity-link,
+ a.content-link,
+ a.inline-roll {
+    color:#98968a;
+    background: #40130c;
+    padding: 0px 3px;
+    border: 2px solid #671911;
+    border-radius: 6px;
+}
+
+.dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
+    background: transparent;
+}

@@ -1,9 +1,9 @@
-{
-  "id": "dark-blades-ui",
-  "title": "Blades in the Dark Styled UI for Foundry VTT",
-  "description": "Theme for Blades in the Dark.",
-  "url": "https://github.com/pinkflumph/dark-blades-ui",
-  "version": "v1",
+{{
+  "id": "rpg-styled-ui",
+  "title": "RPG Styled UI for Foundry VTT",
+  "description": "Theme for DnD5e.",
+  "url": "https://github.com/Xbozon/rpg-styled-ui",
+  "version": "v1.1.8",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
@@ -34,8 +34,8 @@
       "flags": {}
     }
   ],
-  "manifest": "https://raw.githubusercontent.com/pinkflumph/dark-blades-ui/main/module.json",
-  "download": "https://github.com/pinkflumph/dark-blades-ui/archive/refs/tags/v1.zip",
+  "manifest": "https://raw.githubusercontent.com/pinkflumph/rpg-styled-ui/main/module.json",
+  "download": "https://github.com/pinkflumph/rpg-styled-ui/archive/refs/tags/v1.1.8.zip",
 
   "authors": [
     {

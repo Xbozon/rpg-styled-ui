@@ -12,6 +12,8 @@
     --border-color: #372d25;
     --header-bg-color: #7e152350;
     --header-bg-color-light: #99999975;
+    --attribute-dot-empty-color: #7e152350;
+    --attribute-dot-filled-color: #EEE;
 }
 
 #pause img[src*="icons/svg/clockwork.svg"] {

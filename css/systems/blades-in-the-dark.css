@@ -1,4 +1,6 @@
+/* ============ */
 /* === CHAT === */
+/* ============ */
 
 		.blades-in-the-dark.chat-card {
 		    padding-bottom: 15px;
@@ -64,19 +66,13 @@
 		    box-shadow: none;
 		}
 
-/* ================ */
-/* === PC SHEET === */
-/* ================ */
+/* ================== */
+/* === ALL SHEETS === */
+/* ================== */
 
-		.blades-in-the-dark.sheet.actor.character {
-		    min-height: 730px;
-		}
-		
-		.blades-in-the-dark.sheet.actor.npc {
-		    min-height: 720px;
-		}
-		
-		.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc),
+	/* == LAYOUT == */
+	
+		.blades-in-the-dark.sheet.actor,
 		.blades-in-the-dark.sheet.item {
 		    background: rgba(6, 4, 3, 0.92);
 		    border-image-source: url(../../ui/frames/input_border.webp);
@@ -98,6 +94,9 @@
 		    background: #181413;
 		}
 		
+		.blades-in-the-dark.sheet .actor-sheet {
+			padding: 10px !important;
+		}
 		
 		.window-app.blades-in-the-dark.sheet.actor .window-header,
 		.window-app.blades-in-the-dark.sheet.item .window-header {
@@ -105,7 +104,7 @@
 		    color: var(--main-text-light-color);
 		}
 		
-		.window-app.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .window-header::after,
+		.window-app.blades-in-the-dark.sheet.actor .window-header::after,
 		.window-app.blades-in-the-dark.sheet.item .window-header::after {
 		    position: absolute;
 		    z-index: -1;
@@ -118,145 +117,19 @@
 		    background-size: 100% 45px;
 		}
 		
-		.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .window-content,
+		.blades-in-the-dark.sheet.actor .window-content,
 		.blades-in-the-dark.sheet.item .window-content {
 		    background: none;
 		    color: var(--main-text-light-color);
 		}
 		
-		
-		
-		.blades-in-the-dark.sheet .sheet-header {
-		    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
-		    border-bottom: 5px groove #eeede0;
+		.blades-in-the-dark.sheet.actor textarea,
+		.blades-in-the-dark.sheet.item textarea {
+		    background: none;
+		    color: var(--main-text-light-color);
+			font-family: "Kurale";
 		}
-		
-		.blades-in-the-dark.sheet .sheet-header img.profile {
-		    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-navigation {
-		    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
-		    border-bottom: 5px groove #eeede0;
-		}
-		
-		.blades-in-the-dark.sheet.actor .sheet-header .summary,
-		.blades-in-the-dark.sheet.item .sheet-header .summary {
-		    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
-		    border-bottom: 5px groove #eeede0;
-		    border-top: 5px groove #eeede0;
-		    height: 34px;
-		}
-		
-		.blades-in-the-dark.sheet.actor:not(.npc) .sheet-header .summary {
-		    margin-top: 15px;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-header .summary li {
-		    margin: 1px 3px;
-		    border: none;
-		}
-		
-		.blades-in-the-dark.item .sheet-header .summary li {
-		    margin: -5px 3px;
-		    border: none;
-		}
-		
-		.blades-in-the-dark.sheet.actor .sheet-header .header-exp {
-		    height: 47px;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .sheet-header .xpbar .bar {
-		    background: url("../../ui/other/xp_bar.webp") center right;
-		    height: 10px;
-		    border: none;
-		    margin: 0;
-		}
-		
-		.blades-in-the-dark.sheet.actor .sheet-header .summary input, .blades-in-the-dark.sheet.actor .sheet-header .summary span {
-		    font-family: 'Kurale', serif;
-		    height: 22px;
-		    line-height: 22px;
-		}
-		
-		.blades-in-the-dark.sheet.actor h4.box-title {
-		    border-bottom: none;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-header .header-details {
-		    position: relative;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .sheet-header .xpbar {
-		    width: 100%;
-		    position: absolute;
-		    background: #ffffff14;
-		    top: 58px;
-		    left: 0;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .inventory .item-controls .item-toggle,
-		.blades-in-the-dark.sheet.actor.character .spellbook .item-controls .item-toggle {
-		    color: #4b4a44;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .inventory .item-controls .item-toggle.active,
-		.blades-in-the-dark.sheet.actor.character .spellbook .item-controls .item-toggle.active {
-		    color: #b5b3a4;
-		}
-		
-		.blades-in-the-dark.sheet.actor .sheet-header .attributes {
-		    padding-bottom: 10px;
-		}
-		
-		.blades-in-the-dark.sheet.actor .sheet-header .attributes .attribute {
-		    border-right: none;
-		}
-		
-		.blades-in-the-dark.sheet.actor ul.attributes li.attribute .attribute-footer {
-		    margin-top: 4px;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-navigation .item {
-		    border-bottom: none;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-navigation .item {
-		    position: relative;
-		    border-bottom: none;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-navigation .item.active {
-		    border-bottom: none;
-		}
-		
-		.blades-in-the-dark.sheet.actor:not(.loot-sheet-npc) .sheet-navigation .item::before,
-		.blades-in-the-dark.item .sheet-navigation .item::before {
-		    opacity: 0;
-		    position: absolute;
-		    content: " ";
-		    width: 130%;
-		    height: 50%;
-		    left: -15%;
-		    bottom: -17px;
-		    background: url(../../ui/buttons/active.webp);
-		    background-size: 100% auto;
-		    background-repeat: no-repeat;
-		    z-index: 1;
-		    -webkit-transition: opacity 0.2s ease-in-out;
-		    transition: opacity 0.2s ease-in-out;
-		}
-		
-		.blades-in-the-dark.item .sheet-navigation .item::before {
-		    width: 90%;
-		    height: 50%;
-		    left: 7%;
-		    bottom: -16px;
-		}
-		
-		.blades-in-the-dark.sheet .sheet-navigation .item.active::before {
-		    opacity: 1;
-		}
+			
 		
 		.blades-in-the-dark.sheet input[type="text"], .blades-in-the-dark input[type="number"], .blades-in-the-dark select {
 		    color: #837360;
@@ -271,65 +144,29 @@
 		    background: #ffffff25;
 		}
 		
-		.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest {
-		    font-family: 'Kurale', serif;
-		    font-weight: 600;
-		    color: #837360;
-		    border: none;
-		    position: relative;
-		    box-shadow: none;
+		.blades-in-the-dark .black-label,
+		.blades-in-the-dark .gray-label {
+			padding: 3px 5px;
 		}
 		
-		.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest::before {
-		    position: absolute;
-		    content: " ";
-		    width: 120%;
-		    height: 140%;
-		    top: -15%;
-		    left: -7%;
-		    background: url(../../ui/buttons/btn.webp);
-		    background-size: 100% 100%;
-		    z-index: -1;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .sheet-header .attributes a.rest::after {
-		    position: absolute;
-		    content: " ";
-		    width: 100%;
-		    height: 130%;
-		    top: -15%;
-		    background: url(../../ui/buttons/btn-accept.webp);
-		    background-size: 100% 100%;
-		    z-index: -1;
-		    left: 0;
-		    opacity: 0;
-		    -webkit-transition: opacity 0.2s ease-in-out;
-		    transition: opacity 0.2s ease-in-out;
-		}
-		
-		.blades-in-the-dark.sheet.actor.character .characteristics textarea {
-		    border: 1px solid var(--border-color);
-		    color: #837360;
-		    background: #ffffff14;
-		}
-
 	/* == FONTS == */
 	
 		/* = Regular text = */
 		.blades-in-the-dark {
-		    text-family: "Kurale";
+		    font-family: "Kurale";
 		}
 		
 		/* = Headings = */
+		.blades-in-the-dark .attribute-label,
+		.blades-in-the-dark .attribute-skill-label,
+		.blades-in-the-dark .black-label,
+		.blades-in-the-dark .black-white,
+		.blades-in-the-dark .gray-label,
 		.blades-in-the-dark .label-stripe,
-		.blades-in-the-dark .label-stripe-gray,
-		.blades-in-the-dark .loadout select,		
-		.blades-in-the-dark.actor.pc .flex-horizontal.tabs,
-		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th,
-		.blades-in-the-dark.actor.pc * .attributes .attribute-label, 
-		.blades-in-the-dark.actor.pc * .attributes .attribute-skill-label {
+		.blades-in-the-dark .label-stripe-gray th,
+		.blades-in-the-dark .tabs .item {
 			font-family: "Kirsty";
-			font-weight: normal;
+			font-weight: normal !important;
 			text-transform: uppercase;
 		}
 
@@ -349,21 +186,106 @@
 		    background-color: var(--header-bg-color);
 		}
 		
-		.blades-in-the-dark.actor.pc * .big-teeth-section {
-		    border-color: var(--header-bg-color);
-		}
-		
 		/* = Light striped headings = */
 		.blades-in-the-dark .label-stripe-gray {
 		    background-color: var(--header-bg-color-light);
 		}
 
+		
+/* ================ */
+/* === PC SHEET === */	
+/* ================ */
+
+	/* == GENERAL == */
+		.blades-in-the-dark.actor.pc {
+			min-width: 750px;
+		}
+		
+		.blades-in-the-dark.actor.pc .item .item-control {
+			max-width: 14px;
+			margin-right: 5px;
+		}
+
+	/* == NAME-ALIAS == */
+		
+		.blades-in-the-dark.actor.pc .name-alias .portrait {
+			max-height: 192px !important;
+			
+		}	
+
+		.blades-in-the-dark.actor.pc .name-alias .item-class-label {
+			width: 95px;
+		}			
+
+
+		.blades-in-the-dark.actor.pc .name-alias .item .item-body {
+			width: auto;
+		}
+
+		.blades-in-the-dark.actor.pc .name-alias .item .item-name {
+			width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		
+		.blades-in-the-dark.actor.pc .name-alias .coins.coins-hands {
+			margin-right: 15px;
+		}
+		
+		
+	/* == STRESS AND TRAUMA == */
+		
+		/* = Section border = */
+		.blades-in-the-dark.actor.pc .big-teeth-section {
+		    border-color: var(--header-bg-color);
+		}
+		
+		/* = Trauma = */
+		.blades-in-the-dark.actor.pc .trauma-list {
+			align-content: flex-start;
+			justify-content: space-evenly;
+			width: 100%;
+		}
+		
+		.blades-in-the-dark.actor.pc .trauma-list .checkmark {
+			font-family: "Kirsty";
+			font-weight: normal !important;
+			text-transform: uppercase;
+		}
+
+	/* == HARM AND HEALING == */
+
 		/* = Harm table = */
-		.blades-in-the-dark.actor.pc * .harm-armor table tr:nth-child(even) {
+		.blades-in-the-dark.actor.pc .harm-armor table tr:nth-child(even) {
  			background-color: inherit;
 		}
 
+	/* == ITEMS == */
+	
+		/* = Abilities = */
+		.blades-in-the-dark.actor.pc .abilities .item-name {
+			margin-right: 0;
+		}
+
+		.blades-in-the-dark.actor.pc .abilities .item-description {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			max-height: 130px;
+			overflow: hidden;
+			-webkit-line-clamp: 3;
+			text-overflow: ellipsis;
+		}
+
 		/* = Loadout dropdown = */
+		.blades-in-the-dark.actor.pc .loadout select {
+			font-family: "Kirsty";
+			font-weight: normal !important;
+			text-transform: uppercase;
+		}
+
+
+	/* == ATTRIBUTES == */
 
 		/* = Ability dots = */
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked ~ label {

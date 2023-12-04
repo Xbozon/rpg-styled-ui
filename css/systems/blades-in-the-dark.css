@@ -320,12 +320,19 @@
 		    text-family: "Kurale";
 		}
 		
-		/* = Striped headings = */
+		/* = Headings = */
 		.blades-in-the-dark .label-stripe,
-		.blades-in-the-dark .label-stripe-gray {
-		    font-family: "Kirsty";
+		.blades-in-the-dark .label-stripe-gray,
+		.blades-in-the-dark .loadout select,		
+		.blades-in-the-dark.actor.pc .flex-horizontal.tabs,
+		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th,
+		.blades-in-the-dark.actor.pc * .attributes .attribute-label, 
+		.blades-in-the-dark.actor.pc * .attributes .attribute-skill-label {
+			font-family: "Kirsty";
+			font-weight: normal;
+			text-transform: uppercase;
 		}
-		
+
 		/* = Tooltips = */
 		
 		.system-blades-in-the-dark .tooltiptext {
@@ -347,19 +354,34 @@
 		}
 		
 		/* = Light striped headings = */
-		.blades-in-the-dark .label-stripe {
+		.blades-in-the-dark .label-stripe-gray {
 		    background-color: var(--header-bg-color-light);
 		}
-		
-		
+
+		/* = Harm table = */
+		.blades-in-the-dark.actor.pc * .harm-armor table tr:nth-child(even) {
+ 			background-color: inherit;
+		}
+
+		/* = Loadout dropdown = */
+
 		/* = Ability dots = */
+		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked ~ label {
+		    background-color: var(--attribute-dot-empty-color);
+		}
+
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container label,
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked + label {
 		    background-color: var(--attribute-dot-filled-color);
 		}
-		
-		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked ~ label {
-		    background-color: var(--attribute-dot-empty-color);
+
+	/* == MARGINS == */
+
+		/* = Harm, healing and armor = */
+		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th {
+		    text-align: left;
+		    padding: 7px;
+		    padding-left: 10px;
 		}
 
 /* ATTRIBUTES */

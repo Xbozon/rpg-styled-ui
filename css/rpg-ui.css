@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 @import 'carousel.css';
+@import 'compatibility.css';
 @import 'text-editor.css';
 @import "systems/pf2e.css";
 @import "systems/dnd5e.css";
@@ -9,6 +10,7 @@
     --main-text-light-color: #98968a;
     --main-text-very-light-color: #d4d1c3;
     --border-color: #372d25;
+    --text-shadow: 0px 1px 2px black;
 }
 
 #pause img[src*="icons/svg/clockwork.svg"] {
@@ -222,15 +224,40 @@ body.compact-mode #logo {
     filter: brightness(1.0) hue-rotate(180deg);
 }
 
-#chat-log .message .message-header {
+/* DD5 v3*/
+#chat-log .message .message-header .title {
     color: var(--main-text-light-color) !important; /*92887f*/
+    text-shadow: var(--text-shadow);
     font-size: 16px;
     font-weight: 600;
 }
-
+#chat-log .message .message-header .subtitle,
+#chat-log .message .message-header time, 
+#chat-log .message .message-header .message-metadata {
+    color: var(--main-text-very-light-color);
+    text-shadow: var(--text-shadow);
+}
+#chat-log .message .message-header .flavor-text, 
+#chat-log .message .message-header .whisper-to {
+    color: var(--main-text-light-color) !important; /*8e8073*/
+    text-shadow: var(--text-shadow);
+}
+#chat-log .message .message-header .message-sender img {
+    box-shadow: var(--box-shadow);
+}
 .chat-message .message-content {
     color: var(--main-text-light-color) !important; /*8e8073*/
+    text-shadow: var(--text-shadow);
 }
+.chat-message .message-content h3.nue {
+    padding: 8px 0;
+    border-top: 2px groove var(--color-underline-header);
+    border-bottom: 2px groove var(--color-underline-header);
+}
+.chat-message .message-content footer.nue {
+    border-top: 2px groove var(--color-underline-header);
+}
+/* End */
 
 .chat-message .table-draw .table-description {
     border-top: 1px solid var(--monks-border-color);
@@ -1046,11 +1073,17 @@ button#roll-hd:hover::before {
     font-weight: bold;
 }
 
-.sheet.journal-entry .pages-list .h2 .heading-link,
-.sheet.journal-entry .pages-list .h2 .heading-link:hover {
+/* DD5 v3 */
+.sheet.journal-entry .pages-list .h2 .heading-link {
     color: #5d180d;
     font-weight: bold;
 }
+.sheet.journal-entry .pages-list .h2 .heading-link:hover {
+    color: red;
+    --color-text-hyperlink: #ff6400;
+    text-shadow: 0 0 8px var(--color-text-hyperlink)
+}
+/* End */
 
 .sheet.journal-entry .pages-list .page-heading {
     color: #5d180d;

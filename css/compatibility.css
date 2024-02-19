@@ -331,36 +331,6 @@ nav.damage-log-nav .item.active:before,
     color: var(--main-text-very-light-color)
 }
 
-/* DF Chat Enhancements */
-/* https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance */
-:root {
-    --glassy: 0px 0px 2px rgba(255, 255, 255, 0.4) inset, 0px 0px 6px rgba(255, 255, 255, 0.2) inset, 1px 1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 4px rgba(0, 0, 0, 0.5);
-}
-
-#dfcp-rt-buttons button {
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-    background: var(--glassy);
-    border: none;
-    border-radius: 50%;
-    color: #837360;
-    box-shadow: var(--glassy);
-    cursor: pointer;
-}
-
-#dfcp-rt-buttons button:hover {
-    color: #ff6400;
-    border-color: #ff6400;
-    box-shadow: 0 0 6px inset #ff6400;
-}
-
-#dfcp-rt-buttons button[data-id=publicroll].active {
-    background-color: #91a82a;
-}
-
-#dfcp-rt-buttons button[data-id=selfroll].active {
-    background-color: #ff6400;
-}
-
 /* Minimal UI */
 /* https://github.com/saif-ellafi/foundryvtt-minimal-ui/issues */
 .minimal-ui-mode .new-logo {

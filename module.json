@@ -9,9 +9,18 @@
     "verified": "11",
     "maximum": "11"
   },
-  "scripts": [
-
-  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "3.0.2"
+        }
+      }
+    ]
+  },
   "esmodules": [
     "scripts/rpg-ui.js"
   ],

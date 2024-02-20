@@ -461,3 +461,56 @@
 .dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
     background: transparent;
 }
+
+
+/* D&D v3 */
+
+.dnd5e2.chat-card .description {
+    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy);
+    color: var(--pfui-main-color);
+    border-radius: 10px;
+    text-shadow: var(--text-shadow);
+}
+.dnd5e2 .name-stacked .subtitle {
+    color: var(--main-text-light-color)
+}
+.dnd5e2 button {
+    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-cool-5);
+    box-shadow: var(--glassy);
+    color: var(--pfui-main-color);
+    border-radius: 10px;
+    text-shadow: var(--text-shadow);
+}
+.dnd5e2 button:hover:not(:disabled),
+.dnd5e2 button:focus {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    color: var(--pfui-main-color);
+    background-color: hsl(0,0%,15%);
+    box-shadow: var(--glassy);
+}
+.dnd5e2 .pills .pill.pill-sm {
+    border: 1px dotted var(--color-border-dark-5);
+    color: var(--pfui-main-color);
+    background-color: hsl(0,0%,15%);
+    box-shadow: var(--glassy);
+}
+
+/* Dice formula */
+.dice-result .dice-formula,
+.dice-result .dice-total {
+    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-cool-5)!important;
+    box-shadow: var(--glassy)!important;
+    color: var(--pfui-main-color);
+    border-radius: 10px;
+}
+
+/* Journal Entry */
+.sheet.journal-entry.dnd5e2-journal .journal-entry-content {
+    background: unset;
+}
+
+/* D&D v3 End */

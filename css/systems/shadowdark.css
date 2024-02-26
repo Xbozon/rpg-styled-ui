@@ -1,7 +1,27 @@
 :root {
     --pfui-main-color: #cfbda7;
+    --color-cool-1: #b1a0d4;
 }
 
 .shadowdark-dialog {
     color: var(--pfui-main-color);
+}
+.system-shadowdark .chat-message .message-header .message-sender {
+    color: var(--color-cool-1);
+}
+.shadowdark.welcome-message .card-header, 
+.shadowdark.roll-card .card-header, 
+.shadowdark.item-card .card-header {
+    border-top: 1px dotted #675241;
+    border-bottom: 1px dotted #675241;
+}
+.shadowdark.welcome-message .card-attack-roll, 
+.shadowdark.roll-card .card-attack-roll, 
+.shadowdark.item-card .card-attack-roll {
+    border-top: 1px dotted #675241;
+}
+.shadowdark.welcome-message .card-footer, 
+.shadowdark.roll-card .card-footer, 
+.shadowdark.item-card .card-footer {
+    border-top: 1px dotted #675241;
 }

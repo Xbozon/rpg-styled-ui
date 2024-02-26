@@ -18,6 +18,14 @@
           "minimum": "3.0.0",
           "verified": "3.0.2"
         }
+      },
+      {
+        "id": "shadowdark",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.7.0",
+          "verified": "1.7.6"
+        }
       }
     ]
   },

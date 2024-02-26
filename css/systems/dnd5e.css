@@ -464,7 +464,7 @@
 
 
 /* D&D v3 */
-
+/*chat-card*/
 .dnd5e2.chat-card .description {
     background: var(--color-cool-5-50);
     border: 1px solid var(--color-cool-5);
@@ -497,6 +497,12 @@
     background-color: hsl(0,0%,15%);
     box-shadow: var(--glassy);
 }
+.dnd5e2.chat-card p.supplement > strong {
+    color: var(--color-warm-1);
+}
+.dnd5e2.chat-card p.supplement {
+    color: var(--pfui-main-color);
+}
 
 /* Dice formula */
 .dice-result .dice-formula,
@@ -507,7 +513,19 @@
     color: var(--pfui-main-color);
     border-radius: 10px;
 }
-
+.dice-result .dice-tooltip {
+    background: var(--color-cool-5-50);
+    border-radius: 0 0 10px 10px;
+}
+.dice-result .dice-tooltip .dice .total .label {
+    color: var(--pfui-main-color);
+}
+.dice-result .dice-tooltip .tooltip-part {
+    border-bottom: 1px dotted #675241;
+}
+.dice-result .dice-tooltip .dice .total {
+    color: var(--pfui-main-color);
+}
 /* Journal Entry */
 .sheet.journal-entry.dnd5e2-journal .journal-entry-content {
     background: unset;

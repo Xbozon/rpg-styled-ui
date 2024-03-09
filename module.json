@@ -2,15 +2,37 @@
   "id": "rpg-styled-ui",
   "title": "RPG Styled UI for Foundry VTT",
   "description": "Theme for DnD5e.",
-  "url": "https://github.com/pinkflumph/rpg-styled-ui",
-  "version": "v1.1.95",
+  "url": "https://github.com/Xbozon/rpg-styled-ui",
+  "version": "v1.1.10",
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "11",
+    "maximum": "11"
   },
-  "scripts": [
-
-  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "3.0.2"
+        }
+      },
+      {
+        "id": "shadowdark",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.7.0",
+          "verified": "1.7.6"
+        }
+      },
+      {
+        "id": "blades-in-the-dark",
+        "type": "system"
+      }
+    ]
+  },
   "esmodules": [
     "scripts/rpg-ui.js"
   ],
@@ -34,16 +56,12 @@
       "flags": {}
     }
   ],
-  "manifest": "https://raw.githubusercontent.com/pinkflumph/rpg-styled-ui/main/module.json",
-  "download": "https://github.com/pinkflumph/rpg-styled-ui/archive/refs/tags/v1.1.95.zip",
+  "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
+  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v1.1.10.zip",
 
   "authors": [
     {
       "name": "Xbozon",
-      "flags": {}
-    },
-    {
-      "name": "Pink Flumph",
       "flags": {}
     }
   ]

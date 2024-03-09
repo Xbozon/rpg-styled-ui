@@ -130,15 +130,21 @@
 		.blades-in-the-dark .black-label,
 		.blades-in-the-dark .label-stripe,
 		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th,
-		.blades-in-the-dark.actor.pc * .attributes .stripe,
-		.blades-alt header.full-bar,
-		.blades-alt .tab-space .tab-item{
+		.blades-in-the-dark.actor.pc * .attributes .stripe {
 		    background-color: var(--header-bg-color);
 			color: var(--header-text-color-light);
 		}
 
+		.blades-alt header.full-bar,
+		.blades-alt .tab-space .tab-item{
+		    background-color: var(--header-bg-color) !important;
+			color: var(--header-text-color-light);
+		}
+
+
 		.blades-alt .tab-space .tab-item:not(.active) {
 			opacity: 0.4;
+			background-color: var(--header-bg-color) !important;
 			color: var(--color-text-light-highlight);
 		}
 		
@@ -175,13 +181,13 @@
 		}	
 
 		.blades-alt.actor.pc .character-portrait div.portrait {
-			width: 85%;
-			height: 85%;
+			width: 85% !important;
+			height: 85% !important;
 			left: 35px;
 		}
 
 		.blades-alt.actor.pc .character-portrait div.status-buttons {
-			left: -10px;
+			left: -10px !important;
 		}
 
 	/* == NAME-ALIAS == */
@@ -207,7 +213,7 @@
 		}
 		
 		.blades-alt.sheet.actor.pc .name-alias {
-		    color: var(--main-text-light-color);
+		    color: var(--main-text-light-color) !important;
 		}
 		
 	/* == STRESS AND TRAUMA == */
@@ -251,15 +257,16 @@
 		.blades-alt.actor.pc .playbook section,
 		.blades-alt.actor.pc .playbook:after,
 		.blades-alt.actor.pc .character-notes-area {
-			background: none;	
+			background: none !important;	
 		}
 
-		.blades-alt.actor.pc .abilities .ability-block:nth-child(even) {
-			background-color: var(--text-bg-color);	
+		.blades-alt.actor.pc .abilities .ability-block:nth-child(even),
+		.blades-alt.actor.pc .character-notes-area .editor{
+			background-color: var(--text-bg-color) !important;	
 		}
 
 		.blades-alt.actor.pc .abilities .ability-block input {
-			margin-top: 3px;
+			margin-top: 3px !important;
 		}
 
 		.blades-alt.actor.pc .abilities .ability-list label {

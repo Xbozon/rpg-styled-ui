@@ -1,71 +1,3 @@
-/* ============ */
-/* === CHAT === */
-/* ============ */
-
-		.blades-in-the-dark.chat-card {
-		    padding-bottom: 15px;
-		}
-		
-		.blades-in-the-dark.chat-card::before {
-		    position: relative;
-		    content: ' ';
-		    background: url(../../ui/frames/brown_line.webp);
-		    background-size: 350px 7px;
-		    left: -3px;
-		    width: 350px;
-		    height: 7px;
-		    bottom: 8px;
-		}
-		
-		.blades-in-the-dark.chat-card .card-header {
-		    border: none;
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button {
-		    border: none;
-		}
-		
-		.blades-in-the-dark.chat-card .card-footer {
-		    border: none;
-		}
-		
-		.blades-in-the-dark.chat-card .card-header h3 {
-		    color: var(--main-text-light-color);
-		}
-		
-		.blades-in-the-dark.chat-card .card-footer span {
-		    border: none;
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button {
-		    color: var(--main-text-light-color);
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button {
-		    position: relative;
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button::before {
-		    position: absolute;
-		    content: " ";
-		    width: 100%;
-		    height: 130%;
-		    top: -15%;
-		    background: url(../../ui/buttons/btn.webp);
-		    background-size: 100% 100%;
-		    z-index: -1;
-		    left: 0;
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button:hover::before {
-		    background: url(../../ui/buttons/btn_hover.webp);
-		    background-size: 100% 100%;
-		}
-		
-		.blades-in-the-dark.chat-card .card-buttons button:hover {
-		    box-shadow: none;
-		}
-
 /* ================== */
 /* === ALL SHEETS === */
 /* ================== */
@@ -73,7 +5,9 @@
 	/* == LAYOUT == */
 	
 		.blades-in-the-dark.sheet.actor,
-		.blades-in-the-dark.sheet.item {
+		.blades-in-the-dark.sheet.item,
+		.blades-alt.sheet.actor,
+		.blades-alt.sheet.item {
 		    background: rgba(6, 4, 3, 0.92);
 		    border-image-source: url(../../ui/frames/input_border.webp);
 		    border-image-slice: 5 20 20 20 fill;
@@ -82,15 +16,17 @@
 		    border-image-outset: 1px 2px 2px 2px;
 		    border-radius: 0;
 		}
-		
-		.blades-in-the-dark.sheet ::-webkit-scrollbar-thumb {
+
+		.blades-in-the-dark.sheet ::-webkit-scrollbar-thumb,
+		.blades-alt.sheet ::-webkit-scrollbar-thumb {
 		    outline: none;
 		    border-radius: 0px;
 		    border: none;
 		    background: #251f1d;
 		}
 		
-		.blades-in-the-dark.sheet ::-webkit-scrollbar-track {
+		.blades-in-the-dark.sheet ::-webkit-scrollbar-track,
+		.blades-alt.sheet ::-webkit-scrollbar-track {
 		    background: #181413;
 		}
 		
@@ -99,13 +35,17 @@
 		}
 		
 		.window-app.blades-in-the-dark.sheet.actor .window-header,
-		.window-app.blades-in-the-dark.sheet.item .window-header {
+		.window-app.blades-in-the-dark.sheet.item .window-header,
+		.window-app.blades-alt.sheet.actor .window-header,
+		.window-app.blades-alt.sheet.item .window-header{
 		    border: none;
 		    color: var(--main-text-light-color);
 		}
 		
 		.window-app.blades-in-the-dark.sheet.actor .window-header::after,
-		.window-app.blades-in-the-dark.sheet.item .window-header::after {
+		.window-app.blades-in-the-dark.sheet.item .window-header::after,
+		.window-app.blades-alt.sheet.actor .window-header::after,
+		.window-app.blades-alt.sheet.item .window-header::after{
 		    position: absolute;
 		    z-index: -1;
 		    content: " ";
@@ -118,11 +58,13 @@
 		}
 		
 		.blades-in-the-dark.sheet.actor .window-content,
-		.blades-in-the-dark.sheet.item .window-content {
+		.blades-in-the-dark.sheet.item .window-content,
+		.blades-alt.sheet.actor .window-content,
+		.blades-alt.sheet.item .window-content {
 		    background: none;
 		    color: var(--main-text-light-color);
 		}
-		
+
 		.blades-in-the-dark.sheet.actor textarea,
 		.blades-in-the-dark.sheet.item textarea {
 		    background: none;
@@ -131,7 +73,9 @@
 		}
 			
 		
-		.blades-in-the-dark.sheet input[type="text"], .blades-in-the-dark input[type="number"], .blades-in-the-dark select {
+		.blades-in-the-dark.sheet input[type="text"], 
+		.blades-in-the-dark input[type="number"], 
+		.blades-in-the-dark select {
 		    color: #837360;
 		    background: #ffffff14;
 		}
@@ -170,8 +114,12 @@
 			text-transform: uppercase;
 		}
 
+		.blades-alt .attribute-skill-label {
+			text-transform: uppercase;
+			padding-top: 6px;
+		}
+
 		/* = Tooltips = */
-		
 		.system-blades-in-the-dark .tooltiptext {
 		    font-family: var(--font-primary);
 		}
@@ -182,16 +130,30 @@
 		.blades-in-the-dark .black-label,
 		.blades-in-the-dark .label-stripe,
 		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th,
-		.blades-in-the-dark.actor.pc * .attributes .stripe {
+		.blades-in-the-dark.actor.pc * .attributes .stripe,
+		.blades-alt header.full-bar,
+		.blades-alt .tab-space .tab-item{
 		    background-color: var(--header-bg-color);
+			color: var(--header-text-color-light);
+		}
+
+		.blades-alt .tab-space .tab-item:not(.active) {
+			opacity: 0.4;
+			color: var(--color-text-light-highlight);
 		}
 		
 		/* = Light striped headings = */
 		.blades-in-the-dark .label-stripe-gray {
 		    background-color: var(--header-bg-color-light);
 		}
-
 		
+		/* = Teeth sections = */
+		.blades-in-the-dark.actor .big-teeth-section, 
+		.blades-in-the-dark.actor .crew-reputation,
+		.blades-in-the-dark.actor .crew-tier {
+		    border-color: var(--header-bg-color) !important;
+		}
+
 /* ================ */
 /* === PC SHEET === */	
 /* ================ */
@@ -206,12 +168,23 @@
 			margin-right: 5px;
 		}
 
-	/* == NAME-ALIAS == */
-		
+	/* == PORTRAIT == */
 		.blades-in-the-dark.actor.pc .name-alias .portrait {
 			max-height: 192px !important;
 			
 		}	
+
+		.blades-alt.actor.pc .character-portrait div.portrait {
+			width: 85%;
+			height: 85%;
+			left: 35px;
+		}
+
+		.blades-alt.actor.pc .character-portrait div.status-buttons {
+			left: -10px;
+		}
+
+	/* == NAME-ALIAS == */
 
 		.blades-in-the-dark.actor.pc .name-alias .item-class-label {
 			width: 95px;
@@ -233,13 +206,11 @@
 			margin-right: 15px;
 		}
 		
+		.blades-alt.sheet.actor.pc .name-alias {
+		    color: var(--main-text-light-color);
+		}
 		
 	/* == STRESS AND TRAUMA == */
-		
-		/* = Section border = */
-		.blades-in-the-dark.actor.pc .big-teeth-section {
-		    border-color: var(--header-bg-color);
-		}
 		
 		/* = Trauma = */
 		.blades-in-the-dark.actor.pc .trauma-list {
@@ -277,6 +248,29 @@
 			text-overflow: ellipsis;
 		}
 
+		.blades-alt.actor.pc .playbook section,
+		.blades-alt.actor.pc .playbook:after,
+		.blades-alt.actor.pc .character-notes-area {
+			background: none;	
+		}
+
+		.blades-alt.actor.pc .abilities .ability-block:nth-child(even) {
+			background-color: var(--text-bg-color);	
+		}
+
+		.blades-alt.actor.pc .abilities .ability-block input {
+			margin-top: 3px;
+		}
+
+		.blades-alt.actor.pc .abilities .ability-list label {
+			font-size: 1.2em
+			line-height: 1.1em;
+		}
+
+		.blades-alt.actor.pc .abilities .ability-list .ability-name {
+			line-height: 0em;
+		}
+
 		/* = Loadout dropdown = */
 		.blades-in-the-dark.actor.pc .loadout select {
 			font-family: "Kirsty";
@@ -287,7 +281,7 @@
 
 	/* == ATTRIBUTES == */
 
-		/* = Ability dots = */
+		/* = Skill dots = */
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked ~ label {
 		    background-color: var(--attribute-dot-empty-color);
 		}
@@ -295,6 +289,12 @@
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container label,
 		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked + label {
 		    background-color: var(--attribute-dot-filled-color);
+		}
+
+		/* = Skill names = */
+		.blades-alt .attribute-skill-label {
+			text-transform: uppercase;
+			padding-top: 6px;
 		}
 
 	/* == MARGINS == */
@@ -306,28 +306,19 @@
 		    padding-left: 10px;
 		}
 
-/*.blades-in-the-dark.sheet.item a.entity-link,
-.blades-in-the-dark.sheet.item a.inline-roll {
-    color:#98968a;
-    background: #40130c;
-    padding: 0px 3px;
-    border: 2px solid #671911;
-    border-radius: 6px;
-}*/
+		 a.entity-link,
+		 a.content-link,
+		 a.inline-roll {
+			color:#98968a;
+			background: #40130c;
+			padding: 0px 3px;
+			border: 2px solid #671911;
+			border-radius: 6px;
+		}
 
- a.entity-link,
- a.content-link,
- a.inline-roll {
-    color:#98968a;
-    background: #40130c;
-    padding: 0px 3px;
-    border: 2px solid #671911;
-    border-radius: 6px;
-}
-
-.dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
-    background: transparent;
-}
+		.dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
+			background: transparent;
+		}
 
 /* ============== */
 /* === CLOCKS === */
@@ -357,3 +348,60 @@
 		.system-blades-in-the-dark img[src*="Progress Clock"][src$=".svg"] {
 			filter: brightness(0%) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(103%) contrast(103%);
 		}
+		
+/* ================== */
+/* === CREW SHEET === */	
+/* ================== */
+
+	/* == HEADER == */
+
+		/* = Tier section = */
+		.blades-in-the-dark.actor.crew .crew-tier {
+		    background: none;
+		}
+		
+		.blades-in-the-dark.actor.crew .crew-tier input:checked ~ label:not(.black-label) {
+		    background-color: var(--attribute-dot-empty-color) !important;
+		}
+
+		.blades-in-the-dark.actor.crew .crew-tier label:not(.black-label){
+			background-color: var(--attribute-dot-filled-color);
+		}
+
+		.blades-in-the-dark.actor.crew .crew-tier input:checked + label:not(.black-label) {
+		    background-color: var(--attribute-dot-filled-color) !important;
+		}
+		
+		/* = Crew type = */
+		.blades-in-the-dark.actor.crew .crew-class {
+			border-color: var(--header-bg-color);
+			margin-bottom: 10px;
+		}
+		
+		.blades-in-the-dark.actor.crew .crew-class .big-description {
+			color: var(--main-text-light-color);
+			font-family: 'Kirsty';
+		}
+		
+	/* == TABS == */
+	
+		/* = Turf = */
+			.blades-in-the-dark.actor.crew .turf-block,
+			.blades-in-the-dark.actor.crew .turf-block .connector {
+				background-color: var(--text-bg-color) !important;
+			}
+			
+			.blades-in-the-dark.actor.crew .turf-block.turf-selected,
+			.blades-in-the-dark.actor.crew .turf-block.turf-selected .connector {
+				background-color: #525252b5 !important;
+			}
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		

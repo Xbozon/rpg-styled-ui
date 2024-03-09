@@ -10,10 +10,12 @@
     --main-text-light-color: #98968a;
     --main-text-very-light-color: #d4d1c3;
     --border-color: #372d25;
-    --header-bg-color: #7e152350;
+    --header-bg-color: #7e152375;
     --header-bg-color-light: #99999975;
-    --attribute-dot-empty-color: #7e152350;
-    --attribute-dot-filled-color: #EEE;
+	--header-text-color-light: #EEEFFF;
+	--text-bg-color: #52525240;
+    --attribute-dot-empty-color: #52525240;
+    --attribute-dot-filled-color: #ff0000;
 }
 
 #pause img[src*="icons/svg/clockwork.svg"] {

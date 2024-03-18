@@ -1,0 +1,994 @@
+:root{
+    --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1), 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    --glassy-shadow: var(--glassy) , var(--box-shadow);
+    --glass-bg: rgba(20, 20, 20, 0.6);
+    --glass-bg-light: rgba(255, 255, 255, 0.1);
+    --glass-bg-dark: rgba(0, 0, 0, 0.7);
+    --pf2e-shadow-is-dark: 0px 1px var(--pf2e-half-transparent-dark);
+    --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-light);
+    --pf2e-translucent-middle-for-light: hsla(0, 0%, 80%,0.5);
+    --pf2e-translucent-very: var(--pf2e-translucent-very-for-light);
+    --pf2e-transcluent-very-for-light: hsla(0, 0%, 60%,0.2);
+    --header-text-shadow: var(--pf2e-shadow-is-dark);
+    --pf2e-shadow-is-dark: 0px 1px var(--pf2e-half-transparent-dark);
+    --filter-dark: invert(100%) drop-shadow(0px 1px 1px black);
+    --pf2e-half-transparent-dark: hsla(0, 0%, 0%,0.5);
+    --color-text-hyperlink: #ff6400;
+    --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
+    --red: #5e0000;
+    --red-light:#ff0000;
+    --custom-trait:#61180e;
+    --green: #91a82a;
+    --pfui-main-color: #cfbda7;
+    --pfui-main-grey-color: #98968a;
+    --rpg-styled-ui-color: #837360;
+    --primary-remaster: hsl(153, 100%, 8%);
+	--primary-light-remaster: hsl(170, 96%, 19%);
+
+    --background: #100d0d;
+    --border-radius: 3px;
+    --border-radius-5: 5px;
+    --box-shadow: 0px 1px 3px 1px black;
+    --box-shadow-light: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4), inset 0px 0px 3px 1px var(--color-cool-3);
+
+    --rarity-common: #7e7e7e;
+    --rarity-uncommon: #ff6400;
+    --rarity-rare: #0062ff;
+    --rarity-unique: #e127e1;
+
+    --input-background-color: var(--color-cool-4);
+    --input-border-color: transparent;
+    --input-border-color: var(--color-cool-3);
+    --input-focus-text-color: var(--color-light-2);
+    --input-text-color: var(--color-light-3);
+    --input-placeholder-color: var(--color-light-4);
+    --input-text-selection-color: var(--color-cool-3);
+    --input-focus-outline-color: var(--color-cool-3);
+
+
+/* Foundry2
+====================================================== */
+    --color-warm-1: #ee9b3a;
+    --color-warm-2: #c9593f;
+    --color-warm-3: #5d142b;
+    --color-warm-4: #420418;
+    --color-warm-5: #26020d;
+    --color-cool-1: #b1a0d4;
+    --color-cool-2: #79689c;
+    --color-cool-3: #584a75;
+    --color-cool-4: #302831;
+    --color-cool-5: #0b0a13;
+    --color-cool-5-25: rgba(11, 10, 19, 0.25);
+    --color-cool-5-50: rgba(11, 10, 19, 0.5);
+    --color-cool-5-75: rgba(11, 10, 19, 0.75);
+    --color-cool-5-90: rgba(11, 10, 19, 0.9);
+    --color-light-1: #f7f3e8;
+    --color-light-2: #efe6d8;
+    --color-light-3: #e7d1b1;
+    --color-light-4: #d0b8a3;
+    --color-light-5: #9f8475;
+    --color-light-6: #816b66;
+    --color-level-error: #ce0707;
+    --color-level-error-bg: rgba(105, 0, 8, 0.8);
+    --color-level-error-border: #750003;
+    --color-level-info: #59a1f6;
+    --color-level-info-bg: rgba(47, 80, 132, 0.8);
+    --color-level-info-border: #5c87b9;
+    --color-level-success: #26b231;
+    --color-level-success-bg: rgba(26, 107, 34, 0.8);
+    --color-level-success-border: #1b8f23;
+    --color-level-warning: #ee9b3a;
+    --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+    --color-level-warning-border: #b18404;
+    --color-scrollbar: #5d142b;
+    --color-scrollbar-border: #8d151b;
+}
+
+
+/* ==== compatibility ==== */
+
+/* Illandril's Hotbar Uses */
+.illandril-hotbar-uses--hasUses .illandril-hotbar-uses--counter {
+    z-index: 10;
+}
+
+/* D&D 5th Edition PHB Journal Styling for Foundry VTT */
+/* https://github.com/Daxiongmao87/foundry-vtt-5e-phb-journal-styling */
+.journal-sheet .editor-content {
+    font-size: .365cm !important;
+    padding: 0 !important;
+    background: transparent;
+}
+
+.journal-sheet .editor-content blockquote {
+    margin: 10px;
+}
+
+/* Damage Log */
+/* https://github.com/cs96and/FoundryVTT-damage-log */
+/* Tabbed Chatlog */
+/* https://github.com/cswendrowski/FoundryVTT-Tabbed-Chatlog */
+
+nav.damage-log-nav.tabs,
+.tabbedchatlog.tabs {
+    position: relative;
+    box-shadow: none;
+    border: none;
+}
+
+.tabbedchatlog.tabs {
+    padding: 0 10px;
+}
+
+nav.damage-log-nav.tabs::before,
+.tabbedchatlog.tabs::before {
+    content: " ";
+    position: absolute;
+    width: 317px;
+    z-index: 10;
+    left: -2px;
+    height: 7px;
+    bottom: -7px;
+    background: url(../ui/frames/brown_line.webp);
+    background-size: 317px 7px;
+}
+
+nav.damage-log-nav .item,
+.tabbedchatlog .item {
+    position: relative;
+}
+
+nav.damage-log-nav .item.active,
+.tabbedchatlog .item.active {
+    border: none;
+    box-shadow: none;
+}
+
+nav.damage-log-nav .item:before,
+.tabbedchatlog .item:before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/frames/red_line.webp);
+    width: 70%;
+    height: 3px;
+    bottom: -3px;
+    z-index: 10;
+    left: 15%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+nav.damage-log-nav .item.active:before,
+.tabbedchatlog .item.active:before {
+    opacity: 1;
+}
+
+#settings button,
+#sidebar .directory .action-buttons button {
+    z-index: 18;
+
+    color: var(--color-text-light-highlight);
+    font-family: 'Kurale', serif;
+    line-height: 25px;
+
+    position: relative;
+    background: url(../ui/buttons/button-bg.webp) no-repeat;
+    background-size: cover;
+
+
+    border: 1px solid #332a1f;
+    box-shadow: 0px 0px 0px 1px #675241;
+
+    transition: all 0.2s;
+}
+
+#sidebar .directory .action-buttons button {
+    margin: 6px 5px;
+    height: auto;
+}
+
+#settings button:hover,
+#sidebar .directory .action-buttons button:hover {
+    background: url(../ui/frames/header.webp) center center;
+    background-size: 100% 45px;
+    /*color: #a11414;*/
+}
+
+#settings button::before,
+#sidebar .directory .action-buttons button::before {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 27px;
+    left: -5px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+#settings button::after,
+#sidebar .directory .action-buttons button::after {
+    position: absolute;
+    content: ' ';
+    background: url(../ui/buttons/corner.webp) center center no-repeat;
+    background-size: auto;
+    width: 13px;
+    height: 26px;
+    right: -5px;
+    top: 0;
+}
+
+#sidebar .directory .directory-header .header-search {
+    position: relative;
+}
+
+#sidebar .directory .directory-header .header-search .fas {
+    position: relative;
+    color: #a0836c;
+}
+
+#sidebar .directory .directory-header .header-search::after {
+    position: absolute;
+    content: ' ';
+    bottom: 3px;
+    right: 1%;
+
+    width: 98%;
+    height: 1px;
+
+    border-bottom: 1px solid #332a1f;
+    box-shadow: 0px 1px 0px 0px #675241;
+}
+
+#sidebar .directory .directory-header .header-search input {
+    background: none;
+    border-radius: 0;
+    border: none;
+    color: var(--color-text-light-highlight);
+    transition: all 0.2s;
+}
+
+#sidebar .directory .directory-header .header-search input:focus {
+    box-shadow: none;
+}
+
+#sidebar .directory .directory-header .header-search input::placeholder {
+    color: var(--main-text-light-color)
+}
+
+#sidebar hr {
+    border: none;
+    border-top: 1px dotted #675241;
+    border-bottom: 1px dotted #675241;
+}
+
+#settings h2 {
+    margin: 6px 5px;
+    border: none;
+    border-bottom: 1px dotted #675241;
+    background: rgb(125 125 125 / 10%);
+}
+
+/* Dice Tray */
+/* https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator */
+
+.dice-tray {
+    position: relative;
+    top: -25px;
+    padding: 0 4px;
+}
+
+.dice-tray button {
+    box-shadow: 0 0 6px inset #3f342b;
+}
+
+.dice-calculator > button, .dice-calculator .dice-calculator--button {
+    color: var(--main-text-light-color)
+}
+
+/* Dynamic Active Effects */
+/* https://gitlab.com/tposney/dae */
+
+.app.sw5e .dnd5e.sheet.actor:not(.loot-sheet-npc):not(.sw5e),
+.app.sw5e .dnd5e.sheet.item:not(.sw5e) {
+    background: none;
+    border: none;
+}
+
+/* Better Rolls 5e */
+/* https://github.com/RedReign/FoundryVTT-BetterRolls5e */
+
+.red-dual .die-icon {
+    color: black;
+}
+
+/* Monk's TokenBar */
+/* https://github.com/ironmonk88/monks-tokenbar */
+
+:root {
+    --monks-border-color: #6b6155;
+}
+
+#chat .monks-tokenbar.chat-card .card-header {
+    padding: 3px 0;
+    border-top: 2px groove var(--monks-border-color);
+    border-bottom: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar.chat-card .card-footer {
+    border-top: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar.chat-card .card-footer span {
+    border-right: 2px groove var(--monks-border-color);
+}
+
+#chat .monks-tokenbar .sheet .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: #cfbda7;
+}
+
+#chat .monks-tokenbar.chat-card .card-header h3 {
+    color: var(--main-text-light-color)
+}
+
+#chat #requestsavingthrow .request-header {
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: #cfbda7;
+    background: black;
+    border: 2px solid var(--border-color);
+    padding: 1px 8px;
+}
+
+#chat .monks-tokenbar .sheet .items-list .item-name h3,
+#chat .monks-tokenbar .sheet .items-list .item-name h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: #cfbda7;
+    font-weight: bold;
+    padding: 1px 4px;
+
+    background: rgba(0, 0, 0, 0.43);
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#chat .monks-tokenbar .sheet .items-list .items-header {
+    height: 28px;
+    margin: 2px 0;
+    padding: 0;
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: nowrap;
+
+    background: rgba(0, 0, 0, 0.43);
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#chat .monks-tokenbar.chat-card .sheet .items-list {
+    padding: 0;
+}
+
+/* Midi Quality of Life Improvements */
+/* https://gitlab.com/tposney/midi-qol */
+.xmidi-qol-flex-container select {
+    color: var(--main-text-light-color)
+}
+.midi-qol-nobox {
+    border-top: 2px groove #837360;
+}
+.dnd5e.chat-card .card-buttons span {
+    border: 0px solid #CCC;
+}
+.xmidi-qol-flex-container button {
+    box-shadow: 0px 0px 0px 0px #675241;
+    transition: all 0.2s;
+    background: url(../ui/buttons/controls_btn.webp);
+    border: 0px;
+    font-size: 18px !important;
+    width: 26px !important;
+    height: 26px !important;
+}
+.xmidi-qol-flex-container button:hover {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    border: 0px;
+}
+.xmidi-qol-flex-container select,  .xmidi-qol-flex-container option{
+    background: rgba(6, 4, 3, 1);
+    border: 1px solid #332a1f;
+    box-shadow: 0px 0px 0px 1px #675241;
+}
+
+/* Babele */
+/* https://gitlab.com/riccisi/foundryvtt-babele */
+#actor-translate-log {
+    color: var(--main-text-very-light-color)
+}
+
+/* Minimal UI */
+/* https://github.com/saif-ellafi/foundryvtt-minimal-ui/issues */
+.minimal-ui-mode .new-logo {
+    display: none !important;
+}
+
+.minimal-ui-mode #controls ol li.scene-control[data-control="combat-carousel"] {
+    width: var(--controlsw) !important;
+    height: var(--controlsh) !important;
+}
+
+.minimal-ui-mode #controls li[data-control="combat-carousel"]::after {
+    width: calc(var(--controlsw) - 10px) !important;
+    height: calc(var(--controlsh) - 10px) !important;
+}
+
+.minimal-ui-mode #ui-bottom > div {
+    justify-content: inherit !important;
+}
+
+:root {
+    --hotbarvis: visible;
+    --hotbarypos: -5px;
+    --hotbarxpos: 400px;
+    --hotbarlh1: 24px;
+    --hotbarlh2: 8px;
+    --hotbarhv: -5px;
+    --hotbarmg: 0px;
+    --hotbarhh: 100%;
+    --hotbarshp: 0px;
+}
+
+.minimal-ui-mode #hotbar {
+    left: var(--hotbarxpos);
+    bottom: var(--hotbarypos);
+    visibility: var(--hotbarvis);
+    transition: 0.5s ease-out 0.5s;
+    opacity: var(--opacity);
+    position: absolute;
+}
+
+:root {
+    --playervis: hidden;
+    --playerfsize: 0px;
+    --playerfsizehv: 12px;
+    --playerwidthhv: 150px;
+    --playerslh: 20px;
+    --playerbennies: none;
+    --playerh3w: unset;
+    --playerbot: -8px;
+    --playerleft: -8px;
+    --playerpingdisplay: initial;
+}
+
+.minimal-ui-mode #players {
+    bottom: var(--playerbot);
+    left: var(--playerleft);
+    font-size: var(--playerfsize);
+    visibility: var(--playervis);
+    opacity: var(--opacity);
+    box-shadow: none;
+    position: absolute;
+    border: none;
+}
+
+.minimal-ui-mode #navigation #scene-list {
+    margin-left: 16px;
+}
+
+.minimal-ui-mode #controls ol.main-controls {
+    width: 60px;
+}
+
+/* Monk's little details */
+
+.dnd5e.sheet.actor:not(.loot-sheet-npc), .dnd5e.sheet.item {
+    background-color: rgba(6, 4, 3, 0.92)!important;
+}
+
+.app.window-app.dialog, .app.window-app.folder-edit {
+    background-color: rgba(6, 4, 3, 0.92)!important;
+}
+
+body.change-windows:not(.system-forbidden-lands) .window-app > header {
+    border: none;
+}
+
+.window-app.single-sheet, .sheet.journal-entry {
+    background: none !important;
+}
+
+/* Monk's Hotbar Expansion */
+
+#hotbar .macro-list {
+    column-gap: 8px;
+}
+
+.hotbar-page {
+    width: calc(var(--hotbar-width) + 72px);
+}
+
+#hotbar .macro-list {
+    border: none;
+    border-radius: 3px;
+}
+
+/* Tidy5e Sheet */
+/* https://github.com/sdenec/tidy5e-sheet */
+:root.tidy5eDark {
+    --t5e-primary-font: rgba(152,150,138, 1);
+    --t5e-background: rgba(6, 4, 3, 0.92);
+    --t5e-white: rgba(0, 0, 0, 1);
+    --t5e-primary-color: rgba(152,150,138, 0.8);
+    --t5e-secondary-color: rgba(152,150,138, 0.65);
+    --t5e-light-color: rgba(152,150,138, 0.25);
+    --t5e-faint-color: rgba(152,150,138, 0.1);
+    --t5e-faintest-color: rgba(152,150,138, 0.05);
+    --t5e-ability-accent: darkslategrey;
+    --t5e-header-background: rgba(6, 4, 3, 0.05);
+    --t5e-header-border: rgba(152,150,138, 0.25);
+    --t5e-primary-accent: #9A0806;
+    --t5e-ability-accent: #837360 ;
+    --t5e-equipped: rgba(152,150,138, 0.2);
+    --t5e-prepared: rgba(152,150,138, 0.2);
+    --t5e-pact: rgba(152,150,138, 0.2);
+    --t5e-atwill: rgba(152,150,138, 0.2);
+    --t5e-innate: rgba(152,150,138, 0.2);
+    --t5e-alwaysprepared: rgba(152,150,138, 0.2);
+    --t5e-icon-background: rgba(30, 30, 30, 1);
+    --t5e-icon-shadow: rgba(0, 0, 0, 0.4);
+    --t5e-icon-outline: rgba(0, 0, 0, 0.4);
+    --t5e-icon-font: rgba(255, 255, 255, 0.4);
+    --t5e-icon-hover: rgba(255, 255, 255, 0.8);
+    --t5e-warning-accent: rgba(255, 30, 0, 0.65);
+    --t5e-check-default: url("../images/check-dark-unchecked.svg");
+    --t5e-check-checked: url("../images/check-light-checked.svg");
+    --t5e-checkbox-font: rgba(255, 255, 255, 0.8);
+    --t5e-checkbox-outline: rgba(50, 50, 50, 1);
+    --t5e-checkbox-unchecked: rgba(75, 75, 75, 1);
+    --t5e-checkbox-checked: rgba(0, 255, 0, 0.5);
+    --t5e-safe-accent: #331914;
+}
+.tidy5eDark .tidy5e.sheet {
+    background: rgba(6, 4, 3, 0.92) !important;
+    background-color: rgba(6, 4, 3, 0.92) !important;
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+.tidy5eDark .tidy5e.sheet .window-content, .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet, .tidy5eDark .tidy5e.sheet .window-content form  {
+    background: none;
+    background-color: rgba(6, 4, 3, 0.25) !important;
+}
+.tidy5eDark .tidy5e.sheet .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    background: #251f1d;
+}
+.tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-track {
+    background: #181413;
+}
+.tidy5eDark .tidy5e.sheet.actor .inspiration input:checked + label {
+    text-shadow: 0 0 10px var(--color-shadow-primary);
+    background: var(--t5e-icon-background);
+}
+.tidy5eDark .tidy5e.sheet.actor .inspiration input:checked + label i {
+    color: var(--main-text-light-color);
+}
+.tidy5eDark .tidy5e.sheet.actor .header-attributes .ac-display svg path {
+    fill: #331914;
+}
+.tidy5eDark .tidy5e.sheet.actor .origin-summary {
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+    border-top: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .movement {
+    border-image: url(../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet.actor .ability-scores .ability, .tidy5eDark .tidy5e.sheet.actor .header-attribute {
+    border-image: url(../ui/frames/brown_line_vertical.webp) 25 25 round;
+    border-left: 5px groove #eeede0;
+}
+.tidy5eDark .tidy5e.sheet .tidy5e-navigation .item, .tidy5eDark .tidy5e.sheet .sheet-navigation .item, .tidy5eDark .tidy5e.sheet .sheet-navigation .list-row, .tidy5eDark .dnd5e.sheet .sheet-navigation .list-row{
+    padding: 2px 8px 0 8px !important;
+    font-size: 18px !important;
+    font-family: "Modesto Condensed", "Palatino Linotype", serif !important;
+}
+.fa-key:before {
+    display: none;
+}
+.tidy5eDark .tidy5e.sheet.actor .attuned-items-counter {
+    -webkit-box-shadow: 0 0 5px #368EED inset;
+    box-shadow: 0 0 5px #368EED inset;
+    border: 1px solid #368EED;
+}
+.tidy5eDark .tidy5e.sheet.actor .encumbrance .encumbrance-bar {
+    border: 1px solid #9A0806;
+    background: #621616;
+}
+.tidy5eDark .tidy5e.sheet.actor .items-list .items-header {
+    background: url(../ui/other/items-header.webp) !important;
+    background-size: 100% !important;
+}
+.tidy5eDark .tidy5e.sheet.item .form-group select, .tidy5eDark .tidy5e.sheet.item .form-group input[type=text], .tidy5eDark .tidy5e.sheet.item .form-group button, .tidy5eDark .tidy5e.sheet.item .form-group input[type=number], .tidy5eDark .tidy5e.sheet.item .form-group input[type=checkbox] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.tidy5eDark .tidy5e.sheet.item .form-group select:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=text]:hover, .tidy5eDark .tidy5e.sheet.item .form-group button:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=number]:hover, .tidy5eDark .tidy5e.sheet.item .form-group input[type=checkbox]:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid #9A0806 !important;
+}
+
+/* Simbul's cover calculator */
+/* https://github.com/vtt-lair/simbuls-cover-calculator */
+#party-inventory button,
+.cover-calc button {
+    background: #837360;
+    border: 2px groove #000000;
+    border-radius: 3px;
+}
+.cover-calc button {
+    height: 22px;
+    line-height: 15px;
+}
+.cover-calc button img {
+    position: relative;
+    top: -3px;
+    max-width: 125%;
+    max-height: 125%
+}
+
+/* Fast Dice */
+/* https://github.com/sanguaire/fast-dice-box */
+#fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img {
+    filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(52%);
+}
+#fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img:hover {
+    filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50%) drop-shadow(0px 0px 7px var(--color-shadow-primary));
+}
+#fast-rolls-chat-dice  {
+    top: -15px;
+    position: relative;
+}
+
+/* Mastercrafted */
+/* https://wiki.theripper93.com/premium/mastercrafted */
+#mastercrafted-recipeApp.sheet.journal-entry .journal-sidebar, #mastercrafted-recipeApp .recipe-description, .app.journal-sheet, #mastercrafted-recipeApp .mastercrafted-recipe-header p {
+    color: var(--color-text-dark-primary);
+}
+#mastercrafted-recipeApp h3 {
+    border-top: 2px groove #000000;
+    border-bottom: 2px groove #000000;
+}
+
+/* Levels Auto Cover */
+/* https://wiki.theripper93.com/levels/levelsautocover */
+.levelsautocover-header {
+    color: var(--main-text-light-color);
+}
+
+/* Damage Log */
+/* https://github.com/cs96and/FoundryVTT-damage-log */
+.message.damage-log.damage {
+    background-image: url(../ui/frames/chat-texture-light.webp) !important;
+    background-color: #1d0500;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 115% 130%;
+    background-blend-mode: luminosity;
+    border: 1px solid #b61d00!important;
+    border-radius: 5px !important;
+    padding: 2px !important;
+    margin: 3px !important;
+}
+.message.damage-log.healing {
+    background-image: url(../ui/frames/chat-texture-light.webp) !important;
+    background-color: #001515;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 115% 130%;
+    background-blend-mode: luminosity;
+    border: 1px solid #00b4b6!important;
+    border-radius: 5px !important;
+    padding: 2px !important;
+    margin: 3px !important;
+}
+.message.damage-log.chat-message .message-header {
+    color: var(--main-text-light-color) !important;
+}
+.dfce-cm-middle > .message-content,
+.dfce-cm-bottom > .message-content {
+    padding-right: 0;
+}
+
+/* Simple Calendar */
+/* https://github.com/vigoren/foundryvtt-simple-calendar */
+.simple-calendar.dark {
+    --font-family: Roboto, sans-serif;
+    --heading-font-family: "Signika", sans-serif;
+    --input-bg-color: rgba(152,150,138, 0.1) !important;
+    --input-border-color: rgba(152,150,138, 1) !important;
+    --input-color: rgba(152,150,138, 1) !important;
+    --link-color: rgba(255,0,0, 0.7) !important;
+    --link-hover-color: rgba(255,0,0, 1) !important;
+    --entity-link-bg-color: #2E638C;
+    --entity-link-border-color: #598BAD;
+    --entity-link-icon-color: #E1B438;
+    --entity-link-icon-hover-color: #D59C24;
+    --heading-border-color: #E1B438;
+    --about-heading-border-color: #3C769E;
+    --app-header-bg-color: none !important;
+    --app-header-bg-image: unset;
+    --app-header-color: #f0f0e0 !important;
+    --app-header-border: 0;
+    --app-header-border-image: unset;
+    --app-header-height: 1.875rem;
+    --app-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --app-bg-image: unset;
+    --app-border: 0;
+    --app-border-image: unset;
+    --app-color: rgba(152,150,138, 1) !important;
+    --comapct-header-control-grey: rgba(152,150,138, 1) !important;
+    --comapct-header-control-secondary: #E1B438;
+    --comapct-header-control-tertiary: #A19ECF;
+    --comapct-header-control-save: #2E8D72;
+    --section-bg-color: rgba(152,150,138, 0.10) !important;
+    --section-border-color: rgba(152,150,138, 0.30) !important;
+    --section-color: rgba(152,150,138, 1) !important;
+    --side-drawer-color: rgba(152,150,138, 1) !important;
+    --side-drawer-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --side-drawer-bg-image: unset;
+    --side-drawer-border-color: rgba(152,150,138, 0.70) !important;
+    --side-drawer-border-image: unset;
+    --scrollbar-background-color: #782e22 !important;
+    --scrollbar-border-color: #ff6400 !important;
+    --scrollbar-track-bg-color: #181413 !important;
+    --scrollbar-track-border: unset;
+    --scrollbar-button-height: 0;
+    --scrollbar-button-bg-color: unset;
+    --scrollbar-button-border: unset;
+    --cal-weekend-bg-color: rgba(0, 0, 0, 0.25);
+    --cal-day-border-color: rgba(152,150,138, 0.30) !important;
+    --cal-day-hover-color: rgba(152,150,138, 0.20) !important;
+    --cal-day-current-bg-color: rgba(255,0,0, .3) !important;
+    --cal-day-current-box-shadow-color: rgba(255,0,0, 0.3) !important;
+    --cal-day-current-hover-bg-color: rgba(255,0,0, 0.5) !important;
+    --cal-day-selected-bg-color: rgba(152,150,138, 0.3) !important;
+    --cal-day-selected-box-shadow-color: rgba(152,150,138, 0.3) !important;
+    --cal-day-selected-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --cal-note-indicator-bg-color: rgba(152,150,138, 1) !important;
+    --cal-note-reminder-indicator-bg-color: rgba(255,0,0, .75) !important;
+    --cal-note-indicator-color: #2b292a;
+    --cal-moon-group-bg-color: #162B39;
+    --cal-moon-group-border-color: #366E96;
+    --cal-moon-group-box-shadow-color: rgba(122, 122, 122, 0.7098039216);
+    --cal-moon-text-shadow: rgba(152,150,138, 1) !important;
+    --cal-list-color: #ffffff;
+    --cal-list-active-border-color: #459FFF;
+    --cal-list-active-bg-color: #275982;
+    --cal-list-visible-bg-color: #3D3697;
+    --cal-list-bg-hover-color: #5F59AD;
+    --clock-started-color: #00FF00BF !important;
+    --clock-stopped-color: #FF0000BF !important;
+    --clock-paused-color: #FFFF00BF !important;
+    --context-menu-color: #ffffff;
+    --context-menu-border-color: #E1B438;
+    --context-menu-bg-color: rgba(0, 0, 0, 0.85);
+    --context-menu-action-hover-color: #459FFF;
+    --context-menu-divider-color: #6c757d;
+    --config-menu-heading-color: rgba(152,150,138, 1) !important;
+    --config-menu-item-border-color: #495057;
+    --config-menu-item-color: #E1B438;
+    --config-menu-item-hover-color: #2b292a;
+    --config-menu-item-hover-bg-color: #E1B438;
+    --config-menu-cal-settings-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --config-menu-cal-selector-bg-color: #0D1A22;
+    --config-menu-cal-selector-hover-bg-color: #1A3344;
+    --config-menu-cal-selector-color: #ffffff;
+    --config-menu-cal-selector-hover-color: #ffffff;
+    --btn-bg-image: unset;
+    --btn-border: 1px solid;
+    --btn-border-image: unset;
+    --btn-grey-border-color: rgba(152,150,138, .7) !important;
+    --btn-grey-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-grey-color: rgba(152,150,138, 1) !important;
+    --btn-grey-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-grey-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-primary-border-color: rgba(152,150,138, .7) !important;
+    --btn-primary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-primary-color: rgba(152,150,138, 1) !important;
+    --btn-primary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-primary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-secondary-border-color: rgba(152,150,138, .7) !important;
+    --btn-secondary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-secondary-color: rgba(152,150,138, 1) !important;
+    --btn-secondary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-secondary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-tertiary-border-color: rgba(152,150,138, .7) !important;
+    --btn-tertiary-bg-color: rgba(152,150,138, 0.3) !important;
+    --btn-tertiary-color: rgba(152,150,138, 1) !important;
+    --btn-tertiary-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --btn-tertiary-disabled-bg-color: rgba(152,150,138, 0.1) !important;
+    --btn-delete-border-color: #CD1E16;
+    --btn-delete-bg-color: #CD1E16BF !important;
+    --btn-delete-color: rgba(152,150,138, 1) !important;
+    --btn-delete-bg-hover-color: #E14337;
+    --btn-delete-disabled-bg-color: #AB726E;
+    --btn-save-border-color: #1A7255;
+    --btn-save-bg-color: #1A7255BF !important;
+    --btn-save-color: rgba(152,150,138, 1) !important;
+    --btn-save-bg-hover-color: #3C9F85;
+    --btn-save-disabled-bg-color: #5C7F76;
+    --form-group-bg-color: rgba(152,150,138, 0.1) !important;
+    --form-group-bg-hover-color: rgba(152,150,138, 0.2) !important;
+    --form-group-border-color: rgba(152,150,138, .7) !important;
+    --form-group-label-color: rgba(225,180,56, 1) !important;
+    --form-group-help-color: rgba(225,180,56, 1) !important;
+    --form-group-input-bg-color: rgba(152,150,138, 0.3) !important;
+    --form-group-input-border-color: rgba(152,150,138, .7) !important;
+    --form-group-input-color: rgba(152,150,138, 1) !important;
+    --form-group-help-icon-color: #E1B438;
+    --message-color: rgba(152,150,138, 1) !important;
+    --message-warn-bg-color: #695110;
+    --message-warn-border-color: #CD8C17;
+    --message-success-bg-color: #1A4439;
+    --message-success-border-color: #1A7255;
+    --message-info-bg-color: #1A3344;
+    --message-info-border-color: #1A4670;
+    --message-danger-bg-color: #9D2017;
+    --message-danger-border-color: #AE241A;
+    --multi-select-option-bg-color: rgba(6, 4, 3, 0.92) !important;
+    --multi-select-option-bg-hover-color: rgba(50,50,50, 0.92) !important;
+    --multi-select-option-border-color: rgba(152,150,138, 0.7) !important;
+    --multi-select-option-color: rgba(152,150,138, 1) !important;
+    --multi-select-disabled-bg-color: #495057;
+    --multi-select-disabled-color: #ced4da;
+    --note-cat-color: rgba(152,150,138, 1) !important;
+    --note-cat-bg-color: rgba(152,150,138, 0.3) !important;
+    --note-cat-box-shadow-color: #2b292a;
+    --note-cat-secondary-bg-color: #E1B438;
+    --note-cat-secondary-color: #2b292a;
+    --note-cat-success-bg-color: #1A7255;
+    --note-cat-success-color: #ffffff;
+    --note-cat-danger-bg-color: #CD1E16;
+    --note-cat-danger-color: #ffffff;
+    --note-cat-reminder-bg-color: #7B77BC;
+    --note-cat-reminder-color: #2b292a;
+    --note-list-note-border-color: rgba(152,150,138, 0.7) !important;
+    --note-list-note-bg-hover-color: rgba(152,150,138, 0.5) !important;
+    --note-list-note-hover-color: rgba(152,150,138, 1) !important;
+    --note-list-note-dragger-bg-color: #6c757d;
+    --note-list-note-dragger-box-shadow-color: #2b292a;
+    --note-sheet-page-list-border-color: rgba(152,150,138, 0.7) !important;
+    --note-sheet-page-list-page-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --pre-cal-color: #AFADFF;
+    --pre-cal-border-color: #5F59AD;
+    --pre-cal-border-hover-color: #3D3697;
+    --precal-hover-color: #ffffff;
+    --progress-bar-bg-color: #495057;
+    --progress-bar-border-color: #adb5bd;
+    --progress-bar-fill-color: #7B77BC;
+    --editor-color: rgba(152,150,138, 1) !important;
+    --editor-menu-bg-color: rgba(152,150,138, .3) !important;
+    --editor-menu-control-bg-color: rgba(152,150,138, .8) !important;
+    --editor-menu-control-bg-hover-color: rgba(152,150,138, 1) !important;
+    --search-box-placeholder-color: #ced4da;
+    --search-box-color: rgba(152,150,138, 1) !important;
+    --time-selector-color: rgba(152,150,138, 1) !important;
+    --time-selector-input-bg-color: rgba(152,150,138, 0.3) !important;
+    --time-selector-input-border-color: rgba(152,150,138, 0.7) !important;
+    --time-selector-option-bg-even-color: rgba(152,150,138, 0.4) !important;
+    --time-selector-option-hover-bg-color: rgba(152,150,138, 0.5) !important;
+    --toggle-unchecked-image: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 0.5%29%27/%3e%3c/svg%3e);
+    --toggle-checked-image: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e);
+    --toggle-border-color: rgba(152,150,138, 1) !important;
+    --toggle-checked-bg-color: rgba(152,150,138, 0.5) !important;
+}
+body.game .fsc-h {
+    border: 1px solid var(--section-border-color) !important;
+}
+.simple-calendar.window-app.journal-sheet button{
+    background-image: none !important;
+}
+.simple-calendar.app.journal-sheet::before, body.change-windows:not(.system-forbidden-lands) .simple-calendar.window-app:not(.image-popout) {
+    background: none !important;
+}
+body.game .simple-calendar.window-app {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+body.game .simple-calendar.window-app header.window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 26px;
+    left: 0;
+    top: 0px;
+    background-color: rgba(6, 4, 3, 0.92) !important;
+    background: url(../ui/frames/header.webp);
+    background-size: 100% 30px;
+}
+body.game .simple-calendar.window-app.fsc-vf header::after {
+    height: 16px;
+}
+body.game .fsc-nc.simple-calendar.window-app .window-content .fsc-ph .fsc-li{
+    background-color: rgba(6, 4, 3, 0.92) !important;
+    z-index:99;
+}
+body.game .simple-calendar.window-app header.window-header a.header-button.close {
+    background: #a006;
+    border: 1px solid #c008;
+    border-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 100%;
+    margin: 0 -8px 0 0;
+}
+body.game .simple-calendar.window-app header.window-header a.header-button {
+    margin: 0;
+    padding: 0 4px;
+    background: #5556;
+    border: 1px solid #7778;
+    border-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 26px;
+}
+body.game .simple-calendar.window-app.fsc-vf header>*:not(.close), body.game .simple-calendar.window-app.fsc-vf header a.header-button.close {
+    width: 12px !important;
+    padding-top: 2px;
+    font-size: 0 !important;
+    line-height: 0;
+    height: 12px !important;
+}
+body.game .simple-calendar.window-app.fsc-vf header>*:not(.close) i{
+    font-size: 3px !important;
+    top: -5px !important;
+}
+
+/* Heartbeat */
+/* Move out of the way or carousel and active effects */
+button#heartbeat-button {
+    position: fixed !important;
+    left: 5px !important;
+    top: 10px !important;
+    z-index: 999 !important;
+}

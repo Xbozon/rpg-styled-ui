@@ -25,7 +25,9 @@
     padding-left: 128px;
     background-image: none;
 }
-
+#pause img {
+    display: none;
+}
 #pause:after {
     content: '';
     position: absolute;
@@ -38,7 +40,6 @@
     background-image: url("../ui/other/paused.webp");
     animation: rotation 20s infinite linear;
 }
-
 #pause:before {
     content: '';
     position: absolute;
@@ -1705,7 +1706,7 @@ body.change-windows:not(.system-forbidden-lands) .window-app > header {
     border-radius: 0px;
     border: none;
     background: #251f1d;
-} 
+}
 .tidy5eDark .tidy5e.sheet.actor .tidy5e-sheet ::-webkit-scrollbar-track {
     background: #181413;
 }
@@ -1788,7 +1789,7 @@ filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(52
 }
 #fast-rolls-chat-dice .fast-rolls-dice .fast-rolls-die .fast-rolls-die-img:hover {
 filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50%) drop-shadow(0px 0px 7px var(--color-shadow-primary));
-} 
+}
 #fast-rolls-chat-dice  {
     top: -15px;
     position: relative;
@@ -1907,7 +1908,7 @@ filter: invert(100%) sepia(100%) saturate(900%) hue-rotate(-58deg) brightness(50
     --cal-moon-group-bg-color: #162B39;
     --cal-moon-group-border-color: #366E96;
     --cal-moon-group-box-shadow-color: rgba(122, 122, 122, 0.7098039216);
-    --cal-moon-text-shadow: rgba(152,150,138, 1) !important; 
+    --cal-moon-text-shadow: rgba(152,150,138, 1) !important;
     --cal-list-color: #ffffff;
     --cal-list-active-border-color: #459FFF;
     --cal-list-active-bg-color: #275982;
@@ -2091,7 +2092,7 @@ body.game .simple-calendar.window-app header.window-header a.header-button {
     width: 26px;
 }
 body.game .simple-calendar.window-app.fsc-vf header>*:not(.close), body.game .simple-calendar.window-app.fsc-vf header a.header-button.close {
-    width: 12px !important;    
+    width: 12px !important;
     padding-top: 2px;
     font-size: 0 !important;
     line-height: 0;

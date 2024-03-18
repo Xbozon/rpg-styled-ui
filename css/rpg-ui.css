@@ -3,6 +3,7 @@
 @import "compatibility.css";
 @import 'text-editor.css';
 @import "systems/dnd5e.css";
+@import "systems/blades-in-the-dark.css";
 @import "systems/shadowdark.css";
 
 :root {
@@ -10,6 +11,12 @@
     --main-text-very-light-color: #d4d1c3;
     --border-color: #372d25;
     --text-shadow: 0px 1px 2px black;
+    --header-bg-color: #7e152375;
+    --header-bg-color-light: #99999975;
+    --header-text-color-light: #EEEFFF;
+    --text-bg-color: #52525240;
+    --attribute-dot-empty-color: #52525240;
+    --attribute-dot-filled-color: #ff0000;
 }
 
 #pause img[src*="icons/svg/clockwork.svg"] {
@@ -17,9 +24,42 @@
     width: 128px;
     height: 128px;
     padding-left: 128px;
-
+    background-image: none;
+}
+#pause img {
+    display: none;
+}
+#pause:after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: calc(50% - 64px);
+    box-sizing: border-box;
+    width: 128px;
+    height: 128px;
+    padding-left: 128px;
     background-image: url("../ui/other/paused.webp");
     animation: rotation 20s infinite linear;
+}
+#pause:before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: calc(50% - 64px);
+    box-sizing: border-box;
+    width: 128px;
+    height: 128px;
+    padding-left: 128px;
+    background-image: url("../ui/other/paused_center.webp")
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 #logo {

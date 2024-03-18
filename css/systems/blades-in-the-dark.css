@@ -1,0 +1,414 @@
+/* ================== */
+/* === ALL SHEETS === */
+/* ================== */
+
+	/* == LAYOUT == */
+	
+		.blades-in-the-dark.sheet.actor,
+		.blades-in-the-dark.sheet.item,
+		.blades-alt.sheet.actor,
+		.blades-alt.sheet.item {
+		    background: rgba(6, 4, 3, 0.92);
+		    border-image-source: url(../../ui/frames/input_border.webp);
+		    border-image-slice: 5 20 20 20 fill;
+		    border-image-repeat: repeat repeat;
+		    border-image-width: auto;
+		    border-image-outset: 1px 2px 2px 2px;
+		    border-radius: 0;
+		}
+
+		.blades-in-the-dark.sheet ::-webkit-scrollbar-thumb,
+		.blades-alt.sheet ::-webkit-scrollbar-thumb {
+		    outline: none;
+		    border-radius: 0px;
+		    border: none;
+		    background: #251f1d;
+		}
+		
+		.blades-in-the-dark.sheet ::-webkit-scrollbar-track,
+		.blades-alt.sheet ::-webkit-scrollbar-track {
+		    background: #181413;
+		}
+		
+		.blades-in-the-dark.sheet .actor-sheet {
+			padding: 10px !important;
+		}
+		
+		.window-app.blades-in-the-dark.sheet.actor .window-header,
+		.window-app.blades-in-the-dark.sheet.item .window-header,
+		.window-app.blades-alt.sheet.actor .window-header,
+		.window-app.blades-alt.sheet.item .window-header{
+		    border: none;
+		    color: var(--main-text-light-color);
+		}
+		
+		.window-app.blades-in-the-dark.sheet.actor .window-header::after,
+		.window-app.blades-in-the-dark.sheet.item .window-header::after,
+		.window-app.blades-alt.sheet.actor .window-header::after,
+		.window-app.blades-alt.sheet.item .window-header::after{
+		    position: absolute;
+		    z-index: -1;
+		    content: " ";
+		    width: 100%;
+		    height: 45px;
+		    left: 0;
+		    top: -9px;
+		    background: url(../../ui/frames/header.webp);
+		    background-size: 100% 45px;
+		}
+		
+		.blades-in-the-dark.sheet.actor .window-content,
+		.blades-in-the-dark.sheet.item .window-content,
+		.blades-alt.sheet.actor .window-content,
+		.blades-alt.sheet.item .window-content {
+		    background: none;
+		    color: var(--main-text-light-color);
+		}
+
+		.blades-in-the-dark.sheet.actor textarea,
+		.blades-in-the-dark.sheet.item textarea {
+		    background: none;
+		    color: var(--main-text-light-color);
+			font-family: "Kurale";
+		}
+			
+		
+		.blades-in-the-dark.sheet input[type="text"], 
+		.blades-in-the-dark input[type="number"], 
+		.blades-in-the-dark select {
+		    color: #837360;
+		    background: #ffffff14;
+		}
+		
+		.blades-in-the-dark.sheet input[type="text"]:hover,
+		.blades-in-the-dark.sheet input[type="number"]:hover,
+		.blades-in-the-dark.sheet input[type="text"]:focus,
+		.blades-in-the-dark.sheet input[type="number"]:focus {
+		    box-shadow: none;
+		    background: #ffffff25;
+		}
+		
+		.blades-in-the-dark .black-label,
+		.blades-in-the-dark .gray-label {
+			padding: 3px 5px;
+		}
+		
+	/* == FONTS == */
+	
+		/* = Regular text = */
+		.blades-in-the-dark {
+		    font-family: "Kurale";
+		}
+		
+		/* = Headings = */
+		.blades-in-the-dark .attribute-label,
+		.blades-in-the-dark .attribute-skill-label,
+		.blades-in-the-dark .black-label,
+		.blades-in-the-dark .black-white,
+		.blades-in-the-dark .gray-label,
+		.blades-in-the-dark .label-stripe,
+		.blades-in-the-dark .label-stripe-gray th,
+		.blades-in-the-dark .tabs .item {
+			font-family: "Kirsty";
+			font-weight: normal !important;
+			text-transform: uppercase;
+		}
+
+		.blades-alt .attribute-skill-label {
+			text-transform: uppercase;
+			padding-top: 6px;
+		}
+
+		/* = Tooltips = */
+		.system-blades-in-the-dark .tooltiptext {
+		    font-family: var(--font-primary);
+		}
+
+	/* == COLORS == */
+
+		/* = Dark striped headings = */
+		.blades-in-the-dark .black-label,
+		.blades-in-the-dark .label-stripe,
+		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th,
+		.blades-in-the-dark.actor.pc * .attributes .stripe {
+		    background-color: var(--header-bg-color);
+			color: var(--header-text-color-light);
+		}
+
+		.blades-alt header.full-bar,
+		.blades-alt .tab-space .tab-item{
+		    background-color: var(--header-bg-color) !important;
+			color: var(--header-text-color-light);
+		}
+
+
+		.blades-alt .tab-space .tab-item:not(.active) {
+			opacity: 0.4;
+			background-color: var(--header-bg-color) !important;
+			color: var(--color-text-light-highlight);
+		}
+		
+		/* = Light striped headings = */
+		.blades-in-the-dark .label-stripe-gray {
+		    background-color: var(--header-bg-color-light);
+		}
+		
+		/* = Teeth sections = */
+		.blades-in-the-dark.actor .big-teeth-section, 
+		.blades-in-the-dark.actor .crew-reputation,
+		.blades-in-the-dark.actor .crew-tier {
+		    border-color: var(--header-bg-color) !important;
+		}
+
+/* ================ */
+/* === PC SHEET === */	
+/* ================ */
+
+	/* == GENERAL == */
+		.blades-in-the-dark.actor.pc {
+			min-width: 750px;
+		}
+		
+		.blades-in-the-dark.actor.pc .item .item-control {
+			max-width: 14px;
+			margin-right: 5px;
+		}
+
+	/* == PORTRAIT == */
+		.blades-in-the-dark.actor.pc .name-alias .portrait {
+			max-height: 192px !important;
+			
+		}	
+
+		.blades-alt.actor.pc .character-portrait div.portrait {
+			width: 85% !important;
+			height: 85% !important;
+			left: 35px;
+		}
+
+		.blades-alt.actor.pc .character-portrait div.status-buttons {
+			left: -10px !important;
+		}
+
+	/* == NAME-ALIAS == */
+
+		.blades-in-the-dark.actor.pc .name-alias .item-class-label {
+			width: 95px;
+		}			
+
+
+		.blades-in-the-dark.actor.pc .name-alias .item .item-body {
+			width: auto;
+		}
+
+		.blades-in-the-dark.actor.pc .name-alias .item .item-name {
+			width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		
+		.blades-in-the-dark.actor.pc .name-alias .coins.coins-hands {
+			margin-right: 15px;
+		}
+		
+		.blades-alt.sheet.actor.pc .name-alias {
+		    color: var(--main-text-light-color) !important;
+		}
+		
+	/* == STRESS AND TRAUMA == */
+		
+		/* = Trauma = */
+		.blades-in-the-dark.actor.pc .trauma-list {
+			align-content: flex-start;
+			justify-content: space-evenly;
+			width: 100%;
+		}
+		
+		.blades-in-the-dark.actor.pc .trauma-list .checkmark {
+			font-family: "Kirsty";
+			font-weight: normal !important;
+			text-transform: uppercase;
+		}
+
+	/* == HARM AND HEALING == */
+
+		/* = Harm table = */
+		.blades-in-the-dark.actor.pc .harm-armor table tr:nth-child(even) {
+ 			background-color: inherit;
+		}
+
+	/* == ITEMS == */
+	
+		/* = Abilities = */
+		.blades-in-the-dark.actor.pc .abilities .item-name {
+			margin-right: 0;
+		}
+
+		.blades-in-the-dark.actor.pc .abilities .item-description {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			max-height: 130px;
+			overflow: hidden;
+			-webkit-line-clamp: 3;
+			text-overflow: ellipsis;
+		}
+
+		.blades-alt.actor.pc .playbook section,
+		.blades-alt.actor.pc .playbook:after,
+		.blades-alt.actor.pc .character-notes-area {
+			background: none !important;	
+		}
+
+		.blades-alt.actor.pc .abilities .ability-block:nth-child(even),
+		.blades-alt.actor.pc .character-notes-area .editor{
+			background-color: var(--text-bg-color) !important;	
+		}
+
+		.blades-alt.actor.pc .abilities .ability-block input {
+			margin-top: 3px !important;
+		}
+
+		.blades-alt.actor.pc .abilities .ability-list label {
+			font-size: 1.2em
+			line-height: 1.1em;
+		}
+
+		.blades-alt.actor.pc .abilities .ability-list .ability-name {
+			line-height: 0em;
+		}
+
+		/* = Loadout dropdown = */
+		.blades-in-the-dark.actor.pc .loadout select {
+			font-family: "Kirsty";
+			font-weight: normal !important;
+			text-transform: uppercase;
+		}
+
+
+	/* == ATTRIBUTES == */
+
+		/* = Skill dots = */
+		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked ~ label {
+		    background-color: var(--attribute-dot-empty-color);
+		}
+
+		.blades-in-the-dark.actor.pc * .attributes .attributes-container label,
+		.blades-in-the-dark.actor.pc * .attributes .attributes-container input:checked + label {
+		    background-color: var(--attribute-dot-filled-color);
+		}
+
+		/* = Skill names = */
+		.blades-alt .attribute-skill-label {
+			text-transform: uppercase;
+			padding-top: 6px;
+		}
+
+	/* == MARGINS == */
+
+		/* = Harm, healing and armor = */
+		.blades-in-the-dark.actor.pc * .harm-armor .character-harm table th {
+		    text-align: left;
+		    padding: 7px;
+		    padding-left: 10px;
+		}
+
+		 a.entity-link,
+		 a.content-link,
+		 a.inline-roll {
+			color:#98968a;
+			background: #40130c;
+			padding: 0px 3px;
+			border: 2px solid #671911;
+			border-radius: 6px;
+		}
+
+		.dice-tooltip .dice-rolls .roll.discarded, .dice-tooltip .dice-rolls .roll.rerolled {
+			background: transparent;
+		}
+
+/* ============== */
+/* === CLOCKS === */
+/* ============== */
+
+		/* = Clock zero label = */
+		.blades-in-the-dark .clock-zero-label {
+		    color: var(--main-text-light-color);
+		}
+	
+		/* = Clock sheet width = */
+		.blades-in-the-dark.sheet.clock {
+		    min-width: 320px;
+		    min-height: 360px;
+		}
+	
+		/* = Clock color = */
+		.blades-in-the-dark .blades-clock {
+			filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(103%) contrast(103%);
+		}
+		
+		/*.blades-in-the-dark.actor.pc .blades-clock {
+			filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(103%) contrast(103%);
+			filter: brightness(0%) saturate(100%) invert(14%) sepia(27%) saturate(6040%) hue-rotate(333deg) brightness(96%) contrast(101%) opacity(50%);
+		}*/
+			
+		.system-blades-in-the-dark img[src*="Progress Clock"][src$=".svg"] {
+			filter: brightness(0%) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(103%) contrast(103%);
+		}
+		
+/* ================== */
+/* === CREW SHEET === */	
+/* ================== */
+
+	/* == HEADER == */
+
+		/* = Tier section = */
+		.blades-in-the-dark.actor.crew .crew-tier {
+		    background: none;
+		}
+		
+		.blades-in-the-dark.actor.crew .crew-tier input:checked ~ label:not(.black-label) {
+		    background-color: var(--attribute-dot-empty-color) !important;
+		}
+
+		.blades-in-the-dark.actor.crew .crew-tier label:not(.black-label){
+			background-color: var(--attribute-dot-filled-color);
+		}
+
+		.blades-in-the-dark.actor.crew .crew-tier input:checked + label:not(.black-label) {
+		    background-color: var(--attribute-dot-filled-color) !important;
+		}
+		
+		/* = Crew type = */
+		.blades-in-the-dark.actor.crew .crew-class {
+			border-color: var(--header-bg-color);
+			margin-bottom: 10px;
+		}
+		
+		.blades-in-the-dark.actor.crew .crew-class .big-description {
+			color: var(--main-text-light-color);
+			font-family: 'Kirsty';
+		}
+		
+	/* == TABS == */
+	
+		/* = Turf = */
+			.blades-in-the-dark.actor.crew .turf-block,
+			.blades-in-the-dark.actor.crew .turf-block .connector {
+				background-color: var(--text-bg-color) !important;
+			}
+			
+			.blades-in-the-dark.actor.crew .turf-block.turf-selected,
+			.blades-in-the-dark.actor.crew .turf-block.turf-selected .connector {
+				background-color: #525252b5 !important;
+			}
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -26,6 +26,10 @@
           "minimum": "1.7.0",
           "verified": "1.7.6"
         }
+      },
+      {
+        "id": "blades-in-the-dark",
+        "type": "system"
       }
     ]
   },

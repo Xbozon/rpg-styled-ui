@@ -13,8 +13,8 @@
     --text-shadow: 0px 1px 2px black;
     --header-bg-color: #7e152375;
     --header-bg-color-light: #99999975;
-	--header-text-color-light: #EEEFFF;
-	--text-bg-color: #52525240;
+    --header-text-color-light: #EEEFFF;
+    --text-bg-color: #52525240;
     --attribute-dot-empty-color: #52525240;
     --attribute-dot-filled-color: #ff0000;
 }

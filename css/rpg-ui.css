@@ -19,47 +19,23 @@
     --attribute-dot-filled-color: #ff0000;
 }
 
-#pause img[src*="icons/svg/clockwork.svg"] {
+#pause img[src*="systems/dnd5e/ui/official/ampersand.svg"] {
     box-sizing: border-box;
     width: 128px;
     height: 128px;
     padding-left: 128px;
-    background-image: none;
-}
-#pause img {
-    display: none;
-}
-#pause:after {
-    content: '';
-    position: absolute;
-    top: -16px;
-    left: calc(50% - 64px);
-    box-sizing: border-box;
-    width: 128px;
-    height: 128px;
-    padding-left: 128px;
+
     background-image: url("../ui/other/paused.webp");
     animation: rotation 20s infinite linear;
 }
-#pause:before {
-    content: '';
-    position: absolute;
-    top: -16px;
-    left: calc(50% - 64px);
-    box-sizing: border-box;
-    width: 128px;
-    height: 128px;
-    padding-left: 128px;
-    background-image: url("../ui/other/paused_center.webp")
-}
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 #logo {

@@ -24,9 +24,42 @@
     width: 128px;
     height: 128px;
     padding-left: 128px;
-
+    background-image: none;
+}
+#pause img {
+    display: none;
+}
+#pause:after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: calc(50% - 64px);
+    box-sizing: border-box;
+    width: 128px;
+    height: 128px;
+    padding-left: 128px;
     background-image: url("../ui/other/paused.webp");
     animation: rotation 20s infinite linear;
+}
+#pause:before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: calc(50% - 64px);
+    box-sizing: border-box;
+    width: 128px;
+    height: 128px;
+    padding-left: 128px;
+    background-image: url("../ui/other/paused_center.webp")
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 @keyframes rotation {

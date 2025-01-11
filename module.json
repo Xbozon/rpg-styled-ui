@@ -7,7 +7,7 @@
   "compatibility": {
     "minimum": "11",
     "verified": "11",
-    "maximum": "11"
+    "maximum": "12"
   },
   "relationships": {
     "systems": [
@@ -57,7 +57,7 @@
     }
   ],
   "manifest": "https://raw.githubusercontent.com/Xbozon/rpg-styled-ui/main/module.json",
-  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v1.2.1.zip",
+  "download": "https://github.com/Xbozon/rpg-styled-ui/archive/refs/tags/v1.3.0.zip",
 
   "authors": [
     {

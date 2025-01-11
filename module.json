@@ -3,7 +3,7 @@
   "title": "RPG Styled UI for Foundry VTT",
   "description": "Theme for DnD5e.",
   "url": "https://github.com/Xbozon/rpg-styled-ui",
-  "version": "v1.2.1",
+  "version": "v1.3.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11",
